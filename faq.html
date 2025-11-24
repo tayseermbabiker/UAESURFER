@@ -56,7 +56,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1>HalaUAE</h1>
+                <h1>UAESurfer</h1>
             </div>
             <div class="nav-links">
                 <a href="index.html">Home</a>
@@ -72,6 +72,7 @@
             <div class="container">
                 <h1>Frequently Asked Questions About Dubai & UAE</h1>
                 <p class="page-subtitle">Your Complete Guide to Visiting the United Arab Emirates</p>
+                <a href="index.html" class="back-to-home-btn">← Back to Home</a>
             </div>
         </section>
 
@@ -364,7 +365,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <div class="footer-brand">
-                    <p>&copy; 2025 HalaUAE - Your complete UAE tourism companion</p>
+                    <p>&copy; 2025 UAESurfer - Your complete UAE tourism companion</p>
                     <p class="disclaimer">Affiliate partnerships help us provide free, comprehensive travel guides</p>
                 </div>
                 <div class="footer-links">
@@ -379,6 +380,40 @@
     </footer>
 
     <style>
+        .page-header {
+            background: linear-gradient(135deg, #D4AF37 0%, #C8A882 40%, #F5A623 70%, #FF6B4A 100%) !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(245, 166, 35, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .page-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+        }
+
         .faq-section {
             padding: 2rem 0;
         }
@@ -514,6 +549,26 @@
             background: white;
             color: var(--primary-dark);
             transform: translateY(-2px);
+        }
+
+        .back-to-home-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-dark);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-to-home-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
         @media (max-width: 768px) {

@@ -1,4 +1,4 @@
-# HalauAE Project Guidelines
+# UAESurfer Project Guidelines
 
 ## Code Style & Content Rules
 
@@ -163,5 +163,5 @@ The initial guide content is DRAFT and needs fact-checking. Focus on structure, 
 ---
 
 **Last Updated:** October 27, 2024
-**Project:** HalauAE - UAE Tourism Guide
+**Project:** UAESurfer - UAE Tourism Guide
 **Version:** 2.0

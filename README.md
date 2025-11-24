@@ -1,4 +1,4 @@
-# GoUAE - Tourism Site
+# UAESurfer - Tourism Site
 
 ## Performance Achievement
 **Enhanced Tourism Site with Comprehensive Content**
@@ -50,7 +50,7 @@ Tourism sites prioritize rich, detailed content over minimal file sizes. Our com
 
 ## File Structure
 ```
-gouae-v2/
+UAESurfer-v2/
 ├── index.html (~14KB)
 ├── styles.css (~14KB)
 ├── script.js (~120KB with enhanced content)
@@ -64,8 +64,8 @@ gouae-v2/
 ## Affiliate Configuration
 Replace placeholder codes in `script.js`:
 - `platinumlistConfig.affiliateCode`: Your Platinumlist affiliate ID
-- Booking.com URLs: Update `aid=gouae2024` parameter
-- Skyscanner URLs: Update `ref=gouae` parameter
+- Booking.com URLs: Update `aid=UAESurfer2024` parameter
+- Skyscanner URLs: Update `ref=UAESurfer` parameter
 
 ## Browser Support
 - Chrome 90+

@@ -1,4 +1,4 @@
-SIMPLIFIED BLOG SPECIFICATION FOR GoUAE
+SIMPLIFIED BLOG SPECIFICATION FOR UAESurfer
 =========================================
 
 Based on UX assessment of ANSERS.txt - this is a streamlined version that reduces overwhelm while keeping core functionality.
@@ -69,7 +69,7 @@ KEEP:
 
 ✓ Article Header:
   - Post title (large, bold)
-  - Author: "GoUAE Team"
+  - Author: "UAESurfer Team"
   - Publish date
   - Read time (200 words = 1 min)
   - Category badge

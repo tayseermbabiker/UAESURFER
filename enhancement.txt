@@ -4,7 +4,7 @@ I need your help transforming the info card system on my site. Here's the situat
 
 ### **Current Problem:**
 
-My site (halauae.com) currently has info cards that open modals with brief content (probably 100-200 words each). The analytics show:
+My site (UAESurfer.com) currently has info cards that open modals with brief content (probably 100-200 words each). The analytics show:
 - 16 seconds average engagement time
 - 0.35 engaged sessions per user
 - Users click cards but don't stay engaged

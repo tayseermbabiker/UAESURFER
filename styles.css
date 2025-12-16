@@ -4434,7 +4434,7 @@ img[loading="lazy"].loaded {
     padding: 0;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--text-secondary);
+    color: #000000;
 }
 
 /* Desktop section description */

@@ -3121,18 +3121,32 @@ window.showDining = function(category, targetElement) {
 
     if (categoryData) {
         let html = `<h3>${categoryData.title}</h3><div class="venues-list">`;
+        const visibleCount = 3;
+        const totalVenues = categoryData.venues.length;
 
-        categoryData.venues.forEach(venue => {
+        categoryData.venues.forEach((venue, index) => {
+            const hiddenClass = index >= visibleCount ? 'hidden-venue' : '';
             html += `
-                <div class="venue-card">
+                <div class="venue-card ${hiddenClass}">
                     <h4>${venue.name}</h4>
-                    <p class="venue-type">${venue.type} � ${venue.emirate}</p>
+                    <p class="venue-type">${venue.type} · ${venue.emirate}</p>
                     <p class="venue-description">${venue.description}</p>
                 </div>
             `;
         });
 
         html += '</div>';
+
+        // Add See More button if there are hidden venues
+        if (totalVenues > visibleCount) {
+            html += `
+                <button class="see-more-btn" id="diningToggle" onclick="toggleDining()">
+                    <span class="see-more-text">See ${totalVenues - visibleCount} More Restaurants</span>
+                    <span class="see-less-text" style="display: none;">Show Less</span>
+                </button>
+            `;
+        }
+
         contentDiv.innerHTML = html;
     }
 }
@@ -3949,6 +3963,72 @@ function toggleEmirates() {
     } else {
         // Expand
         grid.classList.add('expanded');
+        moreText.style.display = 'none';
+        lessText.style.display = '';
+    }
+}
+
+// Progressive Disclosure - Toggle Experiences Section
+function toggleExperiences() {
+    const scroll = document.querySelector('.experience-scroll');
+    const btn = document.getElementById('experiencesToggle');
+    const moreText = btn.querySelector('.see-more-text');
+    const lessText = btn.querySelector('.see-less-text');
+
+    if (scroll.classList.contains('expanded')) {
+        // Collapse
+        scroll.classList.remove('expanded');
+        moreText.style.display = '';
+        lessText.style.display = 'none';
+    } else {
+        // Expand
+        scroll.classList.add('expanded');
+        moreText.style.display = 'none';
+        lessText.style.display = '';
+    }
+}
+
+// Progressive Disclosure - Toggle Hotels Section
+function toggleHotels() {
+    const grids = document.querySelectorAll('.hotels-grid');
+    const btn = document.getElementById('hotelsToggle');
+    const moreText = btn.querySelector('.see-more-text');
+    const lessText = btn.querySelector('.see-less-text');
+
+    const isExpanded = grids[0]?.classList.contains('expanded');
+
+    grids.forEach(grid => {
+        if (isExpanded) {
+            grid.classList.remove('expanded');
+        } else {
+            grid.classList.add('expanded');
+        }
+    });
+
+    if (isExpanded) {
+        moreText.style.display = '';
+        lessText.style.display = 'none';
+    } else {
+        moreText.style.display = 'none';
+        lessText.style.display = '';
+    }
+}
+
+// Progressive Disclosure - Toggle Dining Section
+function toggleDining() {
+    const list = document.querySelector('.venues-list');
+    const btn = document.getElementById('diningToggle');
+    const moreText = btn.querySelector('.see-more-text');
+    const lessText = btn.querySelector('.see-less-text');
+
+    if (list.classList.contains('expanded')) {
+        // Collapse
+        list.classList.remove('expanded');
+        moreText.style.display = '';
+        lessText.style.display = 'none';
+    } else {
+        // Expand
+        list.classList.add('expanded');
         moreText.style.display = 'none';
         lessText.style.display = '';
     }

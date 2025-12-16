@@ -849,11 +849,38 @@ a.emirate-card:hover {
 
 /* Progressive Disclosure - Hidden Emirates */
 .emirate-card.hidden-emirate {
-    display: none;
+    display: none !important;
 }
 
 .emirates-grid.expanded .emirate-card.hidden-emirate {
-    display: block;
+    display: flex !important;
+}
+
+/* Progressive Disclosure - Hidden Experiences */
+.experience-card.hidden-experience {
+    display: none !important;
+}
+
+.experience-scroll.expanded .experience-card.hidden-experience {
+    display: flex !important;
+}
+
+/* Progressive Disclosure - Hotels (show first row = 3, hide rest) */
+.hotels-grid .hotel-card:nth-child(n+4) {
+    display: none !important;
+}
+
+.hotels-grid.expanded .hotel-card:nth-child(n+4) {
+    display: block !important;
+}
+
+/* Progressive Disclosure - Dining Venues */
+.venue-card.hidden-venue {
+    display: none !important;
+}
+
+.venues-list.expanded .venue-card.hidden-venue {
+    display: block !important;
 }
 
 /* See More Button */
@@ -2766,6 +2793,7 @@ a.emirate-card:hover {
 /* Hotel Category Tabs */
 .hotel-category-tabs {
     display: flex;
+    justify-content: center;
     gap: var(--space-xs);
     margin-bottom: var(--space-xl);
     overflow-x: auto;

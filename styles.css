@@ -847,6 +847,40 @@ a.emirate-card:hover {
     gap: var(--space-md) !important;
 }
 
+/* Progressive Disclosure - Hidden Emirates */
+.emirate-card.hidden-emirate {
+    display: none;
+}
+
+.emirates-grid.expanded .emirate-card.hidden-emirate {
+    display: block;
+}
+
+/* See More Button */
+.see-more-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--gold-luxury) 0%, var(--gold-warm) 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.see-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.see-more-btn:active {
+    transform: translateY(0);
+}
+
 /* Experiences Grid - Emirates Pages */
 .experiences-grid {
     display: grid;

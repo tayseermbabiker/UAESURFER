@@ -540,7 +540,7 @@ const modalContent = {
                         <h5>Peak Season (Nov-Mar)</h5>
                         <div class="season-badge best">Best Weather</div>
                         <ul>
-                            <li><strong>Temperature:</strong> 20-30°C (68-86°F)</li>
+                            <li><strong>Temperature:</strong> 20-30ï¿½C (68-86ï¿½F)</li>
                             <li><strong>Humidity:</strong> Low and comfortable</li>
                             <li><strong>Rainfall:</strong> Minimal</li>
                             <li><strong>Crowds:</strong> High tourist season</li>
@@ -551,7 +551,7 @@ const modalContent = {
                         <h5>Shoulder Season (Apr-May, Oct)</h5>
                         <div class="season-badge good">Good Balance</div>
                         <ul>
-                            <li><strong>Temperature:</strong> 25-35°C (77-95°F)</li>
+                            <li><strong>Temperature:</strong> 25-35ï¿½C (77-95ï¿½F)</li>
                             <li><strong>Humidity:</strong> Moderate</li>
                             <li><strong>Rainfall:</strong> Rare</li>
                             <li><strong>Crowds:</strong> Fewer tourists</li>
@@ -562,7 +562,7 @@ const modalContent = {
                         <h5>Summer (Jun-Sep)</h5>
                         <div class="season-badge challenging">Very Hot</div>
                         <ul>
-                            <li><strong>Temperature:</strong> 35-45°C (95-113°F)</li>
+                            <li><strong>Temperature:</strong> 35-45ï¿½C (95-113ï¿½F)</li>
                             <li><strong>Humidity:</strong> Very high (80%+)</li>
                             <li><strong>Rainfall:</strong> Occasional storms</li>
                             <li><strong>Crowds:</strong> Lowest tourist numbers</li>
@@ -1231,7 +1231,7 @@ const modalContent = {
             <div class="experience-highlights">
                 <div class="highlight-card">
                     <h5>World's Tallest Building</h5>
-                    <p>Visit the iconic 828-meter skyscraper with breathtaking 360° views from levels 124, 125, and exclusive level 148</p>
+                    <p>Visit the iconic 828-meter skyscraper with breathtaking 360ï¿½ views from levels 124, 125, and exclusive level 148</p>
                 </div>
                 <div class="highlight-card">
                     <h5>Dubai Mall Experience</h5>
@@ -1286,7 +1286,7 @@ const modalContent = {
 
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1508,7 +1508,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1575,7 +1575,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1632,7 +1632,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1689,7 +1689,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1747,7 +1747,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -1965,7 +1965,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2023,7 +2023,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2081,7 +2081,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2139,7 +2139,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2184,7 +2184,7 @@ const modalContent = {
                     <div class="logistics-card">
                         <h5>Best Time</h5>
                         <p><strong>Cool Season:</strong> Nov-Mar<br>
-                        <strong>Mountain Weather:</strong> 10°C cooler<br>
+                        <strong>Mountain Weather:</strong> 10ï¿½C cooler<br>
                         <strong>Adventure Season:</strong> Oct-Apr</p>
                     </div>
                     <div class="logistics-card">
@@ -2197,7 +2197,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2255,7 +2255,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     },
@@ -2313,7 +2313,7 @@ const modalContent = {
             </div>
 
             <div class="modal-guide-hint">
-                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% — at no extra cost to you, it also helps us keep this guide running</p>
+                <p><strong>Pro tip:</strong> Book through our Partner links to enjoy discounts of up to 25% ï¿½ at no extra cost to you, it also helps us keep this guide running</p>
             </div>
         `
     }
@@ -2349,8 +2349,8 @@ const diningCategories = {
         venues: [
             { name: 'Dinner by Heston Blumenthal', type: 'British ??', emirate: 'Dubai', description: 'Historic British cuisine dating back 700 years - Signature "Meat Fruit" dish with traditional Yorkshire pudding' },
             { name: 'Row on 45', type: 'French-Japanese ??', emirate: 'Dubai', description: '45th floor with panoramic Dubai views - 17-course tasting menu for only 22 guests by Jason Atherton' },
-            { name: 'FZN by Bj?rn Frantzén', type: 'European-Japanese ??', emirate: 'Dubai', description: 'Only 27 seats in two-story intimate space - Modern European with Japanese influences and skyline views' },
-            { name: 'STAY by Yannick Alléno', type: 'French ??', emirate: 'Dubai', description: 'One&Only The Palm island location - "Less is more" French cuisine with surprise tasting menus' },
+            { name: 'FZN by Bj?rn Frantzï¿½n', type: 'European-Japanese ??', emirate: 'Dubai', description: 'Only 27 seats in two-story intimate space - Modern European with Japanese influences and skyline views' },
+            { name: 'STAY by Yannick Allï¿½no', type: 'French ??', emirate: 'Dubai', description: 'One&Only The Palm island location - "Less is more" French cuisine with surprise tasting menus' },
             { name: 'Al Muntaha', type: 'European ?', emirate: 'Dubai', description: '27th floor Burj Al Arab location - Floor-to-ceiling windows with European cuisine and Mediterranean touches' },
             { name: 'Jara by Mart?n Berasategui', type: 'Basque ?????', emirate: 'Dubai', description: '8-Michelin star chefs first Dubai restaurant - Traditional Basque family-style with clay-pit oven specialties' },
             { name: 'Erth', type: 'Emirati ?', emirate: 'Abu Dhabi', description: 'First Michelin-starred Emirati restaurant - Modern Emirati cuisine in Qasr Al Hosn cultural district' },
@@ -2385,7 +2385,7 @@ const diningCategories = {
             { name: 'Arabian Tea House', type: 'Emirati ????', emirate: 'Dubai', description: 'Old Dubai courtyard in historic Bastakiya district - Traditional Emirati teas and Arabic coffee cultural immersion' },
             { name: 'Martabaan by Hemant Oberoi', type: 'Indian ?????', emirate: 'Abu Dhabi', description: 'Emirates Palace location - Authentic Indian cuisine with exceptional seafood and varqui crab specialty' },
             { name: 'Al Khayma Heritage', type: 'Emirati ????', emirate: 'Abu Dhabi', description: 'Bedouin tent dining with traditional atmosphere - Emirati machboos and grilled meats with cultural shows' },
-            { name: 'Em Sherif Sea Café', type: 'Lebanese ?????', emirate: 'Abu Dhabi', description: 'Corniche beachfront Lebanese - Comprehensive Arabic menu with mezze selection, indoor and outdoor terrace options' },
+            { name: 'Em Sherif Sea Cafï¿½', type: 'Lebanese ?????', emirate: 'Abu Dhabi', description: 'Corniche beachfront Lebanese - Comprehensive Arabic menu with mezze selection, indoor and outdoor terrace options' },
             { name: 'Charsi Restaurant', type: 'Afghan ????', emirate: 'Ajman', description: 'Authentic Shinwari Afghan cuisine - Live meat selection with Afghani Pulao and aromatic spices' }
         ]
     },
@@ -2400,7 +2400,7 @@ const diningCategories = {
             { name: 'Shimmers', type: 'Greek ?????', emirate: 'Dubai', description: 'Beachfront Greek cuisine with Arabian Gulf views - Jumeirah Beach access with fresh seafood grilled with Greek herbs' },
             { name: 'Azura Panoramic Lounge', type: 'International ?????', emirate: 'Abu Dhabi', description: 'St. Regis Nation Towers 74th floor - Highest dining in Abu Dhabi with 360-degree revolving restaurant views' },
             { name: 'SAL Saadiyat Island', type: 'Mediterranean ?????', emirate: 'Abu Dhabi', description: 'Beachfront Mediterranean with white sand beach access - Saadiyat Island cultural district with sunset terrace' },
-            { name: 'Café Del Mar Abu Dhabi', type: 'Mediterranean ?????', emirate: 'Abu Dhabi', description: 'Sunset dining with Mediterranean vibes - Beach club atmosphere with international DJs and Arabian Gulf views' },
+            { name: 'Cafï¿½ Del Mar Abu Dhabi', type: 'Mediterranean ?????', emirate: 'Abu Dhabi', description: 'Sunset dining with Mediterranean vibes - Beach club atmosphere with international DJs and Arabian Gulf views' },
             { name: 'Al Sakher (Ajman Saray)', type: 'Seafood ?????', emirate: 'Ajman', description: 'Overwater dining on stilts extending into Arabian Gulf - Traditional dhow boat transfers with fresh seafood and Emirati preparation' }
         ]
     },
@@ -2425,7 +2425,7 @@ const diningCategories = {
             <div class="modal-section">
                 <h4>Summer Benefits</h4>
                 <ul class="simple-included-list">
-                    <li>Constant 22°C climate control & premium air conditioning</li>
+                    <li>Constant 22ï¿½C climate control & premium air conditioning</li>
                     <li>Metro-connected access & covered walkways</li>
                     <li>Stroller-friendly pathways & baby changing facilities</li>
                     <li>Family prayer rooms & kids play areas</li>
@@ -2450,7 +2450,7 @@ const diningCategories = {
             <div class="experience-highlights">
                 <div class="highlight-card">
                     <h5>Ski Dubai</h5>
-                    <p>Real snow skiing and snowboarding in 18°C alpine conditions</p>
+                    <p>Real snow skiing and snowboarding in 18ï¿½C alpine conditions</p>
                 </div>
                 <div class="highlight-card">
                     <h5>Penguin Encounters</h5>
@@ -2474,7 +2474,7 @@ const diningCategories = {
 
             <div class="modal-section">
                 <h4>Climate & Comfort</h4>
-                <p><strong>Temperature:</strong> Main mall 20°C, Ski Dubai 18°C</p>
+                <p><strong>Temperature:</strong> Main mall 20ï¿½C, Ski Dubai 18ï¿½C</p>
                 <p><strong>Clothing:</strong> Winter gear provided for snow activities</p>
                 <p><strong>Summer Special:</strong> 40% off ski packages during peak heat season</p>
             </div>
@@ -2514,7 +2514,7 @@ const diningCategories = {
 
             <div class="modal-section">
                 <h4>Facilities</h4>
-                <p><strong>Temperature:</strong> Consistent 20°C throughout all courts</p>
+                <p><strong>Temperature:</strong> Consistent 20ï¿½C throughout all courts</p>
                 <p><strong>Accessibility:</strong> Metro-connected with covered walkways</p>
                 <p><strong>Summer Offer:</strong> 25% off cinema tickets and dining combos</p>
             </div>
@@ -2554,7 +2554,7 @@ const diningCategories = {
 
             <div class="modal-section">
                 <h4>Location Benefits</h4>
-                <p><strong>Temperature:</strong> 21°C with sea breeze circulation</p>
+                <p><strong>Temperature:</strong> 21ï¿½C with sea breeze circulation</p>
                 <p><strong>Views:</strong> Direct Marina and yacht views from dining areas</p>
                 </div>
 
@@ -2585,7 +2585,7 @@ modalContent['dubai-mall'] = {
         </div>
 
         <div class="modal-booking-section">
-            <h5>Temperature: 22°C - Perfect Climate Control</h5>
+            <h5>Temperature: 22ï¿½C - Perfect Climate Control</h5>
             <div class="booking-buttons">
                 <a href="https://dubai.platinumlist.net/event-tickets/house-of-hype-dubai-mall" class="btn btn-primary" target="_blank" rel="noopener">Book House of Hype</a>
                 <a href="https://dubai.platinumlist.net/event-tickets/dubai-ice-rink?ref=yjzkmgy&link=" class="btn btn-secondary" target="_blank" rel="noopener">Ice Rink Tickets</a>
@@ -2601,7 +2601,7 @@ modalContent['mall-emirates'] = {
         <div class="experience-highlights">
             <div class="highlight-card">
                 <h5>Ski Dubai</h5>
-                <p>Real snow skiing and snowboarding in 18°C alpine conditions</p>
+                <p>Real snow skiing and snowboarding in 18ï¿½C alpine conditions</p>
             </div>
             <div class="highlight-card">
                 <h5>Penguin Encounters</h5>
@@ -2614,7 +2614,7 @@ modalContent['mall-emirates'] = {
         </div>
 
         <div class="modal-booking-section">
-            <h5>Temperature: 18°C - Real Alpine Climate</h5>
+            <h5>Temperature: 18ï¿½C - Real Alpine Climate</h5>
             <div class="booking-buttons">
                 <a href="https://dubai.platinumlist.net/event-tickets/ski-dubai" class="btn btn-primary" target="_blank" rel="noopener">Book Ski Dubai</a>
                 <a href="https://dubai.platinumlist.net/event-tickets/ski-dubai-snow-premium-with-penguin-encounter" class="btn btn-secondary" target="_blank" rel="noopener">Penguin Encounters</a>
@@ -2643,7 +2643,7 @@ modalContent['ibn-battuta'] = {
         </div>
 
         <div class="modal-booking-section">
-            <h5>Temperature: 20°C - Cultural Comfort | Free Entry</h5>
+            <h5>Temperature: 20ï¿½C - Cultural Comfort | Free Entry</h5>
         </div>
 
         <div class="modal-guide-hint">
@@ -2671,7 +2671,7 @@ modalContent['marina-mall'] = {
         </div>
 
         <div class="modal-booking-section">
-            <h5>Temperature: 21°C - Marina Breeze | Free Entry</h5>
+            <h5>Temperature: 21ï¿½C - Marina Breeze | Free Entry</h5>
         </div>
 
         <div class="modal-guide-hint">
@@ -2964,21 +2964,21 @@ window.showHeatCategory = function(category, targetElement) {
                 {
                     name: 'Dubai Mall',
                     features: ['Worlds largest aquarium', 'VR Park gaming', 'Ice rink skating', 'Fashion Avenue luxury'],
-                    temp: '22°C',
+                    temp: '22ï¿½C',
                     discount: '30% OFF',
                     highlight: 'Aquarium + VR + Ice Rink'
                 },
                 {
                     name: 'Mall of the Emirates',
                     features: ['Ski Dubai snow experience', 'Luxury brand outlets', 'Cinema complex', 'Family entertainment'],
-                    temp: '18°C',
+                    temp: '18ï¿½C',
                     discount: '40% OFF',
                     highlight: 'Sub-zero Alpine Experience'
                 },
                 {
                     name: 'City Centre Mirdif',
                     features: ['Exclusive beach clubs', 'Premium shopping', 'Family zones', 'Covered walkways'],
-                    temp: '20°C',
+                    temp: '20ï¿½C',
                     discount: '25% OFF',
                     highlight: 'Beach Club Access'
                 }
@@ -2991,21 +2991,21 @@ window.showHeatCategory = function(category, targetElement) {
                 {
                     name: 'Louvre Abu Dhabi',
                     features: ['World-class art collection', 'Saadiyat Cultural District', 'Interactive exhibits', 'Educational programs'],
-                    temp: '21°C',
+                    temp: '21ï¿½C',
                     discount: '35% OFF',
                     highlight: 'Global Art Masterpieces'
                 },
                 {
                     name: 'Museum of the Future',
                     features: ['Futuristic exhibitions', 'Interactive technology', 'Climate innovation', 'Space exploration'],
-                    temp: '23°C',
+                    temp: '23ï¿½C',
                     discount: '20% OFF',
                     highlight: 'Tomorrows Technology Today'
                 },
                 {
                     name: 'Dubai Opera',
                     features: ['World-class performances', 'Cultural events', 'Premium dining', 'Architectural marvel'],
-                    temp: '22°C',
+                    temp: '22ï¿½C',
                     discount: '50% OFF',
                     highlight: 'Live Cultural Performances'
                 }
@@ -3018,21 +3018,21 @@ window.showHeatCategory = function(category, targetElement) {
                 {
                     name: 'Ski Dubai',
                     features: ['Sub-zero alpine experience', 'Penguin encounters', 'Snow activities', 'Winter sports'],
-                    temp: '-4°C',
+                    temp: '-4ï¿½C',
                     discount: '45% OFF',
                     highlight: 'Real Snow in the Desert'
                 },
                 {
                     name: 'CLYMB Abu Dhabi',
                     features: ['Indoor climbing walls', 'Skydiving simulator', 'Adventure courses', 'Fitness challenges'],
-                    temp: '19°C',
+                    temp: '19ï¿½C',
                     discount: '30% OFF',
                     highlight: 'Worlds Largest Climbing Wall'
                 },
                 {
                     name: 'Bounce Dubai',
                     features: ['Trampoline parks', 'Ninja courses', 'Basketball zones', 'Family activities'],
-                    temp: '20°C',
+                    temp: '20ï¿½C',
                     discount: '35% OFF',
                     highlight: 'Ultimate Trampoline Experience'
                 }
@@ -3126,7 +3126,7 @@ window.showDining = function(category, targetElement) {
             html += `
                 <div class="venue-card">
                     <h4>${venue.name}</h4>
-                    <p class="venue-type">${venue.type} • ${venue.emirate}</p>
+                    <p class="venue-type">${venue.type} ï¿½ ${venue.emirate}</p>
                     <p class="venue-description">${venue.description}</p>
                 </div>
             `;
@@ -3739,7 +3739,7 @@ async function fetchWeatherData() {
         const tempElement = widget.querySelector('.temp');
 
         if (!cityCoordinates[city]) {
-            tempElement.textContent = '--°';
+            tempElement.textContent = '--ï¿½';
             widget.classList.add('error');
             continue;
         }
@@ -3756,7 +3756,7 @@ async function fetchWeatherData() {
             if (response.ok) {
                 const data = await response.json();
                 const temperature = Math.round(data.main.temp);
-                tempElement.textContent = `${temperature}°C`;
+                tempElement.textContent = `${temperature}ï¿½C`;
                 widget.classList.remove('loading', 'error');
 
                 // Add weather icon if available
@@ -3778,7 +3778,7 @@ async function fetchWeatherData() {
                 'Ras Al Khaimah': 28,
                 'Fujairah': 30
             };
-            tempElement.textContent = `${fallbackTemps[city] || 30}°C`;
+            tempElement.textContent = `${fallbackTemps[city] || 30}ï¿½C`;
             widget.classList.remove('loading');
             widget.classList.add('error');
         }
@@ -3931,5 +3931,25 @@ function filterExperiences(category) {
     const experiencesSection = document.getElementById('experiences');
     if (experiencesSection) {
         experiencesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Progressive Disclosure - Toggle Emirates Section
+function toggleEmirates() {
+    const grid = document.querySelector('.emirates-grid');
+    const btn = document.getElementById('emiratesToggle');
+    const moreText = btn.querySelector('.see-more-text');
+    const lessText = btn.querySelector('.see-less-text');
+
+    if (grid.classList.contains('expanded')) {
+        // Collapse
+        grid.classList.remove('expanded');
+        moreText.style.display = '';
+        lessText.style.display = 'none';
+    } else {
+        // Expand
+        grid.classList.add('expanded');
+        moreText.style.display = 'none';
+        lessText.style.display = '';
     }
 }

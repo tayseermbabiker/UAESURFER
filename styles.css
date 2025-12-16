@@ -558,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
     border: 1px solid #e5e7eb;
     flex-shrink: 0;
-    color: #374151;
+    color: #111827;
     position: relative;
 }
 
@@ -575,7 +575,7 @@ a.info-card:hover {
 }
 
 a.info-card h3 {
-    color: #374151;
+    color: #111827;
 }
 
 /* Emirate card links */
@@ -714,7 +714,7 @@ a.emirate-card:hover {
 .info-card[data-modal="transport"],
 .info-card[data-modal="health"] {
     background: #ffffff;
-    color: #374151;
+    color: #111827;
 }
 
 .info-card h3 {
@@ -742,7 +742,7 @@ a.emirate-card:hover {
 
 .info-card h3 {
     font-weight: 600;
-    color: #374151;
+    color: #111827;
     margin: 0;
     font-size: 13px !important;
 }

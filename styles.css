@@ -38,7 +38,7 @@
     --purple-coral: #FF6B4A;   /* Vibrant sunset orange */
 
     /* Neutrals - Sand & Stone */
-    --neutral-50: #FDFCFA;     /* Pure white with warmth */
+    --neutral-50: #FFFFFF;     /* Pure white */
     --neutral-100: #F7F4F0;    /* Lightest sand */
     --neutral-200: #EDE6DD;    /* Light sand */
     --neutral-300: #D6C7B5;    /* Medium sand */
@@ -62,8 +62,8 @@
     --text-white: #FFFFFF;
 
     /* Background Colors */
-    --background: #FDFCFA;     /* Warm white */
-    --bg-primary: #FDFCFA;     /* Warm white */
+    --background: #FFFFFF;     /* Pure white */
+    --bg-primary: #FFFFFF;     /* Pure white */
     --bg-secondary: #F7F4F0;   /* Light sand */
     --bg-tertiary: #EDE6DD;    /* Light sand */
     --border-light: #D6C7B5;   /* Medium sand */
@@ -479,14 +479,10 @@ h1, h2, h3, h4, h5, h6 {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Section Styles with Glassmorphism */
+/* Section Styles */
 .section {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
     position: relative;
-}
-
-.section:nth-child(even) {
-    background: linear-gradient(180deg, rgba(247, 244, 240, 0.5) 0%, rgba(253, 252, 250, 0.8) 100%);
 }
 
 .section h2 {
@@ -505,7 +501,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Desktop section enhancements */
 @media (min-width: 1024px) {
     .section {
-        padding: 3rem 0;
+        padding: 2.5rem 0;
     }
 
     .section h2 {

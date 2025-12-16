@@ -1,73 +1,75 @@
 :root {
-    /* UAE-Inspired Enhanced Color Palette */
+    /* UAESurfer 2025 Pantone-Inspired Color Palette */
+    /* Cloud Dancer (2026) + Mocha Mousse (2025) + Deep Teal */
 
-    /* Primary Palette - Desert & Gold Tones with Sunset Enhancement */
-    --primary: #C8A882;        /* Warm desert gold - main brand color */
-    --primary-light: #E5D4B7;  /* Light desert sand */
-    --primary-dark: #A0865B;   /* Deep desert bronze */
+    /* Primary Palette - Mocha Mousse (Pantone 2025) */
+    --primary: #A47864;        /* Mocha Mousse - main brand color */
+    --primary-light: #C4A090;  /* Light mocha */
+    --primary-dark: #8A6050;   /* Deep mocha */
 
-    /* Secondary Palette - Arabian Blue Tones */
-    --secondary: #4A90B8;      /* Arabian gulf blue */
-    --secondary-light: #7AB3D3; /* Sky blue */
-    --secondary-dark: #2E5A7A;  /* Deep ocean blue */
+    /* Secondary Palette - Deep Teal for CTAs */
+    --secondary: #1A535C;      /* Deep teal - CTA color */
+    --secondary-light: #2A7A85; /* Light teal */
+    --secondary-dark: #0F3D44;  /* Dark teal */
 
-    /* Rich Gold Luxury Gradient - UAE Theme */
-    --gold-luxury: #D4AF37;    /* Rich gold */
-    --gold-warm: #C8A882;      /* Warm desert gold */
-    --gold-bright: #F5A623;    /* Bright sunset gold */
-    --gold-champagne: #FFB347; /* Champagne gold */
+    /* Accent Colors */
+    --accent-warm: #A47864;    /* Mocha for warm accents */
+    --accent-teal: #1A535C;    /* Teal for contrast */
+    --nature-primary: #2A7A85; /* Teal variation */
 
-    /* Enhanced with Sunset & Nature Accents */
-    --accent-warm: #F5A623;    /* Bright sunset yellow-orange for excitement */
-    --accent-sunset: #FF6B4A;  /* Vibrant sunset orange for hero areas */
-    --nature-primary: #6B8E5A; /* Desert plant green for eco-tourism */
+    /* CTA & Booking - Teal Theme */
+    --cta-primary: #1A535C;    /* Deep teal for primary CTAs */
+    --cta-secondary: #2A7A85;  /* Light teal for secondary CTAs */
+    --cta-success: #2A7A85;    /* Teal for confirmations */
 
-    /* CTA & Booking - UAE Gold Luxury Theme */
-    --cta-primary: #D4AF37;    /* Rich gold for primary CTAs */
-    --cta-secondary: #F5A623;  /* Bright gold for secondary CTAs */
-    --cta-success: #6B8E5A;    /* Nature green for confirmations */
+    /* Legacy variables (keeping for compatibility) */
+    --gold-luxury: #A47864;    /* Now mocha */
+    --gold-warm: #A47864;      /* Now mocha */
+    --gold-bright: #C4A090;    /* Light mocha */
+    --gold-champagne: #C4A090; /* Light mocha */
+    --summer-blue: #1A535C;    /* Now teal */
+    --cooling-mint: #2A7A85;   /* Light teal */
+    --purple-start: #A47864;   /* Now mocha */
+    --purple-mid: #A47864;     /* Now mocha */
+    --purple-bright: #C4A090;  /* Light mocha */
+    --purple-coral: #1A535C;   /* Now teal */
 
-    /* Cooling & Summer Theme */
-    --summer-blue: #0EA5E9;    /* Cooling theme */
-    --cooling-mint: #10B981;   /* Summer comfort */
-
-    /* Desert Glassmorphism Theme - Using existing desert gold palette */
-    --purple-start: #D4AF37;   /* Rich gold (reusing for consistency) */
-    --purple-mid: #C8A882;     /* Warm desert gold */
-    --purple-bright: #F5A623;  /* Bright sunset gold */
-    --purple-coral: #FF6B4A;   /* Vibrant sunset orange */
-
-    /* Neutrals - Sand & Stone */
+    /* Neutrals - Cloud Dancer Base */
     --neutral-50: #FFFFFF;     /* Pure white */
-    --neutral-100: #F7F4F0;    /* Lightest sand */
-    --neutral-200: #EDE6DD;    /* Light sand */
-    --neutral-300: #D6C7B5;    /* Medium sand */
-    --neutral-400: #B8A488;    /* Warm stone */
-    --neutral-500: #8B7B65;    /* Stone */
-    --neutral-600: #6B5B47;    /* Dark stone */
-    --neutral-700: #4D3F2F;    /* Deep stone */
-    --neutral-800: #2F2419;    /* Almost black stone */
-    --neutral-900: #1A140C;    /* Rich black */
+    --neutral-100: #F1EFE7;    /* Cloud Dancer (Pantone 2026) */
+    --neutral-200: #E8E4DA;    /* Light cloud */
+    --neutral-300: #D6D0C4;    /* Medium cloud */
+    --neutral-400: #B8B0A0;    /* Warm gray */
+    --neutral-500: #8B8578;    /* Stone */
+    --neutral-600: #5C574D;    /* Dark stone */
+    --neutral-700: #3D3A34;    /* Deep stone */
+    --neutral-800: #2D2D2D;    /* Charcoal */
+    --neutral-900: #1A1A1A;    /* Near black */
 
-    /* Semantic Colors - Using enhanced palette */
-    --success: #6B8E5A;        /* Nature green */
-    --warning: #F5A623;        /* Bright sunset yellow */
-    --error: #B85450;          /* Desert rose red */
-    --info: #4A90B8;          /* Arabian blue */
+    /* Semantic Colors */
+    --success: #2A7A85;        /* Teal */
+    --warning: #D4A459;        /* Warm gold */
+    --error: #B85450;          /* Soft red */
+    --info: #1A535C;           /* Deep teal */
 
     /* Text Colors */
-    --text-primary: #2F2419;   /* Rich dark stone */
-    --text-secondary: #6B5B47; /* Dark stone */
-    --text-muted: #8B7B65;     /* Stone */
+    --text-primary: #2D2D2D;   /* Charcoal */
+    --text-secondary: #5C574D; /* Dark stone */
+    --text-muted: #8B8578;     /* Stone */
     --text-white: #FFFFFF;
 
-    /* Background Colors */
-    --background: #FFFFFF;     /* Pure white */
-    --bg-primary: #FFFFFF;     /* Pure white */
-    --bg-secondary: #F7F4F0;   /* Light sand */
-    --bg-tertiary: #EDE6DD;    /* Light sand */
-    --border-light: #D6C7B5;   /* Medium sand */
-    --shadow-color: rgba(47, 36, 25, 0.12); /* Warm shadow */
+    /* Background Colors - Cloud Dancer */
+    --background: #F1EFE7;     /* Cloud Dancer */
+    --bg-primary: #F1EFE7;     /* Cloud Dancer */
+    --bg-secondary: #FFFFFF;   /* White for contrast */
+    --bg-tertiary: #E8E4DA;    /* Light cloud */
+    --border-light: #D6D0C4;   /* Medium cloud */
+    --shadow-color: rgba(45, 45, 45, 0.1); /* Neutral shadow */
+
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-shadow: rgba(45, 45, 45, 0.08);
 
     /* Typography - TripAdvisor inspired (Trip Sans alternatives) */
     --font-primary: 'Poppins', 'Mulish', 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -232,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -551,12 +553,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-card {
-    background: #ffffff;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius-md);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 16px var(--glass-shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     cursor: pointer;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--glass-border);
     flex-shrink: 0;
     color: #111827;
     position: relative;
@@ -793,7 +797,7 @@ a.emirate-card:hover {
 }
 
 .book-btn, .category-btn, .tab-btn {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     padding: var(--space-sm) var(--space-md);
@@ -807,7 +811,7 @@ a.emirate-card:hover {
 }
 
 .book-btn:hover, .category-btn:hover, .tab-btn:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: var(--secondary-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -855,12 +859,12 @@ a.emirate-card:hover {
     display: block !important;
 }
 
-/* See More Button */
+/* See More Button - Teal */
 .see-more-btn {
     display: block;
     margin: 30px auto 0;
     padding: 14px 32px;
-    background: linear-gradient(135deg, var(--gold-luxury) 0%, var(--gold-warm) 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     border-radius: 30px;
@@ -868,16 +872,27 @@ a.emirate-card:hover {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 15px rgba(26, 83, 92, 0.3);
 }
 
 .see-more-btn:hover {
+    background: var(--secondary-light);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 6px 20px rgba(26, 83, 92, 0.4);
 }
 
 .see-more-btn:active {
     transform: translateY(0);
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px var(--glass-shadow);
 }
 
 /* Experiences Grid - Emirates Pages */
@@ -1541,7 +1556,7 @@ a.emirate-card:hover {
     }
 
     .book-btn.purple {
-        background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%) !important;
+        background: var(--cta-primary) !important;
         color: white !important;
         border: none !important;
         margin: 0 !important;
@@ -1551,7 +1566,7 @@ a.emirate-card:hover {
     }
 
     .book-btn.green {
-        background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%) !important;
+        background: var(--secondary-light) !important;
         color: white !important;
         border: none !important;
         margin: 0 !important;
@@ -2150,7 +2165,7 @@ a.emirate-card:hover {
 }
 
 .product-btn {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -2289,7 +2304,7 @@ a.emirate-card:hover {
 }
 
 .product-btn.primary {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
 }
 
@@ -2300,7 +2315,7 @@ a.emirate-card:hover {
 }
 
 .product-btn.secondary {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
 }
 
@@ -2312,7 +2327,7 @@ a.emirate-card:hover {
 
 /* Beat the Heat Modal Button Styles */
 .btn.btn-primary, .btn.btn-secondary {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -2511,7 +2526,7 @@ a.emirate-card:hover {
     }
 
     .product-btn {
-        background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+        background: var(--cta-primary);
         color: white;
         border: none;
         font-size: 12px;
@@ -2621,14 +2636,14 @@ a.emirate-card:hover {
 }
 
 .main-tab-btn.active {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-bottom-color: transparent;
     border-radius: var(--radius-sm);
 }
 
 .main-tab-btn:hover {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-radius: var(--radius-sm);
 }
@@ -2711,7 +2726,7 @@ a.emirate-card:hover {
 }
 
 .search-flights-btn {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     padding: 16px 24px;
@@ -2787,13 +2802,13 @@ a.emirate-card:hover {
 }
 
 .category-tab-btn.active {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-color: transparent;
 }
 
 .category-tab-btn:hover {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-color: var(--primary);
 }
@@ -2966,7 +2981,7 @@ a.emirate-card:hover {
 }
 
 .hotel-book-btn {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border: none;
     padding: var(--space-md) var(--space-xl);
@@ -3030,13 +3045,13 @@ a.emirate-card:hover {
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-color: transparent;
 }
 
 .tab-btn:hover {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 70%, #FFB347 100%);
+    background: var(--cta-primary);
     color: white;
     border-color: var(--primary);
 }
@@ -5379,7 +5394,7 @@ img[loading="lazy"].loaded {
 
 /* Guide Hero - Desert Glassmorphism */
 .guide-hero {
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 30%, #F5A623 60%, #FF6B4A 100%) !important;
+    background: var(--cta-primary) !important;
     padding: 80px 20px 60px !important;
     margin-top: 60px !important;
     position: relative !important;

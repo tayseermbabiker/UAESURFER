@@ -118,7 +118,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-primary);
-    background: linear-gradient(135deg, #F1EFE7 0%, #E8E4DA 25%, #F1EFE7 50%, #E0DCD2 75%, #F1EFE7 100%);
+    background: linear-gradient(145deg, #F1EFE7 0%, #DED8CC 30%, #F1EFE7 50%, #C9C3B7 70%, #F1EFE7 100%);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -865,23 +865,23 @@ a.emirate-card:hover {
     display: block;
     margin: 30px auto 0;
     padding: 14px 32px;
-    background: rgba(211, 84, 0, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(211, 84, 0, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(211, 84, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(211, 84, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .see-more-btn:hover {
-    background: rgba(211, 84, 0, 0.95);
+    background: rgba(211, 84, 0, 0.75);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(211, 84, 0, 0.4);
+    box-shadow: 0 12px 40px rgba(211, 84, 0, 0.35);
 }
 
 .see-more-btn:active {

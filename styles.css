@@ -3372,61 +3372,122 @@ a.emirate-card:hover {
 
 /* Summer Travel Callout */
 .summer-callout-section {
-    padding: var(--space-lg) 0;
-    background: #fafafa;
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 50%, #FF6B35 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 .summer-callout {
     display: flex;
     align-items: center;
     gap: var(--space-lg);
-    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
-    border: 2px solid #f0c14b;
-    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
     padding: var(--space-lg) var(--space-xl);
-    box-shadow: 0 4px 16px rgba(240, 193, 75, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Premium metallic light sweep */
+.summer-callout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.08) 25%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.08) 75%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    animation: premiumSweep 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes premiumSweep {
+    0% {
+        left: -75%;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        left: 125%;
+        opacity: 1;
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        left: 125%;
+    }
 }
 
 .summer-callout-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 .summer-callout-content {
     flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .summer-callout-content h3 {
     margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: #333;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .summer-callout-content p {
     margin: 0;
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.summer-callout-content strong {
+    color: #fff;
+    font-weight: 700;
 }
 
 .summer-callout-btn {
     flex-shrink: 0;
-    background: linear-gradient(135deg, #f0c14b 0%, #e8a317 100%);
-    color: #333;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    background: #fff;
+    color: #e85a71;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(240, 193, 75, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
 }
 
 .summer-callout-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(240, 193, 75, 0.4);
-    background: linear-gradient(135deg, #e8a317 0%, #d4940f 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    color: #d4456a;
 }
 
 @media (max-width: 768px) {
@@ -3434,6 +3495,10 @@ a.emirate-card:hover {
         flex-direction: column;
         text-align: center;
         padding: var(--space-lg);
+    }
+
+    .summer-callout-content h3 {
+        font-size: 1.25rem;
     }
 
     .summer-callout-btn {

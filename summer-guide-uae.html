@@ -29,6 +29,138 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+    .places-table-wrapper {
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+
+    .places-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .places-table th {
+        background: #7C8BD4;
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    .places-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        vertical-align: top;
+    }
+
+    .places-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .places-table tr:hover {
+        background: #f8f9fa;
+    }
+
+    .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .tip-card {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 4px solid #7C8BD4;
+    }
+
+    .tip-card h4 {
+        margin: 0 0 0.75rem 0;
+        color: #333;
+        font-size: 1rem;
+    }
+
+    .tip-card p {
+        margin: 0;
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .itinerary-days {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .day-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .day-header {
+        background: #7C8BD4;
+        color: white;
+        padding: 1rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .day-number {
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .day-title {
+        font-size: 0.95rem;
+        opacity: 0.9;
+    }
+
+    .day-activities {
+        padding: 1.5rem;
+        margin: 0;
+        list-style: none;
+    }
+
+    .day-activities li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+        color: #444;
+    }
+
+    .day-activities li:last-child {
+        border-bottom: none;
+    }
+
+    .faq-item {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+    }
+
+    .faq-item h4 {
+        margin: 0 0 0.75rem 0;
+        color: #333;
+    }
+
+    .faq-item p {
+        margin: 0;
+        color: #555;
+        line-height: 1.6;
+    }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -58,20 +190,442 @@
     </section>
 
     <!-- Main Content -->
-    <section class="guide-content">
+    <main class="guide-content">
         <div class="container">
 
-            <!-- Coming Soon Notice -->
-            <div class="content-section" style="text-align: center; padding: 60px 20px;">
-                <h2>Full Guide Coming Soon</h2>
-                <p style="font-size: 1.1rem; color: #555; max-width: 600px; margin: 20px auto;">We're putting together a comprehensive summer travel guide with timing strategies, hotel deals, indoor attractions, and heat-safe itineraries.</p>
-                <p style="margin-top: 30px;">
-                    <a href="index.html" class="cta-button">Back to Homepage</a>
+            <!-- The Real Truth Section -->
+            <section class="content-section">
+                <h2>The Real Truth About UAE Summers</h2>
+                <p>Let's be honest: June through September in the UAE is genuinely hot. We're talking 40-48°C (104-118°F) with humidity that can make it feel even worse. Most travel guides will tell you to avoid this period entirely.</p>
+
+                <p>But here's what they don't tell you: <strong>the UAE was built for this</strong>. While outdoor activities become limited to early mornings and late evenings, the indoor infrastructure is world-class. Air-conditioned malls the size of small cities, indoor ski slopes, aquariums, theme parks, and restaurants that rival anywhere on earth.</p>
+
+                <div class="highlight-box">
+                    <strong>The summer secret:</strong> Hotel prices drop 30-50%, tourist crowds vanish, and you'll have attractions practically to yourself. A 5-star hotel that costs $400/night in December might be $150 in August.
+                </div>
+            </section>
+
+            <!-- Who Should Visit Section -->
+            <section class="content-section">
+                <h2>Is Summer Right for You?</h2>
+                <p class="section-intro">Summer visits work brilliantly for some travelers, poorly for others</p>
+
+                <div class="glance-grid">
+                    <div class="glance-item" style="background: #e8f5e9;">
+                        <strong>✓ Summer is GREAT if you...</strong>
+                        <span>Want luxury hotels at budget prices</span>
+                    </div>
+                    <div class="glance-item" style="background: #e8f5e9;">
+                        <strong>✓ Summer is GREAT if you...</strong>
+                        <span>Prefer indoor attractions & shopping</span>
+                    </div>
+                    <div class="glance-item" style="background: #e8f5e9;">
+                        <strong>✓ Summer is GREAT if you...</strong>
+                        <span>Hate crowds and long queues</span>
+                    </div>
+                    <div class="glance-item" style="background: #e8f5e9;">
+                        <strong>✓ Summer is GREAT if you...</strong>
+                        <span>Are traveling with kids (summer breaks!)</span>
+                    </div>
+                    <div class="glance-item" style="background: #ffebee;">
+                        <strong>✗ Skip summer if you...</strong>
+                        <span>Want beach days & outdoor sightseeing</span>
+                    </div>
+                    <div class="glance-item" style="background: #ffebee;">
+                        <strong>✗ Skip summer if you...</strong>
+                        <span>Plan to do desert safaris mid-day</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Temperature Reality Section -->
+            <section class="content-section">
+                <h2>Summer Temperature Reality</h2>
+                <p class="section-intro">What to actually expect month by month</p>
+
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Average High</th>
+                                <th>Humidity</th>
+                                <th>Verdict</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>June</strong></td>
+                                <td>39-41°C (102-106°F)</td>
+                                <td>50-60%</td>
+                                <td>Hot but manageable. Ramadan may overlap.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>July</strong></td>
+                                <td>41-43°C (106-109°F)</td>
+                                <td>55-65%</td>
+                                <td>Peak heat begins. Plan indoor activities.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>August</strong></td>
+                                <td>42-45°C (108-113°F)</td>
+                                <td>60-70%</td>
+                                <td>Hottest month. Best hotel deals.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>September</strong></td>
+                                <td>38-41°C (100-106°F)</td>
+                                <td>55-65%</td>
+                                <td>Heat starts easing. Good value period.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Pro tip:</strong> Late September is the sweet spot - temperatures drop, but prices haven't fully recovered to peak season rates yet.
+                </div>
+            </section>
+
+            <!-- Hotel Savings Section -->
+            <section class="content-section">
+                <h2>Summer Hotel Savings</h2>
+                <p class="section-intro">Real price comparisons between peak and summer seasons</p>
+
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Hotel Category</th>
+                                <th>Peak Season (Dec-Feb)</th>
+                                <th>Summer (Jul-Aug)</th>
+                                <th>You Save</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Budget (3-star)</strong></td>
+                                <td>$80-120/night</td>
+                                <td>$40-70/night</td>
+                                <td>~40%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mid-range (4-star)</strong></td>
+                                <td>$150-250/night</td>
+                                <td>$80-140/night</td>
+                                <td>~45%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Luxury (5-star)</strong></td>
+                                <td>$300-500/night</td>
+                                <td>$150-280/night</td>
+                                <td>~50%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ultra-luxury</strong></td>
+                                <td>$800-1500/night</td>
+                                <td>$400-750/night</td>
+                                <td>~50%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin-top: 20px;">Many hotels also offer summer packages including free meals, spa credits, kids stay free deals, and complimentary activities. Check directly with hotels - their summer offers often aren't listed on booking sites.</p>
+            </section>
+
+            <!-- Indoor Attractions Section -->
+            <section class="content-section">
+                <h2>50+ Indoor Attractions</h2>
+                <p class="section-intro">Stay cool while experiencing world-class entertainment</p>
+
+                <h3 style="margin-top: 30px; color: #333;">🎢 Theme Parks & Entertainment</h3>
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Attraction</th>
+                                <th>Location</th>
+                                <th>Why Visit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>IMG Worlds of Adventure</strong></td>
+                                <td>Dubai</td>
+                                <td>World's largest indoor theme park. Marvel, Cartoon Network zones.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ferrari World</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Home to world's fastest roller coaster. Full day of rides.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Warner Bros. World</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Immersive themed zones: Gotham, Metropolis, Bedrock.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ski Dubai</strong></td>
+                                <td>Dubai</td>
+                                <td>Real snow, penguins, and skiing at -4°C inside a mall.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Snow Abu Dhabi</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Largest snow park in the world. Perfect summer escape.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>CLYMB Abu Dhabi</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>World's tallest indoor climbing wall & biggest skydiving flight chamber.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 30px; color: #333;">🏛️ Museums & Culture</h3>
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Attraction</th>
+                                <th>Location</th>
+                                <th>Why Visit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Louvre Abu Dhabi</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>World-class art museum with stunning architecture.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Museum of the Future</strong></td>
+                                <td>Dubai</td>
+                                <td>Immersive experience of future technology and possibilities.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dubai Aquarium & Underwater Zoo</strong></td>
+                                <td>Dubai Mall</td>
+                                <td>10-million litre tank with sharks, rays, and 33,000 animals.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>National Aquarium</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Middle East's largest aquarium with 46,000 animals.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Etihad Museum</strong></td>
+                                <td>Dubai</td>
+                                <td>UAE's founding history in a beautifully designed space.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 30px; color: #333;">🛍️ Mega Malls</h3>
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Mall</th>
+                                <th>Location</th>
+                                <th>Highlights</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Dubai Mall</strong></td>
+                                <td>Downtown Dubai</td>
+                                <td>World's most visited mall. Aquarium, ice rink, 1,200+ shops.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mall of the Emirates</strong></td>
+                                <td>Dubai</td>
+                                <td>Home to Ski Dubai. Premium shopping and dining.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Yas Mall</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Connected to theme parks. Great entertainment hub.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Abu Dhabi Mall</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Central location, family-friendly with kids' zones.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 style="margin-top: 30px; color: #333;">🍽️ Food Experiences</h3>
+                <div class="places-table-wrapper">
+                    <table class="places-table">
+                        <thead>
+                            <tr>
+                                <th>Experience</th>
+                                <th>Location</th>
+                                <th>What to Expect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>At.mosphere</strong></td>
+                                <td>Burj Khalifa, Dubai</td>
+                                <td>World's highest restaurant. Stunning views with fine dining.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ossiano</strong></td>
+                                <td>Atlantis, Dubai</td>
+                                <td>Underwater dining surrounded by marine life.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Time Out Market</strong></td>
+                                <td>Dubai</td>
+                                <td>Best of Dubai's restaurants under one roof.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Emirates Palace Tea</strong></td>
+                                <td>Abu Dhabi</td>
+                                <td>Afternoon tea with 24-karat gold cappuccino.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Daily Itinerary Section -->
+            <section class="content-section">
+                <h2>Heat-Smart Daily Schedule</h2>
+                <p class="section-intro">How to structure your summer days for maximum comfort</p>
+
+                <div class="itinerary-days">
+                    <div class="day-card">
+                        <div class="day-header">
+                            <span class="day-number">Early Morning</span>
+                            <span class="day-title">6:00 AM - 9:00 AM</span>
+                        </div>
+                        <ul class="day-activities">
+                            <li><strong>The Golden Hours:</strong> Best time for outdoor activities</li>
+                            <li>Beach walks, outdoor photography</li>
+                            <li>Heritage area visits (Al Fahidi, Al Seef)</li>
+                            <li>Outdoor markets before they close</li>
+                            <li>Pool time at your hotel</li>
+                        </ul>
+                    </div>
+
+                    <div class="day-card">
+                        <div class="day-header">
+                            <span class="day-number">Midday</span>
+                            <span class="day-title">10:00 AM - 5:00 PM</span>
+                        </div>
+                        <ul class="day-activities">
+                            <li><strong>Stay Indoors:</strong> Peak heat hours</li>
+                            <li>Mall exploring, shopping</li>
+                            <li>Indoor theme parks</li>
+                            <li>Museums and cultural sites</li>
+                            <li>Spa treatments, hotel amenities</li>
+                            <li>Long lunch at a nice restaurant</li>
+                        </ul>
+                    </div>
+
+                    <div class="day-card">
+                        <div class="day-header">
+                            <span class="day-number">Evening</span>
+                            <span class="day-title">6:00 PM - Late</span>
+                        </div>
+                        <ul class="day-activities">
+                            <li><strong>Outdoor Revival:</strong> Temperature drops to bearable</li>
+                            <li>Dubai Fountain shows (every 30 mins from 6pm)</li>
+                            <li>Rooftop bars and restaurants</li>
+                            <li>Sunset dhow cruises</li>
+                            <li>Evening desert safaris (cooler sand!)</li>
+                            <li>Night markets and outdoor dining</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Survival Tips Section -->
+            <section class="content-section">
+                <h2>Summer Survival Tips</h2>
+                <p class="section-intro">Practical advice from people who live here year-round</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>💧 Hydration is Serious</h4>
+                        <p>Drink 3-4 liters of water daily minimum. Carry a water bottle everywhere. You'll sweat more than you realize even in air conditioning.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🧴 Sun Protection</h4>
+                        <p>SPF 50+ is essential, even for short outdoor walks. The UV index regularly hits "extreme" levels. Reapply every 2 hours.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>👗 Dress Smart</h4>
+                        <p>Loose, light-colored, breathable fabrics. Carry a light cardigan for over-air-conditioned malls (they're freezing!).</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🚗 Car Strategy</h4>
+                        <p>Use valet parking or covered parking when possible. A car in direct sun becomes an oven. Use a windshield sunshade.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>⏰ Timing Everything</h4>
+                        <p>Plan outdoor activities before 9am or after 6pm. Book restaurants for midday to have somewhere cool to escape to.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🏨 Hotel Matters</h4>
+                        <p>Choose hotels with good pools, beach access (for early morning), and indoor amenities. You'll spend more time there than usual.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="content-section faq-section">
+                <h2>Summer Travel FAQ</h2>
+
+                <div class="faq-item">
+                    <h4>Is it actually dangerous to visit in summer?</h4>
+                    <p>No, it's not dangerous if you're sensible. The UAE is fully equipped for its climate - excellent healthcare, air conditioning everywhere, clean water. Just don't go hiking in the desert at noon. Millions of residents live here year-round without issue.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Can I still go to the beach?</h4>
+                    <p>Yes, but timing is everything. Early morning (6-9am) beach visits are lovely - the water is actually warm and pleasant. By 10am it becomes uncomfortable. Some beach clubs have shaded areas and misting systems.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Are all attractions open in summer?</h4>
+                    <p>Most attractions operate year-round, though some outdoor venues have reduced hours. Indoor attractions like malls, theme parks, and museums maintain normal hours. Some actually extend evening hours in summer.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What about desert safaris?</h4>
+                    <p>Evening desert safaris still run and are popular. The sand is actually cooler after sunset. Morning safaris are less common in summer. Avoid any mid-day desert activities.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Is Ramadan during summer?</h4>
+                    <p>Ramadan moves each year (lunar calendar). Check the dates for your travel year. During Ramadan, eating/drinking in public during daylight is restricted, but hotels and many venues have screened areas for tourists.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Are the deals really that good?</h4>
+                    <p>Yes. Beyond hotel discounts of 30-50%, you'll find summer promotions everywhere: spa packages, restaurant deals, attraction combos. Dubai Summer Surprises festival (July-August) has major sales and entertainment.</p>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="content-section" style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #FFD93D 0%, #FF9F1C 100%); border-radius: 16px; margin-top: 40px;">
+                <h2 style="color: #333;">Ready to Beat the Heat?</h2>
+                <p style="font-size: 1.1rem; color: #444; max-width: 600px; margin: 15px auto;">Take our quiz to get personalized recommendations for your UAE trip, whether you're visiting in summer or any other season.</p>
+                <p style="margin-top: 25px;">
+                    <a href="index.html#quiz" class="cta-button" style="background: #333; color: #fff;">Take the Quiz</a>
                 </p>
-            </div>
+            </section>
 
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer>

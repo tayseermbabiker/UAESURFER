@@ -3370,197 +3370,78 @@ a.emirate-card:hover {
     }
 }
 
-/* Beat the Heat Section */
-.beat-heat-section {
-    background: linear-gradient(135deg, #deb887 0%, #ffb347 25%, #ff8c69 50%, #6495ed 75%, #4169e1 100%);
-    padding: var(--space-md) 0;
+/* Summer Travel Callout */
+.summer-callout-section {
+    padding: var(--space-lg) 0;
+    background: #fafafa;
 }
 
-.beat-heat-header {
-    text-align: center;
-    margin-bottom: var(--space-lg);
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius-md);
-    padding: var(--space-sm) var(--space-md);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.beat-heat-header h2 {
-    color: #ffffff !important;
-    margin-bottom: var(--space-sm);
-    font-size: 2rem;
-    font-weight: 600;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
-    letter-spacing: -0.02em;
-}
-
-.heat-subtitle {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 400;
-}
-
-/* Comfort Banner */
-.comfort-banner {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-lg);
-    margin: var(--space-xl) 0;
-    flex-wrap: wrap;
-}
-
-.temp-indicator, .discount-indicator, .family-indicator {
+.summer-callout {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    background: white;
-    padding: var(--space-md) var(--space-lg);
-    border-radius: var(--radius-lg);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border: 2px solid var(--primary);
-}
-
-.temp-icon, .discount-icon, .family-icon {
-    background: var(--primary);
-    color: white;
-    padding: var(--space-xs) var(--space-sm);
-    border-radius: var(--radius-sm);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.temp-text, .discount-text, .family-text {
-    font-weight: 600;
-    color: var(--text-primary);
-}
-
-/* Indoor Escapes Grid */
-.indoor-escapes-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-lg);
-    margin-top: var(--space-xl);
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    border: 2px solid #f0c14b;
+    border-radius: 16px;
+    padding: var(--space-lg) var(--space-xl);
+    box-shadow: 0 4px 16px rgba(240, 193, 75, 0.15);
 }
 
-.escape-card {
-    background: white;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+.summer-callout-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
 }
 
-.escape-card:hover {
+.summer-callout-content {
+    flex: 1;
+}
+
+.summer-callout-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.summer-callout-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.summer-callout-btn {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #f0c14b 0%, #e8a317 100%);
+    color: #333;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(240, 193, 75, 0.3);
+}
+
+.summer-callout-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(240, 193, 75, 0.4);
+    background: linear-gradient(135deg, #e8a317 0%, #d4940f 100%);
 }
 
-.escape-image {
-    position: relative;
-    height: 150px;
-    overflow: hidden;
+@media (max-width: 768px) {
+    .summer-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-lg);
+    }
+
+    .summer-callout-btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-.escape-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.escape-card:hover .escape-image img {
-    transform: scale(1.05);
-}
-
-
-.location-badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    white-space: nowrap;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.category-badge {
-    position: absolute;
-    top: var(--space-sm);
-    left: var(--space-sm);
-    background: linear-gradient(135deg, #6f42c1, #8b5cf6);
-    color: white;
-    padding: 3px 8px;
-    border-radius: var(--radius-sm);
-    font-size: 9px;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.escape-content {
-    padding: var(--space-md);
-}
-
-.escape-content h3 {
-    color: var(--text-primary);
-    margin-bottom: var(--space-xs);
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.escape-description {
-    color: var(--text-secondary);
-    margin-bottom: var(--space-sm);
-    line-height: 1.4;
-    font-size: 0.85rem;
-}
-
-.escape-features {
-    display: flex;
-    gap: var(--space-xs);
-    flex-wrap: wrap;
-}
-
-.feature-badge {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 4px 6px;
-    border-radius: var(--radius-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-
-.feature-badge.family {
-    background: #dcfce7;
-    color: #166534;
-}
-
-.feature-badge.discount {
-    background: #fef3c7;
-    color: #92400e;
-}
-
-.feature-badge.luxury {
-    background: #fae8ff;
-    color: #86198f;
-}
-
-.feature-badge.premium {
-    background: #f3f4f6;
-    color: #374151;
-}
 
 .tab-text {
     font-weight: 600;
@@ -3845,45 +3726,6 @@ a.emirate-card:hover {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .beat-heat-header h2 {
-        font-size: 1.8rem;
-        background: linear-gradient(135deg, #ff8a00 0%, #ff6b35 30%, #ff4757 70%, #c44569 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 1px 2px rgba(255,255,255,0.2));
-    }
-
-    .heat-subtitle {
-        font-size: 1rem;
-    }
-
-    .indoor-escapes-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md);
-    }
-
-    .escape-image {
-        height: 120px;
-    }
-
-    .escape-content {
-        padding: var(--space-sm);
-    }
-
-    .escape-content h3 {
-        font-size: 1rem;
-    }
-
-    .escape-description {
-        font-size: 0.8rem;
-    }
-
-    .feature-badge {
-        font-size: 9px;
-        padding: 3px 5px;
-    }
-
     .tab-stat {
         font-size: 10px;
     }

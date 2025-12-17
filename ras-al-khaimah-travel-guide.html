@@ -114,10 +114,10 @@
     </script>
 
     <style>
-        .rak-accent { color: #C86D31; }
-        .rak-bg { background-color: #C86D31; }
+        .rak-accent { color: #6b4c96; }
+        .rak-bg { background-color: #6b4c96; }
         .guide-hero {
-            background: linear-gradient(135deg, rgba(200, 109, 49, 0.9), rgba(139, 69, 19, 0.9)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&auto=format&fit=crop&q=90') center/cover;
+            background: linear-gradient(135deg, rgba(85, 108, 230, 0.9), rgba(107, 76, 150, 0.9)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=1920&auto=format&fit=crop&q=90') center/cover;
         }
         .at-glance-grid {
             display: grid;
@@ -130,11 +130,11 @@
             padding: 20px;
             border-radius: 12px;
             text-align: center;
-            border-left: 4px solid #C86D31;
+            border-left: 4px solid #6b4c96;
         }
         .glance-item strong {
             display: block;
-            color: #C86D31;
+            color: #333;
             font-size: 0.9rem;
             margin-bottom: 5px;
             text-transform: uppercase;
@@ -151,7 +151,7 @@
             font-size: 0.95rem;
         }
         .places-table th {
-            background: #C86D31;
+            background: #7C8BD4;
             color: white;
             padding: 14px 12px;
             text-align: left;
@@ -163,11 +163,11 @@
             vertical-align: top;
         }
         .places-table tr:hover {
-            background: #fdf6f1;
+            background: #f8f5fc;
         }
         .places-table .place-name {
             font-weight: 600;
-            color: #C86D31;
+            color: #333;
         }
         .places-table .place-desc {
             color: #555;
@@ -175,13 +175,13 @@
         }
         .rating { color: #f5a623; }
         .insider-tips {
-            background: linear-gradient(135deg, #fdf6f1 0%, #fff9f5 100%);
+            background: linear-gradient(135deg, #f8f5fc 0%, #faf8ff 100%);
             border-radius: 16px;
             padding: 30px;
             margin: 30px 0;
         }
         .insider-tips h3 {
-            color: #C86D31;
+            color: #333;
             margin-bottom: 20px;
         }
         .insider-tips ul {
@@ -192,41 +192,17 @@
             padding: 12px 0;
             padding-left: 30px;
             position: relative;
-            border-bottom: 1px solid rgba(200,109,49,0.1);
+            border-bottom: 1px solid rgba(107,76,150,0.1);
         }
         .insider-tips li:before {
             content: "→";
             position: absolute;
             left: 0;
-            color: #C86D31;
+            color: #333;
             font-weight: bold;
         }
         .insider-tips li:last-child {
             border-bottom: none;
-        }
-        .itinerary-box {
-            background: white;
-            border: 2px solid #C86D31;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 30px 0;
-        }
-        .itinerary-box h3 {
-            color: #C86D31;
-            margin-bottom: 20px;
-        }
-        .day-plan {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #e0e0e0;
-        }
-        .day-plan:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .day-plan strong {
-            color: #C86D31;
         }
         /* Collapsible FAQ Styles */
         .faq-accordion {
@@ -241,11 +217,11 @@
             transition: all 0.3s ease;
         }
         .faq-accordion details:hover {
-            border-color: #C86D31;
+            border-color: #6b4c96;
         }
         .faq-accordion details[open] {
-            border-color: #C86D31;
-            box-shadow: 0 4px 12px rgba(200,109,49,0.15);
+            border-color: #6b4c96;
+            box-shadow: 0 4px 12px rgba(107,76,150,0.15);
         }
         .faq-accordion summary {
             padding: 18px 24px;
@@ -264,7 +240,7 @@
         .faq-accordion summary::after {
             content: "+";
             font-size: 1.5rem;
-            color: #C86D31;
+            color: #333;
             font-weight: 300;
             transition: transform 0.3s ease;
         }
@@ -272,7 +248,7 @@
             content: "−";
         }
         .faq-accordion summary:hover {
-            background: #fdf6f1;
+            background: #f8f5fc;
         }
         .faq-accordion .faq-answer {
             padding: 0 24px 20px 24px;
@@ -297,6 +273,63 @@
                 padding: 15px 18px;
                 font-size: 0.95rem;
             }
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .tip-item {
+            background: #f8f9fa;
+            padding: 1.25rem;
+            border-radius: 8px;
+        }
+        .tip-item strong {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .tip-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .tips-grid,
+            .itinerary-days {
+                grid-template-columns: 1fr;
+            }
+        }
+        .itinerary-days {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .itinerary-day {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        .itinerary-day h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 18px;
+        }
+        .itinerary-day ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .itinerary-day li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+        }
+        .itinerary-day li:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
@@ -439,31 +472,71 @@
                 </div>
             </section>
 
-            <!-- Insider Tips -->
-            <div class="insider-tips">
-                <h3>Insider Tips for Ras Al Khaimah</h3>
-                <ul>
-                    <li><strong>Jebel Jais at sunrise:</strong> Visit around 6-7am for the clearest views and coolest temperatures. Bring a jacket—it's genuinely chilly at altitude year-round</li>
-                    <li><strong>Split stay strategy:</strong> Many European visitors do 3 nights Dubai + 3-4 nights RAK beach resort for the best of both worlds</li>
-                    <li><strong>Rent a car:</strong> Essential for mountain exploration and beach-hopping. RAK roads are excellent and uncongested</li>
-                    <li><strong>Ghost village timing:</strong> Visit Jazirat Al Hamra in the late afternoon for dramatic lighting on the abandoned buildings</li>
-                    <li><strong>Flamingo season:</strong> November to March is best for flamingo sightings at the mangroves—arrive around 4-5pm</li>
-                </ul>
-            </div>
+            <!-- Insider Tips Section -->
+            <section class="content-section insider-tips">
+                <h2>Insider Tips (From Someone Who Lives Here)</h2>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <strong>Jebel Jais at sunrise</strong>
+                        <p>Visit around 6-7am for the clearest views and coolest temperatures. Bring a jacket—it's genuinely chilly at altitude year-round.</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>Split stay strategy</strong>
+                        <p>Many European visitors do 3 nights Dubai + 3-4 nights RAK beach resort for the best of both worlds.</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>Rent a car</strong>
+                        <p>Essential for mountain exploration and beach-hopping. RAK roads are excellent and uncongested.</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>Ghost village timing</strong>
+                        <p>Visit Jazirat Al Hamra in the late afternoon for dramatic lighting on the abandoned buildings.</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>Flamingo season</strong>
+                        <p>November to March is best for flamingo sightings at the mangroves—arrive around 4-5pm.</p>
+                    </div>
+                    <div class="tip-item">
+                        <strong>Beach club access</strong>
+                        <p>Most resort beach clubs offer day passes for non-guests. Great option for day-trippers from Dubai.</p>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Suggested Itinerary -->
-            <div class="itinerary-box">
-                <h3>Suggested RAK Itinerary: 2-3 Days</h3>
-                <div class="day-plan">
-                    <strong>Day 1 – Mountain Adventure:</strong> Drive up Jebel Jais for sunrise views, try the zipline or hiking trails, lunch at the mountain restaurant, sunset at Dhayah Fort with 360° views
+            <!-- Sample Itinerary Section -->
+            <section class="content-section">
+                <h2>Ras Al Khaimah Itineraries</h2>
+                <p>Whether you're doing a <strong>day trip from Dubai</strong> or staying longer:</p>
+
+                <div class="itinerary-days">
+                    <div class="itinerary-day">
+                        <h3>1 Day (Day Trip)</h3>
+                        <ul>
+                            <li>Morning: Drive to Jebel Jais for sunrise views</li>
+                            <li>Late morning: Try the zipline or hiking trails</li>
+                            <li>Lunch: Mountain restaurant with views</li>
+                            <li>Afternoon: Dhayah Fort for 360° panorama</li>
+                            <li>Evening: Drive back to Dubai</li>
+                        </ul>
+                    </div>
+                    <div class="itinerary-day">
+                        <h3>2-3 Days</h3>
+                        <ul>
+                            <li>Day 1: Jebel Jais adventure, Dhayah Fort sunset</li>
+                            <li>Day 2: Al Marjan beaches, Jazirat Al Hamra ghost village, Al Hamra Marina dinner</li>
+                            <li>Day 3: Mangrove kayaking, resort relaxation, optional desert safari</li>
+                        </ul>
+                    </div>
+                    <div class="itinerary-day">
+                        <h3>4+ Days</h3>
+                        <ul>
+                            <li>Add: Full day at beach resort with spa</li>
+                            <li>Add: Wadi Shawka hiking or camping</li>
+                            <li>Add: Day trip to Fujairah east coast</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day-plan">
-                    <strong>Day 2 – Beach & Heritage:</strong> Morning at Al Marjan Island beaches, explore Jazirat Al Hamra ghost village for photos, evening at Al Hamra Marina for dinner with drinks
-                </div>
-                <div class="day-plan">
-                    <strong>Day 3 – Nature & Relax:</strong> Kayak through the mangroves for flamingo spotting, afternoon at your resort pool/beach, optional desert safari at sunset
-                </div>
-            </div>
+            </section>
 
             <!-- FAQ Section -->
             <section class="content-section">

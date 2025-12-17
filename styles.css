@@ -1,75 +1,81 @@
 :root {
-    /* UAESurfer 2025 Pantone-Inspired Color Palette */
-    /* Cloud Dancer (2026) + Mocha Mousse (2025) + Deep Teal */
+    /* UAESurfer Purple-Pink Accent Theme */
+    /* Clean & Minimal with Purple-Pink CTA Gradient */
 
-    /* Primary Palette - Mocha Mousse (Pantone 2025) */
-    --primary: #A47864;        /* Mocha Mousse - main brand color */
-    --primary-light: #C4A090;  /* Light mocha */
-    --primary-dark: #8A6050;   /* Deep mocha */
+    /* Primary Palette - Purple */
+    --primary: #6b4c96;        /* Purple - main brand color */
+    --primary-light: #8b5cf6;  /* Light purple */
+    --primary-dark: #556ce6;   /* Blue-purple */
 
-    /* Secondary Palette - Deep Teal for CTAs */
-    --secondary: #1A535C;      /* Deep teal - CTA color */
-    --secondary-light: #2A7A85; /* Light teal */
-    --secondary-dark: #0F3D44;  /* Dark teal */
+    /* Secondary Palette - Pink */
+    --secondary: #e085f5;      /* Pink */
+    --secondary-light: #f24966; /* Coral pink */
+    --secondary-dark: #d946ef;  /* Deep pink */
 
     /* Accent Colors */
-    --accent-warm: #A47864;    /* Mocha for warm accents */
-    --accent-teal: #1A535C;    /* Teal for contrast */
-    --nature-primary: #2A7A85; /* Teal variation */
+    --accent-warm: #f24966;    /* Coral for warm accents */
+    --accent-purple: #6b4c96;  /* Purple for contrast */
+    --accent-sunset: #e085f5;  /* Pink for highlights */
+    --nature-primary: #8b5cf6; /* Light purple variation */
 
-    /* CTA & Booking - Teal Theme */
-    --cta-primary: #1A535C;    /* Deep teal for primary CTAs */
-    --cta-secondary: #2A7A85;  /* Light teal for secondary CTAs */
-    --cta-success: #2A7A85;    /* Teal for confirmations */
+    /* CTA & Booking - Purple-Pink Theme */
+    --cta-primary: #6b4c96;    /* Purple for primary CTAs */
+    --cta-secondary: #e085f5;  /* Pink for secondary CTAs */
+    --cta-success: #10b981;    /* Green for confirmations */
 
     /* Legacy variables (keeping for compatibility) */
-    --gold-luxury: #A47864;    /* Now mocha */
-    --gold-warm: #A47864;      /* Now mocha */
-    --gold-bright: #C4A090;    /* Light mocha */
-    --gold-champagne: #C4A090; /* Light mocha */
-    --summer-blue: #1A535C;    /* Now teal */
-    --cooling-mint: #2A7A85;   /* Light teal */
-    --purple-start: #A47864;   /* Now mocha */
-    --purple-mid: #A47864;     /* Now mocha */
-    --purple-bright: #C4A090;  /* Light mocha */
-    --purple-coral: #1A535C;   /* Now teal */
+    --gold-luxury: #6b4c96;    /* Now purple */
+    --gold-warm: #556ce6;      /* Blue-purple */
+    --gold-bright: #8b5cf6;    /* Light purple */
+    --gold-champagne: #c4b5fd; /* Very light purple */
+    --summer-blue: #556ce6;    /* Blue-purple */
+    --cooling-mint: #e085f5;   /* Pink */
+    --purple-start: #556ce6;   /* Blue-purple */
+    --purple-mid: #6b4c96;     /* Purple */
+    --purple-bright: #e085f5;  /* Pink */
+    --purple-coral: #f24966;   /* Coral pink */
 
-    /* Neutrals - Cloud Dancer Base */
+    /* Warm Sand Accent - Emirates & Modals */
+    --sand-accent: #C9B99A;    /* Warm sand */
+    --sand-light: #FAF8F5;     /* Light sand background */
+    --sand-dark: #B5A88F;      /* Darker sand */
+
+    /* Neutrals - Clean White Base */
     --neutral-50: #FFFFFF;     /* Pure white */
-    --neutral-100: #F1EFE7;    /* Cloud Dancer (Pantone 2026) */
-    --neutral-200: #E8E4DA;    /* Light cloud */
-    --neutral-300: #D6D0C4;    /* Medium cloud */
-    --neutral-400: #B8B0A0;    /* Warm gray */
-    --neutral-500: #8B8578;    /* Stone */
-    --neutral-600: #5C574D;    /* Dark stone */
-    --neutral-700: #3D3A34;    /* Deep stone */
-    --neutral-800: #2D2D2D;    /* Charcoal */
-    --neutral-900: #1A1A1A;    /* Near black */
+    --neutral-100: #FAFAFA;    /* Off white */
+    --neutral-200: #F5F5F5;    /* Light gray */
+    --neutral-300: #E8E8E8;    /* Medium light */
+    --neutral-400: #BDBDBD;    /* Medium gray */
+    --neutral-500: #9E9E9E;    /* Gray */
+    --neutral-600: #757575;    /* Dark gray */
+    --neutral-700: #616161;    /* Darker gray */
+    --neutral-800: #424242;    /* Charcoal */
+    --neutral-900: #212121;    /* Near black */
 
     /* Semantic Colors */
-    --success: #2A7A85;        /* Teal */
-    --warning: #D4A459;        /* Warm gold */
-    --error: #B85450;          /* Soft red */
-    --info: #1A535C;           /* Deep teal */
+    --success: #2EC4B6;        /* Bright teal */
+    --warning: #F4B942;        /* Vibrant gold */
+    --error: #E63946;          /* Crisp red */
+    --info: #00A896;           /* Vibrant teal */
 
     /* Text Colors */
-    --text-primary: #2D2D2D;   /* Charcoal */
-    --text-secondary: #5C574D; /* Dark stone */
-    --text-muted: #8B8578;     /* Stone */
+    --text-primary: #212121;   /* Near black */
+    --text-secondary: #616161; /* Dark gray */
+    --text-muted: #9E9E9E;     /* Gray */
     --text-white: #FFFFFF;
 
-    /* Background Colors - Cloud Dancer */
-    --background: #F1EFE7;     /* Cloud Dancer */
-    --bg-primary: #F1EFE7;     /* Cloud Dancer */
+    /* Background Colors - Clean & Fresh */
+    --background: #FAFAFA;     /* Off white */
+    --bg-primary: #FAFAFA;     /* Off white */
     --bg-secondary: #FFFFFF;   /* White for contrast */
-    --bg-tertiary: #E8E4DA;    /* Light cloud */
-    --border-light: #D6D0C4;   /* Medium cloud */
-    --shadow-color: rgba(45, 45, 45, 0.1); /* Neutral shadow */
+    --bg-tertiary: #F5F5F5;    /* Light gray */
+    --border-light: #E8E8E8;   /* Medium light */
+    --shadow-color: rgba(0, 0, 0, 0.08); /* Clean shadow */
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.3);
-    --glass-shadow: rgba(45, 45, 45, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: rgba(0, 0, 0, 0.05);
 
     /* Typography - TripAdvisor inspired (Trip Sans alternatives) */
     --font-primary: 'Poppins', 'Mulish', 'DM Sans', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
@@ -118,8 +124,7 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-primary);
-    background: linear-gradient(145deg, #F1EFE7 0%, #DED8CC 30%, #F1EFE7 50%, #C9C3B7 70%, #F1EFE7 100%);
-    background-attachment: fixed;
+    background: #FAFAFA;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -222,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
-    background: rgba(253, 252, 250, 0.95);
+    background: rgba(250, 250, 250, 0.95);
 }
 
 .header .container {
@@ -235,7 +240,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
-    background: var(--cta-primary);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -274,8 +279,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-list a:hover,
     .nav-links a:hover {
-        background: rgba(212, 175, 55, 0.1);
-        color: var(--cta-primary);
+        background: rgba(107, 76, 150, 0.1);
+        color: #6b4c96;
     }
 }
 
@@ -354,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     .nav-list a:hover,
     .nav-links a:hover {
         color: var(--primary);
-        background: rgba(102, 126, 234, 0.08);
+        background: rgba(0, 168, 150, 0.08);
     }
 
     .menu-toggle.active span:nth-child(1) {
@@ -424,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section - Rich Purple Gradient with Sunset Touches */
 .hero {
     height: 60vh;
-    background: linear-gradient(135deg, var(--purple-start) 0%, var(--purple-mid) 30%, var(--purple-bright) 70%, var(--accent-sunset) 85%, var(--purple-coral) 100%);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -442,8 +447,8 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 80%, rgba(245, 166, 35, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 107, 74, 0.3) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(224, 133, 245, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(85, 108, 230, 0.3) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -463,22 +468,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-button {
     display: inline-block;
-    background: var(--cta-primary);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: white;
     padding: var(--space-md) var(--space-xl);
     border-radius: var(--radius-lg);
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-    transition: all 0.2s ease;
-    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(107, 76, 150, 0.35);
     border: 2px solid transparent;
 }
 
 .cta-button:hover {
-    background: var(--cta-secondary);
+    background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 6px 30px rgba(107, 76, 150, 0.45);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -493,12 +498,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--text-primary);
+    color: #212121;
     line-height: 1.3;
-    background: linear-gradient(135deg, #D4AF37 0%, #F5A623 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* Desktop section enhancements */
@@ -798,23 +799,23 @@ a.emirate-card:hover {
 }
 
 .book-btn, .category-btn, .tab-btn {
-    background: var(--cta-primary);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: white;
     border: none;
     padding: var(--space-sm) var(--space-md);
     border-radius: var(--radius-sm);
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     margin-top: var(--space-md);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 15px rgba(107, 76, 150, 0.35);
 }
 
 .book-btn:hover, .category-btn:hover, .tab-btn:hover {
-    background: var(--secondary-light);
+    background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 6px 25px rgba(107, 76, 150, 0.45);
 }
 
 /* Emirates Grid */
@@ -860,28 +861,26 @@ a.emirate-card:hover {
     display: block !important;
 }
 
-/* See More Button - Glassmorphism + Burnt Orange */
+/* See More Button - Subtle Outline Style */
 .see-more-btn {
     display: block;
     margin: 30px auto 0;
-    padding: 14px 32px;
-    background: rgba(211, 84, 0, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 28px;
+    background: transparent;
+    color: #6b4c96;
+    border: 2px solid #6b4c96;
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(211, 84, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .see-more-btn:hover {
-    background: rgba(211, 84, 0, 0.75);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(211, 84, 0, 0.35);
+    background: rgba(107, 76, 150, 0.08);
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    transform: translateY(-1px);
 }
 
 .see-more-btn:active {
@@ -905,14 +904,16 @@ a.emirate-card:hover {
     gap: var(--space-md);
 }
 
-/* Summer Section - Rich Purple with Nature Accents */
+/* Summer Section - Purple-Pink Gradient */
 .summer-section {
-    background: linear-gradient(135deg, var(--purple-start) 0%, var(--nature-primary) 40%, var(--accent-sunset) 70%, var(--purple-bright) 100%);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: white;
 }
 
 .summer-section h2 {
     color: white;
+    -webkit-text-fill-color: white;
+    background: none;
 }
 
 .cooling-features {
@@ -983,17 +984,18 @@ a.emirate-card:hover {
     background: transparent;
     color: var(--text-secondary);
     border: none;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     padding: var(--space-md) var(--space-lg);
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 0;
+    transition: all 0.3s ease;
 }
 
 .tab-btn.active, .tab-btn:hover {
-    color: var(--primary);
-    border-bottom-color: var(--primary);
-    background: transparent;
+    color: #6b4c96;
+    border-bottom-color: #8b5cf6;
+    background: rgba(107, 76, 150, 0.08);
 }
 
 .dining-content {
@@ -1026,6 +1028,7 @@ a.emirate-card:hover {
     max-height: 80vh;
     overflow-y: auto;
     box-shadow: var(--shadow-lg);
+    border-top: 4px solid var(--sand-accent);
 }
 
 .modal-header {
@@ -1036,7 +1039,7 @@ a.emirate-card:hover {
     align-items: center;
     position: sticky;
     top: 0;
-    background: var(--background);
+    background: var(--sand-light);
     z-index: 10;
 }
 
@@ -1728,6 +1731,8 @@ a.emirate-card:hover {
     gap: 8px 10px !important;
     margin: 0 !important;
     padding: 12px 16px 12px 16px !important;
+    background: var(--sand-light) !important;
+    border-top: 3px solid var(--sand-accent) !important;
 }
 
 .card-description {
@@ -1984,7 +1989,7 @@ a.emirate-card:hover {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 15% 25%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 15% 25%, rgba(0, 168, 150, 0.08) 0%, transparent 50%),
         radial-gradient(circle at 85% 75%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
     pointer-events: none;
 }
@@ -1995,7 +2000,7 @@ a.emirate-card:hover {
     font-weight: 600;
     margin-top: 0;
     margin-bottom: var(--space-2xl);
-    background: linear-gradient(135deg, var(--purple-start), var(--purple-mid));
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2061,7 +2066,7 @@ a.emirate-card:hover {
 
 .product-card.featured {
     border: 2px solid var(--cta-primary);
-    background: linear-gradient(135deg, var(--background) 0%, rgba(102, 126, 234, 0.02) 100%);
+    background: linear-gradient(135deg, var(--background) 0%, rgba(0, 168, 150, 0.02) 100%);
 }
 
 .product-card.bundle {
@@ -2180,7 +2185,7 @@ a.emirate-card:hover {
     display: block;
     width: 100%;
     margin-top: 0.5rem;
-    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 168, 150, 0.3);
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2206,7 +2211,7 @@ a.emirate-card:hover {
 
 .product-btn:hover {
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 16px 48px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 16px 48px rgba(0, 168, 150, 0.2);
 }
 
 .product-header {
@@ -2330,7 +2335,7 @@ a.emirate-card:hover {
 
 /* Beat the Heat Modal Button Styles */
 .btn.btn-primary, .btn.btn-secondary {
-    background: var(--cta-primary);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -2341,7 +2346,7 @@ a.emirate-card:hover {
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 20px rgba(107, 76, 150, 0.35);
     margin: 8px 8px 8px 0;
     text-align: center;
     position: relative;
@@ -2351,9 +2356,9 @@ a.emirate-card:hover {
 }
 
 .btn.btn-primary:hover, .btn.btn-secondary:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 30px rgba(107, 76, 150, 0.45);
     text-decoration: none;
     color: white;
 }
@@ -2541,7 +2546,7 @@ a.emirate-card:hover {
         margin-top: 0.3rem;
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 6px 24px rgba(102, 126, 234, 0.3);
+        box-shadow: 0 6px 24px rgba(0, 168, 150, 0.3);
         position: relative;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -2567,7 +2572,7 @@ a.emirate-card:hover {
 
     .product-btn:hover {
         transform: scale(1.05) translateY(-2px);
-        box-shadow: 0 12px 36px rgba(102, 126, 234, 0.2);
+        box-shadow: 0 12px 36px rgba(0, 168, 150, 0.2);
     }
 
     .product-icon {
@@ -2743,17 +2748,17 @@ a.emirate-card:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.3);
 }
 
 .search-flights-btn:hover {
     background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.4);
 }
 
 .search-flights-btn:active {
     transform: translateY(1px);
-    box-shadow: 0 1px 4px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 168, 150, 0.3);
 }
 
 .flight-protip,
@@ -2997,13 +3002,13 @@ a.emirate-card:hover {
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 168, 150, 0.3);
 }
 
 .hotel-book-btn:hover {
     background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 168, 150, 0.4);
     text-decoration: none;
     color: white;
 }
@@ -3033,12 +3038,13 @@ a.emirate-card:hover {
     justify-content: center;
 }
 
-.tab-btn {
+.dining-tabs .tab-btn,
+.hotel-category-tabs .tab-btn {
     background: var(--bg-secondary);
     border: 1px solid var(--border-light);
     padding: var(--space-sm) var(--space-md);
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-secondary);
     cursor: pointer;
     border-radius: var(--radius-md);
@@ -3047,16 +3053,19 @@ a.emirate-card:hover {
     flex-shrink: 0;
 }
 
-.tab-btn.active {
-    background: var(--cta-primary);
+.dining-tabs .tab-btn.active,
+.hotel-category-tabs .tab-btn.active {
+    background: #6b4c96;
     color: white;
     border-color: transparent;
+    box-shadow: 0 4px 12px rgba(107, 76, 150, 0.25);
 }
 
-.tab-btn:hover {
-    background: var(--cta-primary);
-    color: white;
-    border-color: var(--primary);
+.dining-tabs .tab-btn:hover,
+.hotel-category-tabs .tab-btn:hover {
+    background: rgba(107, 76, 150, 0.1);
+    color: #6b4c96;
+    border-color: #6b4c96;
 }
 
 .dining-content {
@@ -4017,24 +4026,25 @@ img[loading="lazy"].loaded {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--purple-start) 0%, var(--purple-mid) 100%);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: var(--text-white);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 24px rgba(107, 76, 150, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--purple-start);
-    border: 2px solid var(--purple-start);
+    color: #6b4c96;
+    border: 2px solid #8b5cf6;
 }
 
 .btn-secondary:hover {
-    background: var(--purple-start);
-    color: var(--text-white);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    color: white;
+    border-color: transparent;
     transform: translateY(-2px);
 }
 
@@ -4050,12 +4060,12 @@ img[loading="lazy"].loaded {
 
     .btn-primary:hover {
         transform: translateY(-3px);
-        box-shadow: 0 12px 32px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 12px 32px rgba(0, 168, 150, 0.4);
     }
 
     .btn-secondary:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+        box-shadow: 0 8px 24px rgba(0, 168, 150, 0.2);
     }
 }
 
@@ -4246,7 +4256,7 @@ img[loading="lazy"].loaded {
 
 /* Why UAE Box */
 .why-uae-box {
-    background: linear-gradient(135deg, var(--purple-start) 0%, var(--purple-mid) 100%);
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
     color: var(--text-white);
     padding: 2.5rem;
     border-radius: var(--radius-md);
@@ -4359,7 +4369,7 @@ img[loading="lazy"].loaded {
 
     .quiz-option:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+        box-shadow: 0 8px 24px rgba(244, 185, 66, 0.3);
     }
 }
 
@@ -4389,11 +4399,11 @@ img[loading="lazy"].loaded {
 }
 
 .quiz-option:hover {
-    background: linear-gradient(135deg, #D4AF37 0%, #A0865B 100%);
+    background: linear-gradient(135deg, #F4B942 0%, #D4A030 100%);
     color: var(--text-white);
     border-color: transparent;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 12px rgba(244, 185, 66, 0.3);
 }
 
 .quiz-emoji {
@@ -4538,7 +4548,7 @@ img[loading="lazy"].loaded {
 
 /* Guide Hero Section */
 .guide-hero {
-    background: linear-gradient(135deg, #D4AF37 0%, #A0865B 100%);
+    background: linear-gradient(135deg, #F4B942 0%, #D4A030 100%);
     color: white;
     padding: 50px 20px 40px;
     text-align: center;
@@ -4574,7 +4584,7 @@ img[loading="lazy"].loaded {
 
 .tldr-box {
     background: #f7f9fc;
-    border-left: 4px solid #D4AF37;
+    border-left: 4px solid #F4B942;
     padding: 25px;
     margin: 0 auto;
     border-radius: 8px;
@@ -4584,7 +4594,7 @@ img[loading="lazy"].loaded {
 .tldr-box h2 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #D4AF37;
+    color: #F4B942;
     font-size: 22px;
     font-weight: 600;
 }
@@ -4592,7 +4602,7 @@ img[loading="lazy"].loaded {
 .tldr-box h3 {
     margin-top: 0;
     margin-bottom: 15px;
-    color: #D4AF37;
+    color: #F4B942;
     font-size: 22px;
     font-weight: 600;
 }
@@ -4614,7 +4624,7 @@ img[loading="lazy"].loaded {
     content: "✓";
     position: absolute;
     left: -20px;
-    color: #D4AF37;
+    color: #F4B942;
     font-weight: bold;
 }
 
@@ -4731,7 +4741,7 @@ img[loading="lazy"].loaded {
 }
 
 .faq-item h3 {
-    color: #D4AF37;
+    color: #F4B942;
     margin-bottom: 15px;
     font-size: 18px;
     font-weight: 600;
@@ -4781,7 +4791,7 @@ img[loading="lazy"].loaded {
 
 .related-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 8px 20px rgba(244, 185, 66, 0.25);
 }
 
 .related-card img {
@@ -4819,7 +4829,7 @@ img[loading="lazy"].loaded {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #D4AF37 0%, #A0865B 100%);
+    background: linear-gradient(135deg, #F4B942 0%, #D4A030 100%);
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -4847,7 +4857,7 @@ img[loading="lazy"].loaded {
     display: inline-block;
     padding: 15px 40px;
     background: white;
-    color: #D4AF37;
+    color: #F4B942;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -5413,7 +5423,7 @@ img[loading="lazy"].loaded {
     bottom: 0;
     background:
         radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(244, 185, 66, 0.3) 0%, transparent 50%),
         radial-gradient(circle at 50% 80%, rgba(245, 166, 35, 0.25) 0%, transparent 40%),
         radial-gradient(circle at 70% 10%, rgba(255, 255, 255, 0.2) 0%, transparent 30%);
     pointer-events: none;
@@ -5486,7 +5496,7 @@ img[loading="lazy"].loaded {
 .tldr-box {
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
     border: 2px solid #e5e7eb !important;
-    border-left: 6px solid #D4AF37 !important;
+    border-left: 6px solid #F4B942 !important;
     padding: 32px !important;
     margin: 0 auto 48px !important;
     border-radius: 16px !important;
@@ -5528,7 +5538,7 @@ img[loading="lazy"].loaded {
     margin: 0 !important;
     font-size: 15px !important;
     color: #374151 !important;
-    border-left: 3px solid #D4AF37 !important;
+    border-left: 3px solid #F4B942 !important;
 }
 
 .tldr-box li::before {
@@ -5538,7 +5548,7 @@ img[loading="lazy"].loaded {
     justify-content: center !important;
     width: 22px !important;
     height: 22px !important;
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 100%) !important;
+    background: linear-gradient(135deg, #F4B942 0%, #FFD166 100%) !important;
     color: white !important;
     border-radius: 50% !important;
     font-size: 12px !important;
@@ -5644,7 +5654,7 @@ img[loading="lazy"].loaded {
     background: #f9fafb !important;
     padding: 20px 24px !important;
     border-radius: 12px !important;
-    border-left: 4px solid #D4AF37 !important;
+    border-left: 4px solid #F4B942 !important;
     line-height: 1.7 !important;
     margin: 0 !important;
     font-size: 15px !important;
@@ -5666,7 +5676,7 @@ img[loading="lazy"].loaded {
 }
 
 .practical-links li a {
-    color: #D4AF37 !important;
+    color: #F4B942 !important;
     text-decoration: none !important;
     font-weight: 500 !important;
     border-bottom: 1px solid transparent !important;
@@ -5674,7 +5684,7 @@ img[loading="lazy"].loaded {
 }
 
 .practical-links li a:hover {
-    border-bottom-color: #D4AF37 !important;
+    border-bottom-color: #F4B942 !important;
 }
 
 @media (min-width: 1024px) {
@@ -5735,7 +5745,7 @@ img[loading="lazy"].loaded {
     left: 0 !important;
     width: 4px !important;
     height: 100% !important;
-    background: linear-gradient(180deg, #D4AF37 0%, #C8A882 100%) !important;
+    background: linear-gradient(180deg, #F4B942 0%, #FFD166 100%) !important;
     opacity: 0 !important;
     transition: opacity 0.3s ease !important;
 }
@@ -5744,7 +5754,7 @@ img[loading="lazy"].loaded {
 .dining-link:hover {
     transform: translateY(-4px) !important;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
-    border-color: #D4AF37 !important;
+    border-color: #F4B942 !important;
 }
 
 .category-link:hover::before,
@@ -5755,7 +5765,7 @@ img[loading="lazy"].loaded {
 .category-link .icon {
     font-size: 12px !important;
     font-weight: 600 !important;
-    color: #D4AF37 !important;
+    color: #F4B942 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.05em !important;
 }
@@ -5798,19 +5808,19 @@ img[loading="lazy"].loaded {
 .cta-button {
     display: inline-block !important;
     padding: 16px 32px !important;
-    background: linear-gradient(135deg, #D4AF37 0%, #C8A882 100%) !important;
+    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%) !important;
     color: white !important;
     text-decoration: none !important;
     border-radius: 12px !important;
     font-weight: 600 !important;
     font-size: 16px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(107, 76, 150, 0.35) !important;
 }
 
 .cta-button:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 8px 20px rgba(107, 76, 150, 0.45) !important;
 }
 
 @media (min-width: 1024px) {

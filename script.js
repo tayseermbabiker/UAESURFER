@@ -3921,11 +3921,11 @@ function handleQuizSelection(type) {
 // ===================================
 // EXPERIENCE FILTER FUNCTION
 // ===================================
-function filterExperiences(category) {
+function filterExperiences(category, btn) {
     // Update active tab
     const tabs = document.querySelectorAll('.experience-filter-tabs .category-tab-btn');
     tabs.forEach(tab => tab.classList.remove('active'));
-    event.target.classList.add('active');
+    if (btn) btn.classList.add('active');
 
     // Get all experience cards
     const cards = document.querySelectorAll('.experience-card');

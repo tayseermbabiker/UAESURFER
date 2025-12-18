@@ -3927,25 +3927,39 @@ function filterExperiences(category, btn) {
     tabs.forEach(tab => tab.classList.remove('active'));
     if (btn) btn.classList.add('active');
 
-    // Get all experience cards
+    // Get scroll container and all experience cards
+    const scroll = document.querySelector('.experience-scroll');
     const cards = document.querySelectorAll('.experience-card');
+
+    // Add filtering class to expand and show all matches
+    scroll.classList.add('filtering');
 
     // Show/hide cards based on category
     cards.forEach(card => {
         const categories = card.getAttribute('data-category');
 
         if (category === 'all' || (categories && categories.includes(category))) {
-            card.style.display = '';
+            card.classList.remove('filter-hidden');
+            card.classList.add('filter-visible');
         } else {
-            card.style.display = 'none';
+            card.classList.add('filter-hidden');
+            card.classList.remove('filter-visible');
         }
     });
+}
 
-    // Scroll into view smoothly
-    const experiencesSection = document.getElementById('experiences');
-    if (experiencesSection) {
-        experiencesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+function clearExperienceFilter() {
+    const scroll = document.querySelector('.experience-scroll');
+    const cards = document.querySelectorAll('.experience-card');
+
+    scroll.classList.remove('filtering');
+    cards.forEach(card => {
+        card.classList.remove('filter-hidden', 'filter-visible');
+    });
+
+    // Remove active from all filter tabs
+    const tabs = document.querySelectorAll('.experience-filter-tabs .category-tab-btn');
+    tabs.forEach(tab => tab.classList.remove('active'));
 }
 
 // Progressive Disclosure - Toggle Emirates Section

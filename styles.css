@@ -886,8 +886,29 @@ a.emirate-card:hover {
     display: none !important;
 }
 
+/* Desktop: show only 3 experiences (1 row), hide 4th and 5th */
+@media (min-width: 1024px) {
+    .experience-scroll .experience-card:nth-child(4),
+    .experience-scroll .experience-card:nth-child(5) {
+        display: none !important;
+    }
+    .experience-scroll.expanded .experience-card:nth-child(4),
+    .experience-scroll.expanded .experience-card:nth-child(5) {
+        display: flex !important;
+    }
+}
+
 .experience-scroll.expanded .experience-card.hidden-experience {
     display: flex !important;
+}
+
+/* Experience Filtering - override all hiding when filtering */
+.experience-scroll.filtering .experience-card.filter-visible {
+    display: flex !important;
+}
+
+.experience-scroll.filtering .experience-card.filter-hidden {
+    display: none !important;
 }
 
 /* Progressive Disclosure - Hotels (show first row = 3, hide rest) */

@@ -842,13 +842,42 @@ a.emirate-card:hover {
     display: flex !important;
 }
 
-/* Mobile: Show only 2 emirates (1 row) - hide 3rd card on mobile */
+/* Mobile: Show only 2 cards per section */
 @media (max-width: 767px) {
+    /* Emirates - show 2, hide 3rd */
     .emirates-grid .emirate-card:nth-child(3) {
         display: none !important;
     }
     .emirates-grid.expanded .emirate-card:nth-child(3) {
         display: flex !important;
+    }
+
+    /* Experiences - show 2, hide 3rd-5th */
+    .experience-scroll .experience-card:nth-child(3),
+    .experience-scroll .experience-card:nth-child(4),
+    .experience-scroll .experience-card:nth-child(5) {
+        display: none !important;
+    }
+    .experience-scroll.expanded .experience-card:nth-child(3),
+    .experience-scroll.expanded .experience-card:nth-child(4),
+    .experience-scroll.expanded .experience-card:nth-child(5) {
+        display: flex !important;
+    }
+
+    /* Hotels - show 2, hide 3rd */
+    .hotels-grid .hotel-card:nth-child(3) {
+        display: none !important;
+    }
+    .hotels-grid.expanded .hotel-card:nth-child(3) {
+        display: block !important;
+    }
+
+    /* Dining - show 2, hide 3rd+ */
+    .venues-list .venue-card:nth-child(n+3) {
+        display: none !important;
+    }
+    .venues-list.expanded .venue-card:nth-child(n+3) {
+        display: block !important;
     }
 }
 

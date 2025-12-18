@@ -107,6 +107,14 @@
     box-sizing: border-box;
 }
 
+/* Responsive Utility Classes */
+.mobile-only { display: inline; }
+.desktop-only { display: none; }
+@media (min-width: 768px) {
+    .mobile-only { display: none; }
+    .desktop-only { display: inline; }
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -834,6 +842,16 @@ a.emirate-card:hover {
     display: flex !important;
 }
 
+/* Mobile: Show only 2 emirates (1 row) - hide 3rd card on mobile */
+@media (max-width: 767px) {
+    .emirates-grid .emirate-card:nth-child(3) {
+        display: none !important;
+    }
+    .emirates-grid.expanded .emirate-card:nth-child(3) {
+        display: flex !important;
+    }
+}
+
 /* Progressive Disclosure - Hidden Experiences */
 .experience-card.hidden-experience {
     display: none !important;
@@ -1437,6 +1455,9 @@ a.emirate-card:hover {
     .info-card {
         width: 170px !important;
         min-height: 75px !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(107, 76, 150, 0.2) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     }
 
     .card-icon {

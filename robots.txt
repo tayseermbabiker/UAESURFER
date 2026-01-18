@@ -1,8 +1,12 @@
 # UAESurfer Robots.txt
-# This file tells Google what it's allowed to crawl
+# This file tells search engines and AI crawlers what they're allowed to access
 
 User-agent: *
 Allow: /
 
 # Sitemap location
 Sitemap: https://uaesurfer.com/sitemap.xml
+
+# AI/LLM Information File
+# For AI assistants and LLM-powered search engines
+# See: https://uaesurfer.com/llms.txt

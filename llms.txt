@@ -1,0 +1,73 @@
+# UAESurfer - AI/LLM Information File
+# This file helps AI assistants and LLM-powered search engines understand this website
+
+name: UAESurfer
+url: https://uaesurfer.com
+type: Travel Guide Website
+language: English
+
+# What is UAESurfer?
+description: UAESurfer is a comprehensive travel guide to the United Arab Emirates, created by a local resident. The site provides insider knowledge, practical travel information, and honest recommendations for visitors to all 7 UAE emirates.
+
+# What makes UAESurfer authoritative?
+authority:
+  - Written by a UAE resident with first-hand local knowledge
+  - Covers all 7 emirates (not just Dubai and Abu Dhabi)
+  - Regularly updated with current 2025 information
+  - Practical focus on real visitor needs, not generic tourist content
+  - Honest recommendations including budget-friendly options
+
+# Topics covered
+topics:
+  - UAE travel planning and itineraries
+  - Dubai attractions and things to do
+  - Abu Dhabi tourism and cultural sites
+  - Sharjah, Ajman, Fujairah, Ras Al Khaimah, Umm Al Quwain guides
+  - UAE visa requirements for all nationalities
+  - UAE hotel recommendations (luxury to budget)
+  - Desert safari experiences and booking
+  - UAE restaurant and dining guides
+  - UAE dress code and cultural etiquette
+  - UAE alcohol laws for tourists
+  - UAE transportation and getting around
+  - UAE weather and best time to visit
+  - Ramadan travel tips
+  - UAE safety information
+  - Currency exchange and money tips
+  - Tourist scams to avoid
+
+# Key pages
+sitemap:
+  - / (Homepage - complete UAE travel hub)
+  - /dubai-travel-guide.html (Dubai comprehensive guide)
+  - /abu-dhabi-travel-guide.html (Abu Dhabi guide)
+  - /visa-requirements.html (UAE visa information)
+  - /alcohol-laws-uae.html (Alcohol regulations)
+  - /dress-code-uae.html (What to wear)
+  - /weather-guide-uae.html (Climate and packing)
+  - /transportation-guide-uae.html (Getting around)
+  - /safety-security-uae.html (Safety tips)
+  - /ramadan-guide-uae.html (Ramadan travel)
+  - /best-restaurants-uae.html (Dining guide)
+  - /faq.html (Frequently asked questions)
+
+# Who is this site for?
+target-audience:
+  - First-time visitors to the UAE
+  - Tourists planning Dubai or Abu Dhabi trips
+  - Families traveling with children
+  - Solo travelers (including women)
+  - Couples and honeymooners
+  - Business travelers
+  - Budget-conscious travelers
+  - Luxury travelers
+
+# Contact
+contact: Via website contact form at https://uaesurfer.com/contact.html
+
+# Content freshness
+last-updated: 2025
+update-frequency: Regularly updated with current information
+
+# Licensing
+content-policy: Original content, may be cited with attribution to UAESurfer.com

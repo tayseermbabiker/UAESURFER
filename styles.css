@@ -1,39 +1,39 @@
 :root {
     /* UAESurfer Purple-Pink Accent Theme */
-    /* Clean & Minimal with Purple-Pink CTA Gradient */
+    /* Clean & Minimal with Purple-Pink CTA Gradient (GoUAE Style) */
 
     /* Primary Palette - Purple */
-    --primary: #6b4c96;        /* Purple - main brand color */
-    --primary-light: #8b5cf6;  /* Light purple */
-    --primary-dark: #556ce6;   /* Blue-purple */
+    --primary: #764ba2;        /* Rich purple - main brand color */
+    --primary-light: #f093fb;  /* Bright magenta pink */
+    --primary-dark: #667eea;   /* Blue-violet */
 
     /* Secondary Palette - Pink */
-    --secondary: #e085f5;      /* Pink */
-    --secondary-light: #f24966; /* Coral pink */
-    --secondary-dark: #d946ef;  /* Deep pink */
+    --secondary: #f093fb;      /* Bright magenta pink */
+    --secondary-light: #f5576c; /* Coral pink */
+    --secondary-dark: #764ba2;  /* Deep purple */
 
     /* Accent Colors */
-    --accent-warm: #f24966;    /* Coral for warm accents */
-    --accent-purple: #6b4c96;  /* Purple for contrast */
-    --accent-sunset: #e085f5;  /* Pink for highlights */
-    --nature-primary: #8b5cf6; /* Light purple variation */
+    --accent-warm: #f5576c;    /* Coral for warm accents */
+    --accent-purple: #764ba2;  /* Purple for contrast */
+    --accent-sunset: #f093fb;  /* Pink for highlights */
+    --nature-primary: #667eea; /* Blue-violet variation */
 
     /* CTA & Booking - Purple-Pink Theme */
-    --cta-primary: #6b4c96;    /* Purple for primary CTAs */
-    --cta-secondary: #e085f5;  /* Pink for secondary CTAs */
+    --cta-primary: #764ba2;    /* Purple for primary CTAs */
+    --cta-secondary: #f093fb;  /* Pink for secondary CTAs */
     --cta-success: #10b981;    /* Green for confirmations */
 
     /* Legacy variables (keeping for compatibility) */
-    --gold-luxury: #6b4c96;    /* Now purple */
-    --gold-warm: #556ce6;      /* Blue-purple */
-    --gold-bright: #8b5cf6;    /* Light purple */
-    --gold-champagne: #c4b5fd; /* Very light purple */
-    --summer-blue: #556ce6;    /* Blue-purple */
-    --cooling-mint: #e085f5;   /* Pink */
-    --purple-start: #556ce6;   /* Blue-purple */
-    --purple-mid: #6b4c96;     /* Purple */
-    --purple-bright: #e085f5;  /* Pink */
-    --purple-coral: #f24966;   /* Coral pink */
+    --gold-luxury: #764ba2;    /* Now purple */
+    --gold-warm: #667eea;      /* Blue-violet */
+    --gold-bright: #f093fb;    /* Bright pink */
+    --gold-champagne: #e0c3fc; /* Very light purple */
+    --summer-blue: #667eea;    /* Blue-violet */
+    --cooling-mint: #f093fb;   /* Pink */
+    --purple-start: #667eea;   /* Blue-violet */
+    --purple-mid: #764ba2;     /* Purple */
+    --purple-bright: #f093fb;  /* Bright pink */
+    --purple-coral: #f5576c;   /* Coral pink */
 
     /* Warm Sand Accent - Emirates & Modals */
     --sand-accent: #C9B99A;    /* Warm sand */
@@ -248,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -287,8 +287,8 @@ h1, h2, h3, h4, h5, h6 {
 
     .nav-list a:hover,
     .nav-links a:hover {
-        background: rgba(107, 76, 150, 0.1);
-        color: #6b4c96;
+        background: rgba(118, 75, 162, 0.1);
+        color: #764ba2;
     }
 }
 
@@ -437,7 +437,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section - Rich Purple Gradient with Sunset Touches */
 .hero {
     height: 60vh;
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,7 +476,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
     padding: var(--space-md) var(--space-xl);
     border-radius: var(--radius-lg);
@@ -484,14 +484,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     font-size: 16px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(107, 76, 150, 0.35);
+    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.35);
     border: 2px solid transparent;
 }
 
 .cta-button:hover {
     background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(107, 76, 150, 0.45);
+    box-shadow: 0 6px 30px rgba(118, 75, 162, 0.45);
     border-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -807,7 +807,7 @@ a.emirate-card:hover {
 }
 
 .book-btn, .category-btn, .tab-btn {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
     border: none;
     padding: var(--space-sm) var(--space-md);
@@ -817,13 +817,13 @@ a.emirate-card:hover {
     font-size: 14px;
     transition: all 0.3s ease;
     margin-top: var(--space-md);
-    box-shadow: 0 4px 15px rgba(107, 76, 150, 0.35);
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.35);
 }
 
 .book-btn:hover, .category-btn:hover, .tab-btn:hover {
     background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(107, 76, 150, 0.45);
+    box-shadow: 0 6px 25px rgba(118, 75, 162, 0.45);
 }
 
 /* Emirates Grid */
@@ -935,8 +935,8 @@ a.emirate-card:hover {
     margin: 30px auto 0;
     padding: 12px 28px;
     background: transparent;
-    color: #6b4c96;
-    border: 2px solid #6b4c96;
+    color: #764ba2;
+    border: 2px solid #764ba2;
     border-radius: 30px;
     font-size: 0.95rem;
     font-weight: 600;
@@ -945,9 +945,9 @@ a.emirate-card:hover {
 }
 
 .see-more-btn:hover {
-    background: rgba(107, 76, 150, 0.08);
-    border-color: #8b5cf6;
-    color: #8b5cf6;
+    background: rgba(118, 75, 162, 0.08);
+    border-color: #f093fb;
+    color: #f093fb;
     transform: translateY(-1px);
 }
 
@@ -974,7 +974,7 @@ a.emirate-card:hover {
 
 /* Summer Section - Purple-Pink Gradient */
 .summer-section {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
 }
 
@@ -1061,9 +1061,9 @@ a.emirate-card:hover {
 }
 
 .tab-btn.active, .tab-btn:hover {
-    color: #6b4c96;
-    border-bottom-color: #8b5cf6;
-    background: rgba(107, 76, 150, 0.08);
+    color: #764ba2;
+    border-bottom-color: #f093fb;
+    background: rgba(118, 75, 162, 0.08);
 }
 
 .dining-content {
@@ -1506,7 +1506,7 @@ a.emirate-card:hover {
         width: 170px !important;
         min-height: 75px !important;
         background: #ffffff !important;
-        border: 1px solid rgba(107, 76, 150, 0.2) !important;
+        border: 1px solid rgba(118, 75, 162, 0.2) !important;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     }
 
@@ -1633,7 +1633,7 @@ a.emirate-card:hover {
     }
 
     .book-btn.purple {
-        background: var(--cta-primary) !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%) !important;
         color: white !important;
         border: none !important;
         margin: 0 !important;
@@ -2071,7 +2071,7 @@ a.emirate-card:hover {
     font-weight: 600;
     margin-top: 0;
     margin-bottom: var(--space-2xl);
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2388,7 +2388,7 @@ a.emirate-card:hover {
 }
 
 .product-btn.primary:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
@@ -2399,14 +2399,14 @@ a.emirate-card:hover {
 }
 
 .product-btn.secondary:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
 /* Beat the Heat Modal Button Styles */
 .btn.btn-primary, .btn.btn-secondary {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
     border: none;
     padding: 12px 24px;
@@ -2417,7 +2417,7 @@ a.emirate-card:hover {
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 20px rgba(107, 76, 150, 0.35);
+    box-shadow: 0 4px 20px rgba(118, 75, 162, 0.35);
     margin: 8px 8px 8px 0;
     text-align: center;
     position: relative;
@@ -2429,7 +2429,7 @@ a.emirate-card:hover {
 .btn.btn-primary:hover, .btn.btn-secondary:hover {
     background: linear-gradient(135deg, #6b7cf0 0%, #7d5ca8 30%, #e99bf7 70%, #f45a78 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(107, 76, 150, 0.45);
+    box-shadow: 0 8px 30px rgba(118, 75, 162, 0.45);
     text-decoration: none;
     color: white;
 }
@@ -2823,7 +2823,7 @@ a.emirate-card:hover {
 }
 
 .search-flights-btn:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     box-shadow: 0 4px 12px rgba(0, 168, 150, 0.4);
 }
 
@@ -3077,7 +3077,7 @@ a.emirate-card:hover {
 }
 
 .hotel-book-btn:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(0, 168, 150, 0.4);
     text-decoration: none;
@@ -3126,17 +3126,17 @@ a.emirate-card:hover {
 
 .dining-tabs .tab-btn.active,
 .hotel-category-tabs .tab-btn.active {
-    background: #6b4c96;
+    background: #764ba2;
     color: white;
     border-color: transparent;
-    box-shadow: 0 4px 12px rgba(107, 76, 150, 0.25);
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.25);
 }
 
 .dining-tabs .tab-btn:hover,
 .hotel-category-tabs .tab-btn:hover {
-    background: rgba(107, 76, 150, 0.1);
-    color: #6b4c96;
-    border-color: #6b4c96;
+    background: rgba(118, 75, 162, 0.1);
+    color: #764ba2;
+    border-color: #764ba2;
 }
 
 .dining-content {
@@ -4004,23 +4004,23 @@ img[loading="lazy"].loaded {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: var(--text-white);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(107, 76, 150, 0.4);
+    box-shadow: 0 8px 24px rgba(118, 75, 162, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #6b4c96;
-    border: 2px solid #8b5cf6;
+    color: #764ba2;
+    border: 2px solid #f093fb;
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
     border-color: transparent;
     transform: translateY(-2px);
@@ -4234,7 +4234,7 @@ img[loading="lazy"].loaded {
 
 /* Why UAE Box */
 .why-uae-box {
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: var(--text-white);
     padding: 2.5rem;
     border-radius: var(--radius-md);
@@ -4526,7 +4526,7 @@ img[loading="lazy"].loaded {
 
 /* Guide Hero Section */
 .guide-hero {
-    background: linear-gradient(135deg, #F4B942 0%, #D4A030 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%);
     color: white;
     padding: 50px 20px 40px;
     text-align: center;
@@ -5385,7 +5385,7 @@ img[loading="lazy"].loaded {
 
 /* Guide Hero - Desert Glassmorphism */
 .guide-hero {
-    background: var(--cta-primary) !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%) !important;
     padding: 80px 20px 60px !important;
     margin-top: 60px !important;
     position: relative !important;
@@ -5400,24 +5400,14 @@ img[loading="lazy"].loaded {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 85% 30%, rgba(244, 185, 66, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 50% 80%, rgba(245, 166, 35, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 70% 10%, rgba(255, 255, 255, 0.2) 0%, transparent 30%);
+        radial-gradient(circle at 20% 80%, rgba(120, 100, 250, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 100, 200, 0.3) 0%, transparent 50%);
     pointer-events: none;
     opacity: 0.9;
 }
 
 .guide-hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.08)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom center no-repeat;
-    background-size: cover;
-    pointer-events: none;
+    content: none;
 }
 
 .guide-hero .container {
@@ -5786,19 +5776,19 @@ img[loading="lazy"].loaded {
 .cta-button {
     display: inline-block !important;
     padding: 16px 32px !important;
-    background: linear-gradient(135deg, #556ce6 0%, #6b4c96 30%, #e085f5 70%, #f24966 100%) !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 70%, #f5576c 100%) !important;
     color: white !important;
     text-decoration: none !important;
     border-radius: 12px !important;
     font-weight: 600 !important;
     font-size: 16px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(107, 76, 150, 0.35) !important;
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.35) !important;
 }
 
 .cta-button:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(107, 76, 150, 0.45) !important;
+    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.45) !important;
 }
 
 @media (min-width: 1024px) {

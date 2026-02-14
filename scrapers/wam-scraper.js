@@ -1,7 +1,7 @@
 const BaseScraper = require('./base-scraper');
 const logger = require('./utils/logger');
 
-const TRAVEL_URL = 'https://www.wam.ae/en/search?query=travel+tourism+UAE';
+const WAM_URL = 'https://www.wam.ae/en';
 
 class WamScraper extends BaseScraper {
   constructor() {
@@ -11,81 +11,58 @@ class WamScraper extends BaseScraper {
   classifyCategory(text) {
     const lower = text.toLowerCase();
     if (/airport|aviation|airline|flight|route|terminal|runway/.test(lower)) return 'Airport';
-    if (/visa|entry|passport|residency|permit|immigration/.test(lower)) return 'Visa';
-    if (/law|legal|regulation|fine|court|decree|ban|rule/.test(lower)) return 'Legal';
-    if (/metro|tram|bus|taxi|road|transport|rail|salik|rta/.test(lower)) return 'Transport';
+    if (/visa|entry|passport|residency|permit|immigration|golden visa/.test(lower)) return 'Visa';
+    if (/law|legal|regulation|fine|court|decree|ban|rule|ramadan/.test(lower)) return 'Legal';
+    if (/metro|tram|bus|taxi|road|transport|rail|salik|rta|etihad rail/.test(lower)) return 'Transport';
     return 'General';
   }
 
   async scrape() {
-    logger.info(this.name, `Fetching: ${TRAVEL_URL}`);
-    await this.page.goto(TRAVEL_URL, { waitUntil: 'domcontentloaded' });
+    logger.info(this.name, `Fetching: ${WAM_URL}`);
+    await this.page.goto(WAM_URL, { waitUntil: 'domcontentloaded' });
     await this.page.waitForTimeout(5000);
 
-    // WAM search results — extract article cards
-    const articles = await this.page.$$eval('article, .news-item, .search-result-item, [class*="card"], [class*="article"]', (elements) => {
+    // WAM homepage lists articles as links to /en/article/...
+    const articles = await this.page.$$eval('a[href*="/en/article/"]', els => {
       const results = [];
-      for (const el of elements) {
-        const linkEl = el.querySelector('a[href]');
-        const titleEl = el.querySelector('h2, h3, h4, .title, [class*="title"], [class*="headline"]');
-        const summaryEl = el.querySelector('p, .summary, .excerpt, [class*="summary"], [class*="desc"]');
-        const dateEl = el.querySelector('time, .date, [class*="date"], [datetime]');
+      const seen = new Set();
 
-        if (!linkEl || !titleEl) continue;
+      for (const a of els) {
+        const href = a.href;
+        const text = a.textContent.trim();
 
-        const headline = titleEl.textContent.trim();
-        const href = linkEl.href;
-
-        if (!headline || headline.length < 10) continue;
-
-        // Extract slug for dedup
+        // Extract slug from URL for dedup
         const slug = href.split('/').filter(Boolean).pop() || '';
+        if (!slug || seen.has(slug)) continue;
+        if (text.length < 20) continue;
 
+        seen.add(slug);
         results.push({
-          headline,
-          summary: summaryEl ? summaryEl.textContent.trim() : '',
+          headline: text.substring(0, 200),
           source_url: href,
           slug,
-          date: dateEl ? (dateEl.getAttribute('datetime') || dateEl.textContent.trim()) : '',
         });
       }
       return results;
     });
 
-    logger.info(this.name, `Found ${articles.length} raw article elements`);
+    logger.info(this.name, `Found ${articles.length} unique articles`);
 
-    // Deduplicate by slug
-    const seen = new Set();
-    const deduped = [];
-    for (const a of articles) {
-      if (a.slug && !seen.has(a.slug)) {
-        seen.add(a.slug);
-        deduped.push(a);
-      }
-    }
+    // Filter to travel/tourism/transport relevant articles
+    const travelKeywords = /travel|tourism|tourist|airport|visa|flight|airline|hotel|transport|rail|metro|ramadan|museum|attraction|heritage|culture|expo|festival|beach|resort|emirates|dubai|abu dhabi/i;
 
-    // Take latest 10
-    return deduped.slice(0, 10).map(a => {
-      let pubDate = new Date().toISOString().split('T')[0];
-      if (a.date) {
-        try {
-          const parsed = new Date(a.date);
-          if (!isNaN(parsed.getTime())) {
-            pubDate = parsed.toISOString().split('T')[0];
-          }
-        } catch { /* use today */ }
-      }
+    const relevant = articles.filter(a => travelKeywords.test(a.headline));
+    logger.info(this.name, `Travel-relevant: ${relevant.length}`);
 
-      return {
-        headline: a.headline,
-        summary: a.summary,
-        source_name: 'WAM',
-        source_url: a.source_url,
-        source_article_id: `wam-${a.slug}`,
-        category: this.classifyCategory(a.headline + ' ' + a.summary),
-        published_date: pubDate,
-      };
-    });
+    return relevant.slice(0, 10).map(a => ({
+      headline: a.headline,
+      summary: '',
+      source_name: 'WAM',
+      source_url: a.source_url,
+      source_article_id: `wam-${a.slug}`,
+      category: this.classifyCategory(a.headline),
+      published_date: new Date().toISOString().split('T')[0],
+    }));
   }
 }
 

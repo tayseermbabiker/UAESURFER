@@ -165,6 +165,36 @@
         color: #555;
         line-height: 1.6;
     }
+
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Do's and Don'ts */
+    .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .dos-column, .donts-column { padding: 1.5rem; border-radius: 12px; }
+    .dos-column { background: #e8f5e9; border: 2px solid #4caf50; }
+    .donts-column { background: #ffebee; border: 2px solid #f44336; }
+    .dos-column h3 { color: #2e7d32; margin: 0 0 1rem 0; }
+    .donts-column h3 { color: #c62828; margin: 0 0 1rem 0; }
+    .dos-column ul, .donts-column ul { margin: 0; padding-left: 1.25rem; }
+    .dos-column li { margin-bottom: 0.5rem; color: #2e7d32; }
+    .donts-column li { margin-bottom: 0.5rem; color: #c62828; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+        .dos-donts { grid-template-columns: 1fr; }
+        .guide-links-grid { grid-template-columns: 1fr; }
+    }
     </style>
 </head>
 <body>
@@ -196,6 +226,12 @@
     <!-- Main Content -->
     <main class="guide-content">
         <div class="container">
+
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>Is it worth visiting Dubai in summer?</h2>
+                <p>Visiting Dubai in summer can absolutely be worth it if you plan accordingly. Hotel prices drop 40-60 percent, attractions are far less crowded, and indoor activities like malls, waterparks, and entertainment venues operate at full capacity with powerful air conditioning. The heat is extreme — regularly exceeding 45 degrees — but most of Dubai life happens indoors anyway.</p>
+            </div>
 
             <!-- The Real Truth Section -->
             <section class="content-section">
@@ -336,6 +372,10 @@
                 </div>
 
                 <p style="margin-top: 20px;">Many hotels also offer summer packages including free meals, spa credits, kids stay free deals, and complimentary activities. Check directly with hotels - their summer offers often aren't listed on booking sites.</p>
+
+                <div class="tip-box">
+                    <strong>Local Tip:</strong> The best summer deal in Dubai is the Dubai Summer Surprises festival running June through August with huge discounts at malls, hotels, and attractions. Some five-star hotels drop below AED 400 per night.
+                </div>
             </section>
 
             <!-- Indoor Attractions Section -->
@@ -463,6 +503,10 @@
                     </table>
                 </div>
 
+                <div class="tip-box">
+                    <strong>Local Tip:</strong> Indoor ski at Ski Dubai in Mall of the Emirates is the ultimate summer contrast. Go from 48 degrees outside to minus 4 degrees inside. Booking the first session at 10 AM avoids weekend crowds.
+                </div>
+
                 <h3 style="margin-top: 30px; color: #333;">🍽️ Food Experiences</h3>
                 <div class="places-table-wrapper">
                     <table class="places-table">
@@ -584,6 +628,28 @@
                 </div>
             </section>
 
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do's</h3>
+                    <ul>
+                        <li>Book hotels midweek for the lowest summer rates</li>
+                        <li>Drink at least 3 litres of water daily even if you feel fine</li>
+                        <li>Plan your day around indoor activities and late evenings</li>
+                        <li>Take advantage of summer sales and promotions for huge savings</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don'ts</h3>
+                    <ul>
+                        <li>Spend more than 15 minutes outdoors during midday heat</li>
+                        <li>Leave your car parked in direct sun without a windshield shade</li>
+                        <li>Wear dark clothing which absorbs heat dangerously fast</li>
+                        <li>Underestimate humidity which makes 40 degrees feel like 50</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
             <section class="content-section faq-section">
                 <h2>Summer Travel FAQ</h2>
@@ -618,6 +684,25 @@
                     <p>Yes. Beyond hotel discounts of 30-50%, you'll find summer promotions everywhere: spa packages, restaurant deals, attraction combos. Dubai Summer Surprises festival (July-August) has major sales and entertainment.</p>
                 </div>
             </section>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="weather-guide-uae.html" class="guide-link-card">
+                        <strong>Weather Guide</strong>
+                        <span>Complete month-by-month climate breakdown</span>
+                    </a>
+                    <a href="dress-code-uae.html" class="guide-link-card">
+                        <strong>Dress Code</strong>
+                        <span>What to wear in extreme heat</span>
+                    </a>
+                    <a href="transportation-guide-uae.html" class="guide-link-card">
+                        <strong>Transport Guide</strong>
+                        <span>Getting around without melting</span>
+                    </a>
+                </div>
+            </div>
 
         </div>
     </main>

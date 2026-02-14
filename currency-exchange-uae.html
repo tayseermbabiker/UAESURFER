@@ -366,6 +366,31 @@
         color: white !important;
     }
 
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Do's and Don'ts */
+    .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .dos-column, .donts-column { padding: 1.5rem; border-radius: 12px; }
+    .dos-column { background: #e8f5e9; border: 2px solid #4caf50; }
+    .donts-column { background: #ffebee; border: 2px solid #f44336; }
+    .dos-column h3 { color: #2e7d32; margin: 0 0 1rem 0; }
+    .donts-column h3 { color: #c62828; margin: 0 0 1rem 0; }
+    .dos-column ul, .donts-column ul { margin: 0; padding-left: 1.25rem; }
+    .dos-column li { margin-bottom: 0.5rem; color: #2e7d32; }
+    .donts-column li { margin-bottom: 0.5rem; color: #c62828; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -384,6 +409,10 @@
         .info-hero h1 {
             font-size: 1.6rem;
         }
+
+        .dos-donts { grid-template-columns: 1fr; }
+
+        .guide-links-grid { grid-template-columns: 1fr; }
     }
     </style>
 </head>
@@ -416,6 +445,12 @@
     <!-- Main Content -->
     <main class="guide-content">
         <div class="container">
+
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>What currency does Dubai use?</h2>
+                <p>Dubai and the entire UAE use the UAE Dirham (AED), which is pegged to the US Dollar at a fixed rate of approximately 3.67 AED to 1 USD. Credit and debit cards are widely accepted everywhere including taxis and small shops. ATMs are plentiful across all emirates and most international cards work without issues.</p>
+            </div>
 
             <!-- Quick Answer Box -->
             <div class="quick-answer-box">
@@ -481,6 +516,10 @@
 
                             <div class="info-box">
                                 <strong>USD advantage:</strong> Since AED is pegged to USD, American travelers have a fixed, predictable rate. No surprises.
+                            </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Exchange money at airport arrivals just for taxi fare of around AED 100-150. Get better rates later at exchange houses in old Dubai. Al Ansari Exchange and UAE Exchange consistently offer rates within half a percent of the interbank rate.
                             </div>
                         </div>
                     </div>
@@ -604,6 +643,10 @@
                             <div class="info-box">
                                 <strong>Cultural note:</strong> Service workers often come from countries with modest wages. Tips are genuinely appreciated and make a real difference.
                             </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Many restaurants and shops round prices to the nearest Dirham. Do not worry about fils (cents) as they are practically extinct. Even vending machines no longer accept fils coins.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -656,6 +699,28 @@
 
             </div>
 
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do's</h3>
+                    <ul>
+                        <li>Use credit or debit cards wherever possible for the best exchange rates</li>
+                        <li>Get a small amount of cash for souks, tips, and smaller vendors</li>
+                        <li>Compare rates at two or three exchange shops before changing money</li>
+                        <li>Check your bank foreign transaction fees before travelling</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don'ts</h3>
+                    <ul>
+                        <li>Exchange money at hotel lobbies which have the worst rates in the UAE</li>
+                        <li>Accept unofficial currency exchange offers from strangers</li>
+                        <li>Carry large amounts of cash when cards work everywhere</li>
+                        <li>Forget to inform your bank about your UAE travel dates</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
             <section class="content-section">
                 <h2>Frequently Asked Questions</h2>
@@ -706,6 +771,25 @@
                 <a href="visa-requirements.html">Visa Requirements</a>
                 <a href="safety-security-uae.html">Safety & Security</a>
                 <a href="scams-tourist-traps-uae.html">Scams to Avoid</a>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="scams-tourist-traps-uae.html" class="guide-link-card">
+                        <strong>Scams to Avoid</strong>
+                        <span>Currency scams and overcharging tricks</span>
+                    </a>
+                    <a href="transportation-guide-uae.html" class="guide-link-card">
+                        <strong>Transport Guide</strong>
+                        <span>Taxi fares, metro cards, and payment tips</span>
+                    </a>
+                    <a href="best-restaurants-uae.html" class="guide-link-card">
+                        <strong>Best Restaurants</strong>
+                        <span>What to expect on the bill and tipping customs</span>
+                    </a>
+                </div>
             </div>
 
         </div>

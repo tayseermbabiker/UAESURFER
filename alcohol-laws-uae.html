@@ -480,6 +480,54 @@
         color: white !important;
     }
 
+    /* Do's and Don'ts Cards */
+    .dos-donts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .dos-column, .donts-column {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .dos-column {
+        background: #e8f5e9;
+        border: 2px solid #4caf50;
+    }
+
+    .donts-column {
+        background: #ffebee;
+        border: 2px solid #f44336;
+    }
+
+    .dos-column h3 {
+        color: #2e7d32;
+        margin: 0 0 1rem 0;
+    }
+
+    .donts-column h3 {
+        color: #c62828;
+        margin: 0 0 1rem 0;
+    }
+
+    .dos-column ul, .donts-column ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .dos-column li {
+        margin-bottom: 0.5rem;
+        color: #2e7d32;
+    }
+
+    .donts-column li {
+        margin-bottom: 0.5rem;
+        color: #c62828;
+    }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -497,6 +545,10 @@
 
         .info-hero h1 {
             font-size: 1.6rem;
+        }
+
+        .dos-donts {
+            grid-template-columns: 1fr;
         }
     }
     </style>
@@ -596,6 +648,10 @@
                             <div class="info-box">
                                 <strong>Happy hours:</strong> Most hotel bars offer 50% off drinks 5-8pm. Great way to save.
                             </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Happy hours at hotel bars typically run from 5-8 PM and offer 50 percent off drinks. Ladies nights (usually Tuesdays or Wednesdays) often include free drinks for women. Check Time Out Dubai for weekly deals.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -663,6 +719,10 @@
                                 <li>Abu Dhabi may have different rates</li>
                                 <li>Tourists can buy from licensed shops (MMI, African+Eastern) with passport — no license needed</li>
                             </ul>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Buy your full duty-free allowance at the airport on arrival. Prices are 30-50 percent cheaper than licensed shops in the city, especially after the 30 percent tax was reinstated in 2025.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -734,6 +794,28 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do</h3>
+                    <ul>
+                        <li>Drink only at licensed venues such as hotel bars and restaurants</li>
+                        <li>Always carry valid photo ID proving you are 21 or older</li>
+                        <li>Use taxis or Careem and Uber after drinking, as there is zero tolerance</li>
+                        <li>Buy your duty-free allowance on arrival for the best prices</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don't</h3>
+                    <ul>
+                        <li>Drink or appear intoxicated in any public space</li>
+                        <li>Drive after consuming any amount of alcohol whatsoever</li>
+                        <li>Bring alcohol into Sharjah, which is completely dry</li>
+                        <li>Assume Ramadan rules are relaxed, since bars open later but restrictions apply</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- FAQ Section -->

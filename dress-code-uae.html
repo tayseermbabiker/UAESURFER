@@ -366,6 +366,31 @@
         color: white !important;
     }
 
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Do's and Don'ts */
+    .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .dos-column, .donts-column { padding: 1.5rem; border-radius: 12px; }
+    .dos-column { background: #e8f5e9; border: 2px solid #4caf50; }
+    .donts-column { background: #ffebee; border: 2px solid #f44336; }
+    .dos-column h3 { color: #2e7d32; margin: 0 0 1rem 0; }
+    .donts-column h3 { color: #c62828; margin: 0 0 1rem 0; }
+    .dos-column ul, .donts-column ul { margin: 0; padding-left: 1.25rem; }
+    .dos-column li { margin-bottom: 0.5rem; color: #2e7d32; }
+    .donts-column li { margin-bottom: 0.5rem; color: #c62828; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -384,6 +409,10 @@
         .info-hero h1 {
             font-size: 1.6rem;
         }
+
+        .dos-donts { grid-template-columns: 1fr; }
+
+        .guide-links-grid { grid-template-columns: 1fr; }
     }
     </style>
 </head>
@@ -416,6 +445,12 @@
     <!-- Main Content -->
     <main class="guide-content">
         <div class="container">
+
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>What is the dress code in Dubai?</h2>
+                <p>The dress code in Dubai and the UAE requires covering your shoulders and knees in public places like malls, restaurants, and souks. Swimwear is perfectly fine at hotel pools and private beaches. Mosques require full coverage including long sleeves and headscarves for women. Dubai is cosmopolitan and enforcement is rare, but modest dress shows cultural respect and creates better interactions with locals.</p>
+            </div>
 
             <!-- Quick Answer Box -->
             <div class="quick-answer-box">
@@ -488,6 +523,10 @@
                                 <li>Lightweight long pants, covered shoulders (sun protection)</li>
                                 <li>Closed shoes or sandals — sand gets very hot</li>
                             </ul>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Mall dress codes are most strictly enforced at Dubai Mall and Mall of the Emirates. Smaller neighbourhood malls are more relaxed, but covering your shoulders is always the safest bet.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -605,10 +644,36 @@
                             <div class="info-box">
                                 <strong>Fabric Tip:</strong> Moisture-wicking, quick-dry fabrics outperform cotton in UAE heat. Cotton gets heavy when sweaty.
                             </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> UAE malls can be 18-20 degrees inside. Keep a light layer in your bag even in summer. The temperature shock between 45 degrees outside and freezing AC inside catches every visitor off guard.
+                            </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do's</h3>
+                    <ul>
+                        <li>Carry a light scarf or cardigan for quick modesty</li>
+                        <li>Wear knee-length or longer shorts in public</li>
+                        <li>Pack one smart casual outfit for nicer venues</li>
+                        <li>Cover up when leaving hotel pool areas</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don'ts</h3>
+                    <ul>
+                        <li>Wear swimwear away from the pool or beach</li>
+                        <li>Walk shirtless in malls or restaurants</li>
+                        <li>Wear very short shorts to traditional souks</li>
+                        <li>Assume all nightclubs have the same dress code</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- FAQ Section -->
@@ -661,6 +726,29 @@
                 <a href="weather-guide-uae.html">Weather Guide</a>
                 <a href="alcohol-laws-uae.html">Alcohol Laws</a>
                 <a href="visa-requirements.html">Visa Requirements</a>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="alcohol-laws-uae.html" class="guide-link-card">
+                        <strong>Alcohol Laws</strong>
+                        <span>Where to drink and what to know</span>
+                    </a>
+                    <a href="ramadan-guide-uae.html" class="guide-link-card">
+                        <strong>Ramadan Guide</strong>
+                        <span>Dress more modestly during the holy month</span>
+                    </a>
+                    <a href="safety-security-uae.html" class="guide-link-card">
+                        <strong>Safety Guide</strong>
+                        <span>Laws and cultural rules for tourists</span>
+                    </a>
+                    <a href="scams-tourist-traps-uae.html" class="guide-link-card">
+                        <strong>Scams to Avoid</strong>
+                        <span>Tourist traps and how to avoid them</span>
+                    </a>
+                </div>
             </div>
 
         </div>

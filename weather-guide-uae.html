@@ -372,6 +372,31 @@
         color: white !important;
     }
 
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Do's and Don'ts */
+    .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .dos-column, .donts-column { padding: 1.5rem; border-radius: 12px; }
+    .dos-column { background: #e8f5e9; border: 2px solid #4caf50; }
+    .donts-column { background: #ffebee; border: 2px solid #f44336; }
+    .dos-column h3 { color: #2e7d32; margin: 0 0 1rem 0; }
+    .donts-column h3 { color: #c62828; margin: 0 0 1rem 0; }
+    .dos-column ul, .donts-column ul { margin: 0; padding-left: 1.25rem; }
+    .dos-column li { margin-bottom: 0.5rem; color: #2e7d32; }
+    .donts-column li { margin-bottom: 0.5rem; color: #c62828; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -390,6 +415,10 @@
         .info-hero h1 {
             font-size: 1.6rem;
         }
+
+        .dos-donts { grid-template-columns: 1fr; }
+
+        .guide-links-grid { grid-template-columns: 1fr; }
     }
     </style>
 </head>
@@ -422,6 +451,12 @@
     <!-- Main Content -->
     <main class="guide-content">
         <div class="container">
+
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>What is the best time to visit UAE?</h2>
+                <p>The best time to visit the UAE is between November and March when temperatures are a pleasant 20-30 degrees with virtually no rain. Summers from June to September are extremely hot, regularly exceeding 45 degrees with high humidity. October and April are shoulder months that can still be enjoyable, especially for budget travellers taking advantage of lower hotel prices.</p>
+            </div>
 
             <!-- Quick Answer Box -->
             <div class="quick-answer-box">
@@ -495,6 +530,10 @@
 
                             <div class="info-box">
                                 <strong>Sweet spot:</strong> November offers near-perfect weather at shoulder-season prices — locals know this as the best month.
+                            </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Even during the winter months, the UAE sun is powerful. Apply SPF 50+ sunscreen and carry water everywhere. Dehydration sneaks up on you fast, even in pleasant 28 degree weather.
                             </div>
                         </div>
                     </div>
@@ -614,10 +653,36 @@
                             </div>
 
                             <p style="margin-top: 1rem;">For complete summer planning: <a href="summer-guide-uae.html" style="color: #7C8BD4; font-weight: 600;">Read our Summer Travel Guide</a></p>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> If visiting in summer, plan any outdoor activities before 9 AM or after 5 PM. Midday heat is genuinely dangerous and even locals avoid being outside from 11 AM to 3 PM.
+                            </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do's</h3>
+                    <ul>
+                        <li>Visit November to March for the best weather</li>
+                        <li>Carry water and sunscreen year-round</li>
+                        <li>Layer clothing for extreme AC indoors</li>
+                        <li>Book outdoor activities for early morning or late afternoon</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don'ts</h3>
+                    <ul>
+                        <li>Plan outdoor sightseeing between 11 AM and 3 PM in summer</li>
+                        <li>Underestimate the sun even in winter months</li>
+                        <li>Skip water because you do not feel thirsty</li>
+                        <li>Leave the hotel without checking the daily UV index</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- FAQ Section -->
@@ -670,6 +735,25 @@
                 <a href="dress-code-uae.html">Dress Code</a>
                 <a href="visa-requirements.html">Visa Requirements</a>
                 <a href="safety-security-uae.html">Safety & Security</a>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="dress-code-uae.html" class="guide-link-card">
+                        <strong>Dress Code</strong>
+                        <span>What to wear in every season</span>
+                    </a>
+                    <a href="summer-guide-uae.html" class="guide-link-card">
+                        <strong>Summer Guide</strong>
+                        <span>Surviving and enjoying the UAE heat</span>
+                    </a>
+                    <a href="transportation-guide-uae.html" class="guide-link-card">
+                        <strong>Transport Guide</strong>
+                        <span>Getting around in comfort year-round</span>
+                    </a>
+                </div>
             </div>
 
         </div>

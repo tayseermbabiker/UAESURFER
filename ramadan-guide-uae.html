@@ -48,6 +48,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+    <style>
+    /* Snippet Answer - Featured Snippet Target */
+    .snippet-answer {
+        background: #fff;
+        border: 2px solid #7C8BD4;
+        border-radius: 16px;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12);
+    }
+
+    .snippet-answer h2 {
+        margin: 0 0 1rem 0;
+        font-size: 1.4rem;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .snippet-answer p {
+        margin: 0;
+        color: #444;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    /* Do's and Don'ts Cards */
+    .dos-donts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .dos-column, .donts-column {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .dos-column {
+        background: #e8f5e9;
+        border: 2px solid #4caf50;
+    }
+
+    .donts-column {
+        background: #ffebee;
+        border: 2px solid #f44336;
+    }
+
+    .dos-column h3 {
+        color: #2e7d32;
+        margin: 0 0 1rem 0;
+    }
+
+    .donts-column h3 {
+        color: #c62828;
+        margin: 0 0 1rem 0;
+    }
+
+    .dos-column ul, .donts-column ul {
+        margin: 0;
+        padding-left: 1.25rem;
+    }
+
+    .dos-column li {
+        margin-bottom: 0.5rem;
+        color: #2e7d32;
+    }
+
+    .donts-column li {
+        margin-bottom: 0.5rem;
+        color: #c62828;
+    }
+
+    @media (max-width: 768px) {
+        .dos-donts {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
@@ -118,6 +198,12 @@
     <!-- Main Content -->
     <section class="guide-content">
         <div class="container">
+
+            <!-- Snippet Bait: Featured Snippet Target -->
+            <div class="snippet-answer">
+                <h2>Can tourists visit Dubai during Ramadan?</h2>
+                <p>Yes, tourists can absolutely visit Dubai and the UAE during Ramadan. You do not need to fast, but you must not eat, drink, or smoke in public during daylight hours. Hotels serve food to guests behind screened areas. Evenings come alive with special Iftar feasts, Ramadan tents, and night markets. Many visitors find Ramadan a unique cultural experience with lower hotel prices and fewer crowds.</p>
+            </div>
 
             <!-- Section 1: What is Ramadan -->
             <div class="content-section">
@@ -386,6 +472,28 @@
 
                 <div class="tip-box">
                     <strong>Final Advice:</strong> Ramadan visit can be wonderful experience if you approach it with right expectations and respect. If you're flexible, culturally curious, and willing to adjust schedule, it's actually unique opportunity to see different side of UAE. If you want typical tourist experience with all conveniences, choose different time of year.
+                </div>
+            </div>
+
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do</h3>
+                    <ul>
+                        <li>Attend at least one Iftar meal for an authentic cultural experience</li>
+                        <li>Book hotel restaurants in advance as Iftar buffets fill up fast</li>
+                        <li>Stock your hotel room with snacks and water for daytime</li>
+                        <li>Enjoy the festive night markets and Ramadan decorations</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don't</h3>
+                    <ul>
+                        <li>Eat, drink, or smoke in any public place during daylight hours</li>
+                        <li>Play loud music or behave boisterously during fasting hours</li>
+                        <li>Wear revealing clothing, as modesty is even more important</li>
+                        <li>Assume everything is closed, since evenings are vibrant and busy</li>
+                    </ul>
                 </div>
             </div>
 

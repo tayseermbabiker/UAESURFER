@@ -366,6 +366,31 @@
         color: white !important;
     }
 
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Do's and Don'ts */
+    .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+    .dos-column, .donts-column { padding: 1.5rem; border-radius: 12px; }
+    .dos-column { background: #e8f5e9; border: 2px solid #4caf50; }
+    .donts-column { background: #ffebee; border: 2px solid #f44336; }
+    .dos-column h3 { color: #2e7d32; margin: 0 0 1rem 0; }
+    .donts-column h3 { color: #c62828; margin: 0 0 1rem 0; }
+    .dos-column ul, .donts-column ul { margin: 0; padding-left: 1.25rem; }
+    .dos-column li { margin-bottom: 0.5rem; color: #2e7d32; }
+    .donts-column li { margin-bottom: 0.5rem; color: #c62828; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -384,6 +409,9 @@
         .info-hero h1 {
             font-size: 1.6rem;
         }
+
+        .dos-donts { grid-template-columns: 1fr; }
+        .guide-links-grid { grid-template-columns: 1fr; }
     }
     </style>
 </head>
@@ -416,6 +444,12 @@
     <!-- Main Content -->
     <main class="guide-content">
         <div class="container">
+
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>How do you get around Dubai?</h2>
+                <p>Dubai has an excellent modern transport network. The Dubai Metro is the fastest and cheapest way to cover long distances, with two lines serving major attractions. Taxis are affordable and metered starting from AED 12. Ride-hailing apps Careem and Uber work throughout the UAE. Buses connect areas the metro does not reach, and water taxis cross Dubai Creek.</p>
+            </div>
 
             <!-- Quick Answer Box -->
             <div class="quick-answer-box">
@@ -492,6 +526,10 @@
                             <div class="info-box">
                                 <strong>Rush hour tip:</strong> 7-9am and 5-8pm are crowded. Gold Class is worth it during peak times.
                             </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Buy a Nol Silver card at any metro station for AED 25 (AED 19 credit). It works on metro, buses, trams, and water buses. Much cheaper than buying single tickets every time.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -530,6 +568,10 @@
 
                             <div class="info-box">
                                 <strong>Surge pricing:</strong> Uber surges during rush hour/rain. Hala app (official taxis) has no surge — good backup option.
+                            </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Avoid the metro between 7-9 AM and 5-7 PM on weekdays. Trains get extremely crowded during rush hour. The Gold Class carriage at the front is worth the extra cost during peak times.
                             </div>
                         </div>
                     </div>
@@ -643,6 +685,28 @@
 
             </div>
 
+            <!-- Do's and Don'ts -->
+            <div class="dos-donts">
+                <div class="dos-column">
+                    <h3>Do's</h3>
+                    <ul>
+                        <li>Use the Dubai Metro for speed and savings on major routes</li>
+                        <li>Download the Careem and Uber apps before arriving</li>
+                        <li>Buy a Nol card for all public transport</li>
+                        <li>Agree on taxi fare before long trips to other emirates</li>
+                    </ul>
+                </div>
+                <div class="donts-column">
+                    <h3>Don'ts</h3>
+                    <ul>
+                        <li>Eat or drink on the Dubai Metro as fines are AED 200</li>
+                        <li>Take unmetered taxis especially near tourist spots</li>
+                        <li>Drive during Friday prayer times when roads empty then suddenly flood</li>
+                        <li>Rent a car unless you are comfortable with aggressive driving</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- FAQ Section -->
             <section class="content-section">
                 <h2>Frequently Asked Questions</h2>
@@ -693,6 +757,25 @@
                 <a href="visa-requirements.html">Visa Requirements</a>
                 <a href="alcohol-laws-uae.html">Alcohol Laws</a>
                 <a href="scams-tourist-traps-uae.html">Scams to Avoid</a>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="currency-exchange-uae.html" class="guide-link-card">
+                        <strong>Currency Guide</strong>
+                        <span>Taxi fares and metro card costs</span>
+                    </a>
+                    <a href="scams-tourist-traps-uae.html" class="guide-link-card">
+                        <strong>Scams to Avoid</strong>
+                        <span>Unlicensed taxi and overcharging tricks</span>
+                    </a>
+                    <a href="weather-guide-uae.html" class="guide-link-card">
+                        <strong>Weather Guide</strong>
+                        <span>Plan transport around the heat</span>
+                    </a>
+                </div>
             </div>
 
         </div>

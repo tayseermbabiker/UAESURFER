@@ -329,6 +329,20 @@
         margin: 0;
     }
 
+    /* Snippet Answer */
+    .snippet-answer { background: #fff; border: 2px solid #7C8BD4; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 16px rgba(124, 139, 212, 0.12); }
+    .snippet-answer h2 { margin: 0 0 1rem 0; font-size: 1.4rem; color: #333; font-weight: 700; }
+    .snippet-answer p { margin: 0; color: #444; font-size: 1.05rem; line-height: 1.8; }
+
+    /* Related Guides */
+    .related-guides { margin: 2.5rem 0; padding: 2rem; background: #f8f9ff; border-radius: 16px; }
+    .related-guides h3 { margin: 0 0 1.5rem 0; color: #333; font-size: 1.3rem; }
+    .guide-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .guide-link-card { display: block; padding: 1.25rem; background: white; border-radius: 12px; text-decoration: none; border: 1px solid #e0e7ff; transition: transform 0.2s, box-shadow 0.2s; }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(124, 139, 212, 0.15); }
+    .guide-link-card strong { display: block; color: #7C8BD4; font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
     @media (max-width: 768px) {
         .quick-answer-box {
             padding: 1.5rem;
@@ -347,6 +361,8 @@
         .info-hero h1 {
             font-size: 1.6rem;
         }
+
+        .guide-links-grid { grid-template-columns: 1fr; }
     }
 
     /* Navigation Link Fixes */
@@ -417,6 +433,12 @@
     <main class="guide-content">
         <div class="container">
 
+            <!-- Snippet Answer -->
+            <div class="snippet-answer">
+                <h2>Do I need a visa for Dubai?</h2>
+                <p>Most Western tourists do NOT need a pre-arranged visa for Dubai or the UAE. Citizens from over 68 countries — including the US, UK, all EU nations, Canada, and Australia — receive a free visa on arrival for 30 to 90 days. You just need a valid passport with at least 6 months remaining validity, a return or onward ticket, and proof of accommodation.</p>
+            </div>
+
             <!-- Quick Answer Box -->
             <div class="quick-answer-box">
                 <h2>Do You Need a Visa?</h2>
@@ -473,6 +495,10 @@
 
                             <div class="info-box">
                                 <strong>Visa Run Tip:</strong> If you're from a visa-on-arrival country, you can leave for 1 day to Oman, then return for another stamp. This is commonly practiced.
+                            </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Immigration queues at Dubai Airport Terminal 3 can be 30-60 minutes during peak hours from evening European flights. Terminal 1 is usually faster. Abu Dhabi airport rarely has long waits.
                             </div>
                         </div>
                     </div>
@@ -534,6 +560,10 @@
 
                             <div class="info-box">
                                 <strong>Pro Tip:</strong> Keep digital copies on your phone. Immigration increasingly accepts digital proof for hotel bookings.
+                            </div>
+
+                            <div class="tip-box">
+                                <strong>Local Tip:</strong> Keep a screenshot of your hotel booking and return flight on your phone. Immigration rarely asks, but having it ready makes the process smoother if they do.
                             </div>
                         </div>
                     </div>
@@ -646,6 +676,25 @@
                 <a href="alcohol-laws-uae.html">Alcohol Laws</a>
                 <a href="safety-security-uae.html">Safety & Security</a>
                 <a href="dress-code-uae.html">Dress Code</a>
+            </div>
+
+            <!-- Related Guides -->
+            <div class="related-guides">
+                <h3>Related Guides</h3>
+                <div class="guide-links-grid">
+                    <a href="safety-security-uae.html" class="guide-link-card">
+                        <strong>Safety & Security</strong>
+                        <span>Laws and emergency numbers for tourists</span>
+                    </a>
+                    <a href="currency-exchange-uae.html" class="guide-link-card">
+                        <strong>Currency Guide</strong>
+                        <span>UAE Dirham, exchange rates and payment tips</span>
+                    </a>
+                    <a href="transportation-guide-uae.html" class="guide-link-card">
+                        <strong>Transport Guide</strong>
+                        <span>Getting around Dubai and between emirates</span>
+                    </a>
+                </div>
             </div>
 
         </div>

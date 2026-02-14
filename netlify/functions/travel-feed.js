@@ -33,10 +33,10 @@ exports.handler = async (event) => {
     }).all();
 
     const updates = records.map(rec => ({
+      id: rec.id,
       headline: rec.get('headline') || '',
       summary: rec.get('summary') || '',
       source_name: rec.get('source_name') || '',
-      source_url: rec.get('source_url') || '',
       category: rec.get('category') || 'General',
       published_date: rec.get('published_date') || '',
     }));

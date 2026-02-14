@@ -535,16 +535,17 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 .travel-ticker {
     position: fixed;
-    top: 60px;
+    top: 64px;
     left: 0;
     right: 0;
     z-index: 99;
-    height: 40px;
+    height: 42px;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     display: flex;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .ticker-live-badge {
@@ -623,7 +624,7 @@ a.ticker-item:hover {
 
 @media (min-width: 1024px) {
     .travel-ticker {
-        top: 70px;
+        top: 84px;
         height: 44px;
     }
 
@@ -4126,7 +4127,7 @@ img[loading="lazy"].loaded {
 @media (min-width: 1024px) {
     .hero-section {
         padding: 40px 0 2.5rem;
-        margin-top: 114px; /* 70px header + 44px ticker */
+        margin-top: 128px; /* 84px header + 44px ticker */
     }
 
     .hero-content {
@@ -4232,7 +4233,7 @@ img[loading="lazy"].loaded {
 @media (max-width: 768px) {
     .hero-section {
         padding: 20px 0 2rem;
-        margin-top: 100px; /* 60px header + 40px ticker */
+        margin-top: 106px; /* 64px header + 42px ticker */
     }
 
     .hero-section .hero-content h1,

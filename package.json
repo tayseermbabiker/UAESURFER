@@ -1,0 +1,13 @@
+{
+  "name": "uaesurfer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "scrape": "node scrapers/run-all.js"
+  },
+  "dependencies": {
+    "@netlify/functions": "^2.8.2",
+    "airtable": "^0.12.2",
+    "playwright": "^1.50.0"
+  }
+}

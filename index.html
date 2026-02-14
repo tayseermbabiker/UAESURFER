@@ -173,41 +173,57 @@
         </div>
     </section>
 
-    <!-- Latest Updates Section -->
-    <section id="latest-updates" class="section updates-section">
-        <div class="container">
-            <div class="updates-header">
-                <span class="updates-pulse"></span>
-                <h2>Latest Updates — February 2026</h2>
-            </div>
-            <div class="updates-grid">
-                <a href="visa-requirements.html" class="update-card">
-                    <span class="update-tag">Visa</span>
-                    <strong>New 2026 Visa-on-Arrival Rules for EU Citizens</strong>
-                    <p>Updated entry requirements and extended stay options for European passport holders visiting the UAE.</p>
-                    <span class="update-link">Read in Visa Guide &rarr;</span>
-                </a>
-                <a href="alcohol-laws-uae.html" class="update-card">
-                    <span class="update-tag">Laws</span>
-                    <strong>UAE Alcohol Laws 2026: Tourist Passport-as-License Process</strong>
-                    <p>Simplified purchasing at MMI and African+Eastern stores — no separate license needed, just your passport.</p>
-                    <span class="update-link">Read in Alcohol Guide &rarr;</span>
-                </a>
-                <a href="ras-al-khaimah-travel-guide.html" class="update-card">
-                    <span class="update-tag">RAK</span>
-                    <strong>Wynn Al Marjan Island: 2026 Casino Resort Progress</strong>
-                    <p>The UAE's first integrated gaming resort in Ras Al Khaimah — latest construction updates and opening timeline.</p>
-                    <span class="update-link">Read in RAK Guide &rarr;</span>
-                </a>
-                <a href="weather-guide-uae.html" class="update-card">
-                    <span class="update-tag">Weather</span>
-                    <strong>Best Time to Visit UAE in 2026: Peak vs Off-Peak Guide</strong>
-                    <p>Updated seasonal breakdown with pricing trends and crowd levels for planning your perfect trip.</p>
-                    <span class="update-link">Read in Weather Guide &rarr;</span>
-                </a>
+    <!-- Live Travel Ticker -->
+    <div class="travel-ticker" id="travel-ticker">
+        <div class="ticker-live-badge">
+            <span class="ticker-pulse"></span>
+            <span class="ticker-live-text">LIVE</span>
+        </div>
+        <div class="ticker-content">
+            <div class="ticker-track" id="ticker-track">
+                <span class="ticker-item ticker-fallback">Welcome to UAE Surfer — Your Local's Guide to the UAE</span>
             </div>
         </div>
-    </section>
+    </div>
+
+    <script>
+    (function() {
+      var track = document.getElementById('ticker-track');
+      var currentIndex = 0;
+      var updates = [];
+      var rotateInterval;
+
+      function renderItem(item) {
+        var tag = item.category || 'General';
+        var source = item.source_name ? ' — ' + item.source_name : '';
+        return '<a href="' + (item.source_url || '#') + '" target="_blank" rel="noopener" class="ticker-item">' +
+          '<span class="ticker-tag">' + tag + '</span> ' +
+          item.headline + source +
+          '</a>';
+      }
+
+      function showNext() {
+        if (updates.length === 0) return;
+        track.style.opacity = '0';
+        setTimeout(function() {
+          track.innerHTML = renderItem(updates[currentIndex]);
+          track.style.opacity = '1';
+          currentIndex = (currentIndex + 1) % updates.length;
+        }, 300);
+      }
+
+      fetch('/api/travel-feed')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          if (data.updates && data.updates.length > 0) {
+            updates = data.updates;
+            showNext();
+            rotateInterval = setInterval(showNext, 5000);
+          }
+        })
+        .catch(function() { /* keep fallback text */ });
+    })();
+    </script>
 
     <!-- Essential Travel Info Cards -->
     <section id="essentials" class="section">

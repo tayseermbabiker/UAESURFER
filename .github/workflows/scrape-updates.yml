@@ -1,0 +1,28 @@
+name: Scrape Travel Updates
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Run scrapers
+        env:
+          UPDATES_URL: ${{ secrets.UPDATES_URL }}
+          UPDATES_SECRET: ${{ secrets.UPDATES_SECRET }}
+        run: npm run scrape

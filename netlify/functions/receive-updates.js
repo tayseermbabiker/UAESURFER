@@ -16,13 +16,16 @@ const EXPIRY_DAYS = {
 
 // Headlines containing these keywords are irrelevant to tourists — skip them
 const IRRELEVANT_KEYWORDS = new RegExp([
-  // Diplomacy & politics
+  // Diplomacy & politics & royal mentions
   'bilateral ties', 'state visit', 'delegation visit', 'diplomatic',
   'ambassador', 'consul general', 'foreign minister', 'MoU sign',
   'cooperation agreement', 'trilateral', 'summit meeting',
   'receives.*leader', 'receives.*president', 'receives.*minister',
   'receives.*delegation', 'meets.*president', 'meets.*prime minister',
   'congratulates', 'condolences', 'credentials',
+  'his highness', 'her highness', 'highness sheikh', 'ruler of',
+  'sheikh mohammed', 'sheikh mohamed', 'sheikh mansour',
+  'sheikh hamdan', 'sheikh maktoum', 'crown prince',
   // Government operations
   'cabinet reshuffle', 'cabinet approves', 'minister appoint',
   'council of ministers', 'federal authority', 'royal decree',

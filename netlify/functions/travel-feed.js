@@ -10,6 +10,15 @@ const CORS_HEADERS = {
   'Cache-Control': 'public, max-age=3600',
 };
 
+// Evergreen tips shown when fewer than 5 active news items exist
+const EVERGREEN_TIPS = [
+  { headline: 'Standard tourist visa is 30 days on arrival for US, UK, EU & Australian citizens', category: 'Visa', source_name: 'UAESurfer' },
+  { headline: 'Download the Careem or UBER app before you land — easiest transport in any emirate', category: 'Transport', source_name: 'UAESurfer' },
+  { headline: 'Alcohol is legal in licensed venues across the UAE — hotel bars are the easiest option', category: 'Legal', source_name: 'UAESurfer' },
+  { headline: 'Dubai Metro runs until midnight — Red Line covers all major tourist spots', category: 'Transport', source_name: 'UAESurfer' },
+  { headline: 'Dress modestly in public malls and markets — swimwear is fine at pools and beaches only', category: 'Legal', source_name: 'UAESurfer' },
+];
+
 exports.handler = async (event) => {
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 204, headers: CORS_HEADERS, body: '' };
@@ -29,7 +38,7 @@ exports.handler = async (event) => {
       filterByFormula: '{is_active} = TRUE()',
       sort: [{ field: 'published_date', direction: 'desc' }],
       maxRecords: 5,
-      fields: ['headline', 'summary', 'source_name', 'source_url', 'category', 'published_date'],
+      fields: ['headline', 'summary', 'source_name', 'category', 'published_date'],
     }).all();
 
     const updates = records.map(rec => ({
@@ -40,6 +49,22 @@ exports.handler = async (event) => {
       category: rec.get('category') || 'General',
       published_date: rec.get('published_date') || '',
     }));
+
+    // Fill remaining slots with evergreen tips if fewer than 5 active news items
+    if (updates.length < 5) {
+      const needed = 5 - updates.length;
+      for (let i = 0; i < needed; i++) {
+        const tip = EVERGREEN_TIPS[i];
+        updates.push({
+          id: null,
+          headline: tip.headline,
+          summary: '',
+          source_name: tip.source_name,
+          category: tip.category,
+          published_date: '',
+        });
+      }
+    }
 
     return {
       statusCode: 200,

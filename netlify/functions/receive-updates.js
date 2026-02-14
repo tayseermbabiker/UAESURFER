@@ -3,6 +3,18 @@ const Airtable = require('airtable');
 const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
   .base(process.env.AIRTABLE_BASE_ID);
 
+// Category-based expiry windows (in days)
+const EXPIRY_DAYS = {
+  Airport:   5,
+  Transport: 7,
+  General:   14,
+  Visa:      30,
+  Legal:     45,
+};
+
+// Headlines containing these keywords are irrelevant to tourists — skip them
+const IRRELEVANT_KEYWORDS = /\b(economy|stock market|oil price|football|soccer|cricket|cabinet reshuffle|minister appoint|GDP|inflation|trade deficit|bilateral ties)\b/i;
+
 exports.handler = async (event) => {
   // Auth check
   const params = new URLSearchParams(event.rawQuery || '');
@@ -43,7 +55,7 @@ exports.handler = async (event) => {
     console.error('Failed to fetch existing records:', err.message);
   }
 
-  const results = { inserted: 0, skipped: 0, errors: 0 };
+  const results = { inserted: 0, skipped: 0, filtered: 0, errors: 0 };
 
   for (const article of articles) {
     if (!article.headline || !article.source_article_id) {
@@ -54,6 +66,12 @@ exports.handler = async (event) => {
     // Skip duplicates
     if (existingIds.has(article.source_article_id)) {
       results.skipped++;
+      continue;
+    }
+
+    // Filter irrelevant headlines
+    if (IRRELEVANT_KEYWORDS.test(article.headline)) {
+      results.filtered++;
       continue;
     }
 
@@ -77,11 +95,37 @@ exports.handler = async (event) => {
     }
   }
 
+  // Auto-expire: category-based expiry windows
+  let expired = 0;
+  try {
+    const activeRecords = await table.select({
+      filterByFormula: '{is_active} = TRUE()',
+      fields: ['published_date', 'category'],
+    }).all();
+
+    const now = new Date();
+    for (const rec of activeRecords) {
+      const category = rec.get('category') || 'General';
+      const pubDate = rec.get('published_date');
+      if (!pubDate) continue;
+
+      const maxDays = EXPIRY_DAYS[category] || 14;
+      const age = Math.floor((now - new Date(pubDate)) / (1000 * 60 * 60 * 24));
+
+      if (age > maxDays) {
+        await table.update(rec.id, { is_active: false });
+        expired++;
+      }
+    }
+  } catch (err) {
+    console.error('Auto-expire failed:', err.message);
+  }
+
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: `Inserted ${results.inserted}, skipped ${results.skipped} dupes, ${results.errors} errors`,
-      results,
+      message: `Inserted ${results.inserted}, skipped ${results.skipped} dupes, filtered ${results.filtered} irrelevant, expired ${expired}`,
+      results: { ...results, expired },
     }),
   };
 };

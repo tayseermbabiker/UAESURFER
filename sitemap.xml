@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://uaesurfer.com/</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,49 +12,49 @@
   <!-- Emirates Travel Guides -->
   <url>
     <loc>https://uaesurfer.com/dubai-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/abu-dhabi-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/sharjah-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/ajman-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/ras-al-khaimah-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/fujairah-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/umm-al-quwain-travel-guide.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,49 +62,71 @@
   <!-- Info Cards / Before You Arrive -->
   <url>
     <loc>https://uaesurfer.com/visa-requirements.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/alcohol-laws-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/dress-code-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/currency-exchange-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/weather-guide-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/transportation-guide-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/safety-security-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Additional Guides -->
+  <url>
+    <loc>https://uaesurfer.com/ramadan-guide-uae.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://uaesurfer.com/summer-guide-uae.html</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://uaesurfer.com/scams-tourist-traps-uae.html</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -112,7 +134,7 @@
   <!-- FAQ Page -->
   <url>
     <loc>https://uaesurfer.com/faq.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -120,14 +142,14 @@
   <!-- Attraction Pages -->
   <url>
     <loc>https://uaesurfer.com/warner-bros-world-abu-dhabi.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://uaesurfer.com/seaworld-abu-dhabi.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -135,7 +157,7 @@
   <!-- Restaurant Guide -->
   <url>
     <loc>https://uaesurfer.com/best-restaurants-uae.html</loc>
-    <lastmod>2025-11-24</lastmod>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

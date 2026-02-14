@@ -1,0 +1,31 @@
+# Redirect non-.html URLs to .html versions (301 permanent)
+# Fixes duplicate URL issue where Google indexes both /page and /page.html
+
+/dubai-travel-guide              /dubai-travel-guide.html              301
+/abu-dhabi-travel-guide          /abu-dhabi-travel-guide.html          301
+/sharjah-travel-guide            /sharjah-travel-guide.html            301
+/ajman-travel-guide              /ajman-travel-guide.html              301
+/ras-al-khaimah-travel-guide     /ras-al-khaimah-travel-guide.html     301
+/fujairah-travel-guide           /fujairah-travel-guide.html           301
+/umm-al-quwain-travel-guide      /umm-al-quwain-travel-guide.html      301
+
+/visa-requirements               /visa-requirements.html               301
+/alcohol-laws-uae                /alcohol-laws-uae.html                301
+/dress-code-uae                  /dress-code-uae.html                  301
+/currency-exchange-uae           /currency-exchange-uae.html           301
+/weather-guide-uae               /weather-guide-uae.html               301
+/transportation-guide-uae        /transportation-guide-uae.html        301
+/safety-security-uae             /safety-security-uae.html             301
+/best-restaurants-uae            /best-restaurants-uae.html            301
+/ramadan-guide-uae               /ramadan-guide-uae.html               301
+/summer-guide-uae                /summer-guide-uae.html                301
+/scams-tourist-traps-uae         /scams-tourist-traps-uae.html         301
+
+/warner-bros-world-abu-dhabi     /warner-bros-world-abu-dhabi.html     301
+/seaworld-abu-dhabi              /seaworld-abu-dhabi.html              301
+
+/faq                             /faq.html                             301
+/about                           /about.html                           301
+/contact                         /contact.html                         301
+/privacy                         /privacy.html                         301
+/terms                           /terms.html                           301

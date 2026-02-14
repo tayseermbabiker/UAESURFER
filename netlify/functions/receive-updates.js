@@ -7,13 +7,51 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY })
 const EXPIRY_DAYS = {
   Airport:   5,
   Transport: 7,
+  Weather:   3,
+  Events:    14,
   General:   14,
   Visa:      30,
   Legal:     45,
 };
 
 // Headlines containing these keywords are irrelevant to tourists — skip them
-const IRRELEVANT_KEYWORDS = /\b(economy|stock market|oil price|football|soccer|cricket|cabinet reshuffle|minister appoint|GDP|inflation|trade deficit|bilateral ties)\b/i;
+const IRRELEVANT_KEYWORDS = new RegExp([
+  // Diplomacy & politics
+  'bilateral ties', 'state visit', 'delegation visit', 'diplomatic',
+  'ambassador', 'consul general', 'foreign minister', 'MoU sign',
+  'cooperation agreement', 'trilateral', 'summit meeting',
+  'receives.*leader', 'receives.*president', 'receives.*minister',
+  'receives.*delegation', 'meets.*president', 'meets.*prime minister',
+  'congratulates', 'condolences', 'credentials',
+  // Government operations
+  'cabinet reshuffle', 'cabinet approves', 'minister appoint',
+  'council of ministers', 'federal authority', 'royal decree',
+  'federal decree', 'national strategy', 'government accelerator',
+  'chairs meeting', 'inaugurates', 'launches initiative',
+  'commends', 'praises', 'directs formation',
+  // Economy & finance
+  'economy', 'stock market', 'stock exchange', 'oil price',
+  'GDP', 'inflation', 'trade deficit', 'IPO', 'bond issuance',
+  'investment fund', 'sovereign wealth', 'central bank',
+  'real estate market', 'property prices', 'corporate earnings',
+  // Military & defense
+  'armed forces', 'military exercise', 'joint exercise',
+  'naval force', 'air force', 'defense cooperation',
+  // Sports (not tourist events)
+  'football', 'soccer', 'cricket', 'tennis tournament',
+  'golf tournament', 'marathon result', 'league match',
+  'world cup qualifier', 'champions league',
+  // Medical & academic
+  'medical conference', 'healthcare forum', 'hospital expansion',
+  'health authority', 'clinical trial', 'university', 'academic',
+  'scholarship', 'research grant', 'education forum', 'PhD',
+  // Airport milestones (not useful to tourists)
+  'million passengers', 'passenger record', 'busiest airport',
+  'airport milestone', 'processing capacity', 'passenger growth',
+  // General noise
+  'martyrs', 'commemoration ceremony', 'charity donation',
+  'humanitarian aid', 'relief effort', 'peacekeeping',
+].join('|'), 'i');
 
 exports.handler = async (event) => {
   // Auth check

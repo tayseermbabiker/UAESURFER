@@ -14,9 +14,9 @@ const CORS_HEADERS = {
 const EVERGREEN_TIPS = [
   { headline: 'Standard tourist visa is 30 days on arrival for US, UK, EU & Australian citizens', category: 'Visa', source_name: 'UAESurfer' },
   { headline: 'Download the Careem or UBER app before you land — easiest transport in any emirate', category: 'Transport', source_name: 'UAESurfer' },
-  { headline: 'Alcohol is legal in licensed venues across the UAE — hotel bars are the easiest option', category: 'Legal', source_name: 'UAESurfer' },
+  { headline: 'UAE has 5% VAT on most purchases — tourists can claim refunds at the airport', category: 'General', source_name: 'UAESurfer' },
   { headline: 'Dubai Metro runs until midnight — Red Line covers all major tourist spots', category: 'Transport', source_name: 'UAESurfer' },
-  { headline: 'Dress modestly in public malls and markets — swimwear is fine at pools and beaches only', category: 'Legal', source_name: 'UAESurfer' },
+  { headline: 'Summer temperatures exceed 45C — plan outdoor activities for early morning or evening', category: 'Weather', source_name: 'UAESurfer' },
 ];
 
 exports.handler = async (event) => {

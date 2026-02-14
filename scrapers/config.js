@@ -22,6 +22,8 @@ module.exports = {
     'Visa',
     'Legal',
     'Transport',
+    'Weather',
+    'Events',
     'General',
   ],
 };

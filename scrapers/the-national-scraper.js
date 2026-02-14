@@ -12,7 +12,9 @@ class TheNationalScraper extends BaseScraper {
     const lower = text.toLowerCase();
     if (/airport|aviation|airline|flight|route|terminal|runway|etihad|emirates|flydubai/.test(lower)) return 'Airport';
     if (/visa|entry|passport|residency|permit|immigration|golden visa/.test(lower)) return 'Visa';
-    if (/law|legal|regulation|fine|court|decree|ban|rule|dress code|ramadan/.test(lower)) return 'Legal';
+    if (/law|legal|regulation|fine|court|decree|ban|rule|dress code/.test(lower)) return 'Legal';
+    if (/weather|temperature|fog|storm|flood|rain|heatwave|humidity|forecast/.test(lower)) return 'Weather';
+    if (/festival|celebration|eid|ramadan|national day|concert|firework|new year/.test(lower)) return 'Events';
     if (/metro|tram|bus|taxi|road|transport|rail|salik|rta|hyperloop|driving/.test(lower)) return 'Transport';
     return 'General';
   }

@@ -7,7 +7,7 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
-  'Cache-Control': 'public, max-age=3600',
+  'Cache-Control': 'public, max-age=300',
 };
 
 // Evergreen tips shown when fewer than 5 active news items exist

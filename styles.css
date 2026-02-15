@@ -643,6 +643,7 @@ a.ticker-item:hover {
     .travel-ticker {
         position: relative;
         top: auto;
+        margin-top: 48px; /* clear the fixed header */
     }
 
     .ticker-item {
@@ -4262,7 +4263,7 @@ img[loading="lazy"].loaded {
 @media (max-width: 768px) {
     .hero-section {
         padding: 20px 0 2rem;
-        margin-top: 48px; /* just clear the fixed header; ticker flows after hero */
+        margin-top: 0; /* ticker is above hero in DOM and clears the fixed header */
     }
 
     .hero-section .hero-content h1,

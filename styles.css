@@ -535,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 .travel-ticker {
     position: fixed;
-    top: 48px;
+    top: 43px;
     left: 0;
     right: 0;
     z-index: 99;
@@ -625,7 +625,7 @@ a.ticker-item:hover {
 
 @media (min-width: 1024px) {
     .travel-ticker {
-        top: 52px;
+        top: 43px;
         height: 44px;
     }
 
@@ -643,7 +643,7 @@ a.ticker-item:hover {
     .travel-ticker {
         position: relative;
         top: auto;
-        margin-top: 48px; /* clear the fixed header */
+        margin-top: 43px; /* clear the fixed header */
     }
 
     .ticker-item {
@@ -4105,7 +4105,7 @@ img[loading="lazy"].loaded {
     overflow: hidden;
     padding: 24px 0 2rem;
     text-align: center;
-    margin-top: 48px;
+    margin-top: 43px;
 }
 
 .hero-section::before {
@@ -4156,7 +4156,7 @@ img[loading="lazy"].loaded {
 @media (min-width: 1024px) {
     .hero-section {
         padding: 40px 0 2.5rem;
-        margin-top: 96px; /* 52px header + 44px ticker */
+        margin-top: 87px; /* 43px header + 44px ticker */
     }
 
     .hero-content {

@@ -641,9 +641,7 @@ a.ticker-item:hover {
 
 @media (max-width: 768px) {
     .travel-ticker {
-        position: relative;
-        top: auto;
-        margin-top: 43px; /* clear the fixed header */
+        /* fixed like desktop — both header + ticker stick at top */
     }
 
     .ticker-item {
@@ -1716,11 +1714,7 @@ a.emirate-card:hover {
 /* Mobile/Tablet styles (below desktop breakpoint) */
 @media (max-width: 1023px) {
     .header {
-        position: relative;
-    }
-
-    .hero {
-        margin-top: 0;
+        position: fixed;
     }
 
     .summer-alert {
@@ -4263,7 +4257,7 @@ img[loading="lazy"].loaded {
 @media (max-width: 768px) {
     .hero-section {
         padding: 20px 0 2rem;
-        margin-top: 0; /* ticker is above hero in DOM and clears the fixed header */
+        margin-top: 85px; /* 43px header + 42px ticker, both fixed */
     }
 
     .hero-section .hero-content h1,

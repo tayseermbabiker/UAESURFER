@@ -8,6 +8,7 @@
   "dependencies": {
     "@netlify/functions": "^2.8.2",
     "airtable": "^0.12.2",
+    "fast-xml-parser": "^5.3.6",
     "playwright": "^1.50.0"
   }
 }

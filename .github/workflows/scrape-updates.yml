@@ -26,3 +26,16 @@ jobs:
           UPDATES_URL: ${{ secrets.UPDATES_URL }}
           UPDATES_SECRET: ${{ secrets.UPDATES_SECRET }}
         run: npm run scrape
+
+      - name: Export travel updates to static JSON
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+        run: node scripts/export-travel-updates.js
+
+      - name: Commit and push travel-updates.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add travel-updates.json
+          git diff --staged --quiet || (git commit -m "Update travel-updates.json" && git push)

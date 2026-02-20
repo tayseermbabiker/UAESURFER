@@ -217,7 +217,7 @@
         }, 300);
       }
 
-      fetch('/api/travel-feed')
+      fetch('/travel-updates.json')
         .then(function(r) { return r.json(); })
         .then(function(data) {
           if (data.updates && data.updates.length > 0) {

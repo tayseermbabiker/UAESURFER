@@ -51,6 +51,25 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   // Airport milestones (not useful to tourists)
   'million passengers', 'passenger record', 'busiest airport',
   'airport milestone', 'processing capacity', 'passenger growth',
+  // Protocol & greetings
+  'well.?wishers', 'receives.*greetings', 'exchange.*greetings',
+  // Participation & conferences (non-tourist)
+  'takes part in', 'concludes.*edition', 'landmark edition',
+  'sets new benchmark', 'key partners',
+  // Equestrian & non-tourist sports
+  'horse championship', 'equestrian', 'horses.*compete',
+  'Dubai Games', 'Abu Dhabi Games', 'battle of government',
+  'battle of cities',
+  // Institutional operations
+  'command centre', 'operations command', 'medical readiness',
+  'medical operations',
+  // Diplomatic arrivals
+  'fraternal visit', 'official visit', 'working visit',
+  'welcomes.*emir', 'welcomes.*king', 'welcomes.*queen',
+  'welcomes.*arrival', 'on behalf of.*president',
+  'leads? .* delegation',
+  // Economic statistics (not actionable for tourists)
+  'revenues? surge', 'tourism revenue', 'tourism.*billion',
   // General noise
   'martyrs', 'commemoration ceremony', 'charity donation',
   'humanitarian aid', 'relief effort', 'peacekeeping',

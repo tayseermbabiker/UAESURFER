@@ -60,7 +60,13 @@ class TheNationalScraper extends BaseScraper {
 
     logger.info(this.name, `Found ${articles.length} unique articles`);
 
-    return articles.slice(0, 10).map(a => ({
+    // The National /travel/ section covers global destinations — filter to UAE-relevant only
+    const UAE_KEYWORDS = /\b(uae|united arab emirates|dubai|abu dhabi|sharjah|ajman|fujairah|ras al khaimah|umm al qaiwain|al ain|emirati|emirates|arabian|gulf|burj|palm jumeirah|louvre abu dhabi|jebel|hatta|khorfakkan|sir bani yas|saadiyat|yas island|etihad|flydubai|jumeirah|deira|jbr|desert safari|dhow|souq|souk|dirham|ramadan|eid)\b/i;
+
+    const uaeRelevant = articles.filter(a => UAE_KEYWORDS.test(a.headline));
+    logger.info(this.name, `UAE-relevant: ${uaeRelevant.length} of ${articles.length}`);
+
+    return uaeRelevant.slice(0, 10).map(a => ({
       headline: a.headline,
       summary: '',
       source_name: 'The National',

@@ -143,6 +143,9 @@
                 <span class="tagline">Explore More, Stress Less</span>
             </div>
             <nav class="nav">
+                <button class="nav-search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
                 <button class="menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -179,6 +182,12 @@
             <div class="hero-content">
                 <h1>Your Local's Guide to UAE</h1>
                 <p class="hero-subheading">Unlock the real UAE—authentic experiences across all 7 emirates, guided by a local who knows where the magic actually happens.</p>
+                <div class="hero-search">
+                    <input type="text" id="hero-search-input" class="hero-search-input" placeholder="Search guides, e.g. visa, alcohol, dress code, Dubai..." readonly>
+                    <button id="hero-search-btn" class="hero-search-btn" aria-label="Search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </button>
+                </div>
                 <div class="hero-cta-buttons">
                     <a href="#essentials" class="btn btn-primary">Plan My Trip</a>
                     <a href="#experiences" class="btn btn-secondary">Explore Experiences</a>
@@ -2439,6 +2448,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="search.js"></script>
     <script>
         // Debug: Test if functions are loaded
         console.log('UAESurfer site loaded successfully');

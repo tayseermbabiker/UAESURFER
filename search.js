@@ -3,129 +3,129 @@
   var SEARCH_INDEX = [
     {
       url: 'visa-requirements.html',
-      title: 'UAE Visa Requirements',
-      description: 'Complete guide to UAE visa requirements. Visa on arrival, tourist visa, transit visa, and how to apply.',
-      keywords: 'visa passport entry immigration tourist transit apply requirements india pakistan uk usa eu'
+      title: 'UAE Visa & Entry Requirements',
+      description: '100+ nationalities get free visa on arrival to the UAE including US, UK and EU. Full list of visa-free countries, tourist visa costs, overstay fines and how to apply.',
+      keywords: 'visa passport entry immigration tourist transit apply requirements india pakistan uk usa eu do i need'
     },
     {
       url: 'alcohol-laws-uae.html',
-      title: 'Alcohol Laws in the UAE',
-      description: 'Everything you need to know about alcohol laws in the UAE. Where to drink, legal age, dry emirates, and penalties.',
-      keywords: 'alcohol drinking beer wine liquor bars clubs dry sharjah legal age license'
+      title: 'UAE Drinking Age & Alcohol Rules',
+      description: 'The legal drinking age in the UAE is 21. Rules differ by emirate — Sharjah is completely dry. What tourists need to know about buying, carrying and consuming alcohol.',
+      keywords: 'alcohol drinking beer wine liquor bars clubs dry sharjah legal age license fines'
     },
     {
       url: 'dress-code-uae.html',
-      title: 'UAE Dress Code Guide',
-      description: 'What to wear in the UAE. Dress code rules for malls, beaches, mosques, and public places.',
-      keywords: 'dress code clothing wear modest bikini swimwear mosque mall beach abaya'
+      title: 'Dubai Dress Code: What Tourists Can Wear',
+      description: 'Shorts and sleeveless tops are fine in malls. Swimwear at beaches and pools only. Mosques require full cover. The real dress code by location.',
+      keywords: 'dress code clothing wear modest bikini swimwear mosque mall beach abaya shorts sleeveless'
     },
     {
       url: 'weather-guide-uae.html',
-      title: 'UAE Weather Guide',
-      description: 'Best time to visit the UAE. Monthly weather breakdown, temperatures, and what to expect each season.',
-      keywords: 'weather temperature hot summer winter best time visit season rain humidity'
+      title: 'Best Time to Visit the UAE',
+      description: 'November to March is peak season — pleasant 20-30C weather and outdoor festivals. Summer hits 45C+ but hotels are 50% cheaper. Month-by-month breakdown.',
+      keywords: 'weather temperature hot summer winter best time visit season rain humidity month'
     },
     {
       url: 'safety-security-uae.html',
-      title: 'UAE Safety & Security',
-      description: 'How safe is the UAE for tourists? Crime rates, emergency numbers, and safety tips for travelers.',
-      keywords: 'safety security crime police emergency safe dangerous women solo travel'
+      title: 'Is Dubai Safe? UAE Safety Guide',
+      description: 'Yes, Dubai is extremely safe — but there are laws you must follow. Crime rates, scam warnings, women\'s safety, things that are illegal and emergency contacts.',
+      keywords: 'safety security crime police emergency safe dangerous women solo travel illegal laws'
     },
     {
       url: 'currency-exchange-uae.html',
-      title: 'UAE Currency & Exchange',
-      description: 'UAE currency guide. AED dirham exchange rates, ATMs, credit cards, tipping, and money-saving tips.',
-      keywords: 'currency money dirham aed exchange rate atm credit card tip tipping cash'
+      title: 'UAE Currency & Money Guide',
+      description: 'UAE currency guide: 1 USD = 3.67 AED (fixed). Credit cards work everywhere. ATMs have best rates. Complete guide to money, tipping and saving.',
+      keywords: 'currency money dirham aed exchange rate atm credit card tip tipping cash usd dollar'
     },
     {
       url: 'transportation-guide-uae.html',
       title: 'UAE Transportation Guide',
-      description: 'Getting around the UAE. Metro, taxis, buses, car rental, ride-hailing apps, and intercity travel.',
-      keywords: 'transport metro taxi bus car rental uber careem driving license nol card'
+      description: 'Dubai transport guide: Metro is AED 3-7 per trip. Uber/Careem work everywhere. Car rental from AED 80/day. Getting around UAE.',
+      keywords: 'transport metro taxi bus car rental uber careem driving license nol card getting around'
     },
     {
       url: 'scams-tourist-traps-uae.html',
-      title: 'UAE Scams & Tourist Traps',
-      description: 'Avoid common scams and tourist traps in the UAE. Fake deals, overcharging, and how to stay safe.',
-      keywords: 'scams tourist traps overcharge fake deals avoid ripoff fraud'
+      title: 'Dubai Scams & Tourist Traps to Avoid',
+      description: 'Dubai scams to avoid: Taxi overcharges, fake gold, safari rip-offs, unlicensed tours. How to spot them and book safely.',
+      keywords: 'scams tourist traps overcharge fake deals avoid ripoff fraud taxi gold safari'
     },
     {
       url: 'best-restaurants-uae.html',
-      title: 'Best Restaurants in the UAE',
-      description: 'Top restaurants across the UAE. Fine dining, street food, local cuisine, and budget-friendly options.',
-      keywords: 'restaurants food dining eat cuisine arabic local street food halal vegetarian'
+      title: 'Best Restaurants in UAE',
+      description: 'Best restaurants in UAE: Dubai and Abu Dhabi fine dining, mid-range gems, budget eats. Complete dining guide with prices, reservations and tips.',
+      keywords: 'restaurants food dining eat cuisine arabic local street food halal vegetarian where to eat'
     },
     {
       url: 'ramadan-guide-uae.html',
-      title: 'Ramadan Guide for Tourists',
-      description: 'Visiting the UAE during Ramadan? Everything you need to know about rules, etiquette, and what to expect.',
-      keywords: 'ramadan fasting iftar rules etiquette eating drinking public muslim'
+      title: 'Visiting UAE During Ramadan',
+      description: 'Complete guide to visiting UAE during Ramadan. Fasting rules, restaurant hours, cultural etiquette, and what tourists should know.',
+      keywords: 'ramadan fasting iftar rules etiquette eating drinking public muslim holy month'
     },
     {
       url: 'summer-guide-uae.html',
-      title: 'UAE Summer Guide',
-      description: 'Visiting the UAE in summer? Beat the heat with indoor activities, deals, and survival tips.',
-      keywords: 'summer hot heat june july august indoor activities deals waterpark'
+      title: 'UAE Summer Travel Guide',
+      description: 'Is Dubai worth visiting in summer? 40-60% cheaper hotels, zero crowds, 50+ indoor attractions. An honest guide from a UAE resident.',
+      keywords: 'summer hot heat june july august indoor activities deals waterpark cheap'
     },
     {
       url: 'dubai-travel-guide.html',
       title: 'Dubai Travel Guide',
-      description: 'Complete Dubai travel guide. Top attractions, hotels, restaurants, shopping, nightlife, and insider tips.',
-      keywords: 'dubai burj khalifa mall emirates palm jumeirah marina downtown deira creek desert safari'
+      description: 'Planning your first Dubai trip? Best things to do, where to stay (Marina vs Downtown vs Palm), desert safari tips, and honest advice.',
+      keywords: 'dubai burj khalifa mall emirates palm jumeirah marina downtown deira creek desert safari things to do'
     },
     {
       url: 'abu-dhabi-travel-guide.html',
       title: 'Abu Dhabi Travel Guide',
-      description: 'Complete Abu Dhabi guide. Grand Mosque, Louvre, Yas Island, Saadiyat, hotels, and things to do.',
-      keywords: 'abu dhabi grand mosque louvre yas island ferrari world saadiyat corniche'
+      description: 'Planning a day trip from Dubai to Abu Dhabi? Things to do, Sheikh Zayed Mosque dress code, Yas Island theme parks, and Abu Dhabi vs Dubai advice.',
+      keywords: 'abu dhabi grand mosque louvre yas island ferrari world saadiyat corniche day trip sheikh zayed'
     },
     {
       url: 'sharjah-travel-guide.html',
       title: 'Sharjah Travel Guide',
-      description: 'Explore Sharjah — the cultural capital. Museums, heritage areas, souks, and family-friendly attractions.',
-      keywords: 'sharjah culture museum heritage souk art gallery family al qasba'
+      description: 'Sharjah is completely dry — zero alcohol. But it\'s rich in culture, museums and waterfront areas. Alcohol rules, things to do and day trip from Dubai.',
+      keywords: 'sharjah culture museum heritage souk art gallery family al qasba dry no alcohol'
     },
     {
       url: 'ajman-travel-guide.html',
       title: 'Ajman Travel Guide',
-      description: 'Discover Ajman. Beaches, Ajman Museum, mangroves, and the most relaxed emirate in the UAE.',
-      keywords: 'ajman beach museum mangroves relaxed quiet budget'
+      description: 'Is Ajman dry? No — alcohol is available in licensed hotels and shops. Quiet beaches, budget hotels and Dubai\'s cheapest beach day trip.',
+      keywords: 'ajman beach museum mangroves relaxed quiet budget cheap day trip'
     },
     {
       url: 'fujairah-travel-guide.html',
       title: 'Fujairah Travel Guide',
-      description: 'Explore Fujairah on the east coast. Beaches, mountains, diving, waterfalls, and Al Bidyah Mosque.',
+      description: 'Can you drink in Fujairah? Yes. Best beaches, snorkeling spots, mountains and how to get there from Dubai.',
       keywords: 'fujairah east coast beach diving snorkeling mountains waterfall al bidyah mosque'
     },
     {
       url: 'ras-al-khaimah-travel-guide.html',
       title: 'Ras Al Khaimah Travel Guide',
-      description: 'Adventure in Ras Al Khaimah. Jebel Jais, zip line, hiking, hot springs, and desert camping.',
+      description: 'RAK is the UAE\'s adventure capital — Jebel Jais zipline, mountain hiking, beach resorts and no crowds.',
       keywords: 'ras al khaimah rak jebel jais zipline hiking adventure camping hot springs'
     },
     {
       url: 'umm-al-quwain-travel-guide.html',
       title: 'Umm Al Quwain Travel Guide',
-      description: 'Discover Umm Al Quwain. Dreamland Aqua Park, mangroves, fishing, and off-the-beaten-path experiences.',
-      keywords: 'umm al quwain uaq dreamland aqua park mangroves fishing quiet'
+      description: 'UAE\'s most underrated emirate. Mangrove kayaking, camping, Dreamland Aqua Park and zero crowds.',
+      keywords: 'umm al quwain uaq dreamland aqua park mangroves fishing quiet hidden'
     },
     {
       url: 'seaworld-abu-dhabi.html',
-      title: 'SeaWorld Abu Dhabi',
-      description: 'Complete guide to SeaWorld Abu Dhabi on Yas Island. Tickets, rides, shows, tips, and what to expect.',
-      keywords: 'seaworld yas island aquarium rides tickets show marine ocean'
+      title: 'SeaWorld Abu Dhabi Guide',
+      description: 'SeaWorld Abu Dhabi: tickets from AED 375, 8 realms, marine encounters, shows. World\'s largest aquarium.',
+      keywords: 'seaworld yas island aquarium rides tickets show marine ocean theme park'
     },
     {
       url: 'warner-bros-world-abu-dhabi.html',
-      title: 'Warner Bros World Abu Dhabi',
-      description: 'Complete guide to Warner Bros World Abu Dhabi. Rides, zones, tickets, tips, and what to expect.',
-      keywords: 'warner bros world theme park rides batman superman bugs bunny yas island'
+      title: 'Warner Bros World Abu Dhabi Guide',
+      description: 'Warner Bros World Abu Dhabi: tickets from AED 295, 29 rides and attractions, insider tips, best time to visit.',
+      keywords: 'warner bros world theme park rides batman superman bugs bunny yas island tickets'
     },
     {
       url: 'faq.html',
-      title: 'UAE Travel FAQ',
-      description: 'Frequently asked questions about traveling to the UAE. Quick answers to common visitor questions.',
-      keywords: 'faq questions answers help common'
+      title: 'Dubai Travel FAQ',
+      description: 'Answers to the most searched Dubai travel questions: visa requirements, safety, dress code, alcohol rules, costs, best time to visit, and what NOT to do.',
+      keywords: 'faq questions answers help common first time visitor'
     }
   ];
 

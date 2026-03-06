@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive UAE packing checklist — documents, clothing, tech, health essentials and desert-specific gear. Check items off as you pack.">
+    <title>UAE Packing Guide: Interactive Travel Checklist | UAESurfer</title>
+
+    <link rel="canonical" href="https://uaesurfer.com/packing-guide.html">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://uaesurfer.com/packing-guide.html">
+    <meta property="og:title" content="UAE Packing Guide: Interactive Travel Checklist">
+    <meta property="og:description" content="Interactive UAE packing checklist — documents, clothing, tech, health essentials and desert-specific gear.">
+    <meta property="og:image" content="https://uaesurfer.com/images/uae-og.jpg">
+    <meta property="og:site_name" content="UAESurfer">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="styles.css?v=118">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+    .info-hero {
+        background: linear-gradient(135deg, #7C8BD4 0%, #6B4C96 100%);
+        padding: 5rem 0 3rem;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .info-hero h1 { color: white; font-size: 2.5rem; margin: 0 0 0.5rem 0; }
+    .info-hero p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0; }
+
+    .packing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .pack-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.75rem;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+        border-top: 4px solid var(--card-accent, var(--primary));
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pack-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    }
+
+    .pack-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--card-accent, var(--primary));
+        margin: 0 0 1rem 0;
+    }
+
+    .pack-card.documents { --card-accent: #667eea; }
+    .pack-card.clothing { --card-accent: #f093fb; }
+    .pack-card.essentials { --card-accent: #10b981; }
+    .pack-card.tech { --card-accent: #f59e0b; }
+    .pack-card.health { --card-accent: #ef4444; }
+    .pack-card.travel { --card-accent: #06b6d4; }
+    .pack-card.beach { --card-accent: #3b82f6; }
+    .pack-card.lifestyle { --card-accent: #8b5cf6; }
+
+    .pack-item {
+        display: flex;
+        align-items: center;
+        padding: 0.6rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        cursor: pointer;
+        transition: padding-left 0.2s;
+    }
+    .pack-item:last-child { border-bottom: none; }
+    .pack-item:hover { padding-left: 6px; }
+    .pack-item.checked .item-text { text-decoration: line-through; color: #999; }
+
+    .pack-check {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--card-accent, var(--primary));
+        border-radius: 4px;
+        margin-right: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: background 0.2s;
+        font-size: 0.8rem;
+        color: transparent;
+    }
+    .pack-item.checked .pack-check {
+        background: var(--card-accent, var(--primary));
+        color: white;
+    }
+
+    .item-text { font-size: 0.95rem; color: #444; }
+
+    .pack-item.priority .item-text { font-weight: 500; }
+    .pack-item.priority {
+        background: linear-gradient(90deg, rgba(239,68,68,0.05), transparent);
+        border-radius: 6px;
+        padding-left: 6px;
+        margin: 2px 0;
+    }
+
+    .tips-box {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+        border: 2px solid #e0e7ff;
+        border-radius: 16px;
+        padding: 1.75rem;
+        margin-top: 2rem;
+        grid-column: 1 / -1;
+    }
+    .tips-box h3 { color: var(--primary); margin: 0 0 1rem 0; font-size: 1.2rem; }
+    .tips-box ul { padding-left: 1.25rem; color: #555; line-height: 1.8; }
+
+    .progress-bar {
+        background: #f0f0f0;
+        border-radius: 20px;
+        height: 8px;
+        margin-top: 2rem;
+        overflow: hidden;
+    }
+    .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        border-radius: 20px;
+        width: 0%;
+        transition: width 0.4s ease;
+    }
+    .progress-text {
+        text-align: center;
+        color: #888;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+
+    .guide-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    .guide-link-card {
+        display: block;
+        padding: 1.25rem;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .guide-link-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .guide-link-card strong { display: block; color: #333; margin-bottom: 0.25rem; }
+    .guide-link-card span { color: #666; font-size: 0.9rem; }
+
+    @media (max-width: 768px) {
+        .info-hero h1 { font-size: 2rem; }
+        .packing-grid { grid-template-columns: 1fr; }
+    }
+
+    .header .logo a { color: inherit; text-decoration: none; }
+    .header .logo a:visited { color: inherit; }
+    .footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+    .footer a:hover { color: white; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>UAESurfer</h1></a>
+            </div>
+            <nav class="nav">
+                <button class="nav-search-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#essentials">Travel Info</a></li>
+                    <li><a href="index.html#emirates">Emirates</a></li>
+                    <li><a href="index.html#experiences">Experiences</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="info-hero">
+        <div class="container">
+            <h1>UAE Packing Guide</h1>
+            <p>Interactive checklist — tap items as you pack</p>
+        </div>
+    </section>
+
+    <main class="guide-content">
+        <div class="container">
+
+            <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            <p class="progress-text" id="progress-text">0 of 0 items packed</p>
+
+            <div class="packing-grid">
+
+                <div class="pack-card documents">
+                    <h3>Essential Documents</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Passport — 6+ months validity</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Visa confirmation or visa on arrival</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Flight & hotel confirmations</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Credit & debit cards</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">UAE Dirhams — small amount</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">International driving permit</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Digital copies on phone</span>
+                    </div>
+                </div>
+
+                <div class="pack-card clothing">
+                    <h3>Smart & Modest Clothing</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Lightweight cotton/linen tops</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Long-sleeved shirts for mosques & AC</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Maxi dresses/long skirts — covers knees</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Long pants/trousers — NOT shorts for public</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Light jacket/cardigan for AC & winter</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Scarf/pashmina for mosque visits</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Smart evening wear — Dubai nightlife is fancy</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Workout clothes</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Sleepwear & underwear</span>
+                    </div>
+                </div>
+
+                <div class="pack-card essentials">
+                    <h3>UAE-Specific Must-Haves</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Jet lag relief pills for 12+ hour flight</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">High SPF sunscreen — SPF 50+ essential</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Quality polarized sunglasses</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Filtered water bottle</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Handheld fan — life-saver in heat</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Lightweight daypack</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Arabic phrase book</span>
+                    </div>
+                </div>
+
+                <div class="pack-card tech">
+                    <h3>Tech & Electronics</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Type G adapter — UK-style 3-pin plugs</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Portable power bank</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Smartphone & charger</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Waterproof phone case for beach</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Camera or great phone camera</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Noise-cancelling headphones</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Local SIM card — get at airport</span>
+                    </div>
+                </div>
+
+                <div class="pack-card health">
+                    <h3>Health & Medical</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Prescription medications with doctor's note</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">First aid kit basics</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Pain relief — paracetamol/ibuprofen</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Antihistamine for allergies</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Motion sickness tablets</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Hand sanitizer</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Hydration salts/electrolytes</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">After-sun lotion</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Eye drops — desert can be dusty</span>
+                    </div>
+                </div>
+
+                <div class="pack-card travel">
+                    <h3>Travel Comfort</h3>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Travel pillow for long flights</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Packing cubes</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Healthy snacks — nuts, protein bars</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Books/e-reader</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Tissues & wet wipes</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Pen & travel journal</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Foldable shopping bag</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Laundry bag</span>
+                    </div>
+                </div>
+
+                <div class="pack-card beach">
+                    <h3>Beach & Desert Adventures</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Swimwear — Western styles OK on beaches</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Beach cover-up for cafes/modesty</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Sun hat — wide-brim recommended</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Flip-flops/beach sandals</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Beach tote bag</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Quick-dry towel</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Lip balm with SPF</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Light scarf for desert sand protection</span>
+                    </div>
+                </div>
+
+                <div class="pack-card lifestyle">
+                    <h3>UAE Lifestyle Essentials</h3>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Smart dress shoes — Dubai nightlife is upscale</span>
+                    </div>
+                    <div class="pack-item priority" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Comfortable walking shoes — lots of mall walking</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Conservative jewelry — leave expensive items home</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Makeup & toiletries — bring enough for first few days</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Moisturizer — desert air is very dry</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Tissues — AC can cause runny noses</span>
+                    </div>
+                    <div class="pack-item" onclick="toggleItem(this)">
+                        <div class="pack-check">&#10003;</div>
+                        <span class="item-text">Emergency contacts list</span>
+                    </div>
+                </div>
+
+                <div class="tips-box">
+                    <h3>Money-Saving Pro Tips</h3>
+                    <ul>
+                        <li>Buy toiletries locally — major brands available but pricey</li>
+                        <li>Get local SIM at airport — international roaming is expensive</li>
+                        <li>Book attractions in advance — saves time and money</li>
+                        <li>Hotels add 22% in taxes plus Tourism Dirham fee (AED 7-20/night)</li>
+                        <li>Haggle in souks — initial prices are often 3-4x fair price</li>
+                        <li>Pack light, modest, and smart — you can buy almost anything in Dubai's malls</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section class="content-section">
+                <h2>More Free Guides</h2>
+                <div class="guide-links">
+                    <a href="instamoment-guide.html" class="guide-link-card">
+                        <strong>Instamoment Photography Guide</strong>
+                        <span>Best photo spots with golden hour timings</span>
+                    </a>
+                    <a href="arabic-apps-guide.html" class="guide-link-card">
+                        <strong>Arabic Phrases & Apps</strong>
+                        <span>Essential phrases and must-have tourist apps</span>
+                    </a>
+                    <a href="visa-requirements.html" class="guide-link-card">
+                        <strong>Visa Requirements</strong>
+                        <span>Entry requirements for all nationalities</span>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <section class="guide-content">
+        <div class="container">
+            <div class="author-bio">
+                <div class="author-avatar">US</div>
+                <div class="author-info">
+                    <strong>Written by a Local Abu Dhabi Resident</strong>
+                    <p>Based on real packing experiences from Western travelers and first-hand knowledge of UAE climate, culture, and lifestyle across all 7 emirates.</p>
+                    <p class="last-updated">Last updated: March 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>UAESurfer</h4>
+                    <p>Your guide to experiencing the UAE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UAESurfer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+    function toggleItem(el) {
+        el.classList.toggle('checked');
+        updateProgress();
+    }
+
+    function updateProgress() {
+        var items = document.querySelectorAll('.pack-item');
+        var checked = document.querySelectorAll('.pack-item.checked');
+        var pct = Math.round((checked.length / items.length) * 100);
+        document.getElementById('progress-fill').style.width = pct + '%';
+        document.getElementById('progress-text').textContent = checked.length + ' of ' + items.length + ' items packed';
+    }
+
+    updateProgress();
+    </script>
+    <script src="search.js"></script>
+</body>
+</html>

@@ -60,10 +60,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=118">
+    <link rel="stylesheet" href="styles.css?v=119">
     <link rel="preload" as="image" href="images/hero-skyline.jpg">
-    <!-- Preload critical images -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=85">
+    <!-- Preconnect to Unsplash for faster image loads -->
+    <link rel="preconnect" href="https://images.unsplash.com">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -2428,8 +2428,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="search.js"></script>
+    <script src="script.js" defer></script>
+    <script src="search.js" defer></script>
     <script>
         // Debug: Test if functions are loaded
         console.log('UAESurfer site loaded successfully');

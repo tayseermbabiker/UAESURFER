@@ -123,7 +123,7 @@ html {
 
 @media (min-width: 1024px) {
     html {
-        scroll-padding-top: 130px; /* header + ticker */
+        scroll-padding-top: 165px; /* 75px header + 44px ticker + padding */
     }
 }
 
@@ -535,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 .travel-ticker {
     position: fixed;
-    top: 43px;
+    top: 48px; /* mobile header height */
     left: 0;
     right: 0;
     z-index: 99;
@@ -625,7 +625,7 @@ a.ticker-item:hover {
 
 @media (min-width: 1024px) {
     .travel-ticker {
-        top: 43px;
+        top: 75px; /* desktop header height */
         height: 44px;
     }
 
@@ -4099,7 +4099,7 @@ img[loading="lazy"].loaded {
     overflow: hidden;
     padding: 24px 0 2rem;
     text-align: center;
-    margin-top: 43px;
+    margin-top: 90px; /* 48px header + 42px ticker */
 }
 
 .hero-section::before {
@@ -4150,7 +4150,7 @@ img[loading="lazy"].loaded {
 @media (min-width: 1024px) {
     .hero-section {
         padding: 40px 0 2.5rem;
-        margin-top: 87px; /* 43px header + 44px ticker */
+        margin-top: 119px; /* 75px header + 44px ticker */
     }
 
     .hero-content {
@@ -4257,7 +4257,7 @@ img[loading="lazy"].loaded {
 @media (max-width: 768px) {
     .hero-section {
         padding: 20px 0 2rem;
-        margin-top: 85px; /* 43px header + 42px ticker, both fixed */
+        margin-top: 90px; /* 48px header + 42px ticker, both fixed */
     }
 
     .hero-section .hero-content h1,

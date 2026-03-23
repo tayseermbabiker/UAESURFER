@@ -60,7 +60,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=119">
+    <link rel="stylesheet" href="styles.css?v=120">
     <link rel="preload" as="image" href="images/hero-skyline.jpg">
     <!-- Preconnect to Unsplash for faster image loads -->
     <link rel="preconnect" href="https://images.unsplash.com">
@@ -215,14 +215,39 @@
           item.headline + source + '</span>';
       }
 
+      function applyScroll() {
+        track.classList.remove('scrolling');
+        var item = track.querySelector('.ticker-item');
+        if (!item) return;
+        var container = track.parentElement;
+        if (item.scrollWidth > container.clientWidth) {
+          var duration = item.scrollWidth / 40; /* 40px/sec */
+          item.style.animationDuration = duration + 's';
+          item.style.paddingLeft = container.clientWidth + 'px';
+          track.classList.add('scrolling');
+        }
+      }
+
       function showNext() {
         if (updates.length === 0) return;
         track.style.opacity = '0';
+        track.classList.remove('scrolling');
         setTimeout(function() {
           track.innerHTML = renderItem(updates[currentIndex]);
           track.style.opacity = '1';
+          applyScroll();
           currentIndex = (currentIndex + 1) % updates.length;
         }, 300);
+      }
+
+      function getInterval() {
+        var item = track.querySelector('.ticker-item');
+        if (!item) return 5000;
+        var container = track.parentElement;
+        if (item.scrollWidth > container.clientWidth) {
+          return Math.max((item.scrollWidth / 40) * 1000 + 1000, 6000);
+        }
+        return 5000;
       }
 
       fetch('/travel-updates.json')
@@ -231,7 +256,14 @@
           if (data.updates && data.updates.length > 0) {
             updates = data.updates;
             showNext();
-            rotateInterval = setInterval(showNext, 5000);
+            /* Use dynamic interval — longer for scrolling items */
+            function scheduleNext() {
+              rotateInterval = setTimeout(function() {
+                showNext();
+                scheduleNext();
+              }, getInterval());
+            }
+            scheduleNext();
           }
         })
         .catch(function() { /* keep fallback text */ });

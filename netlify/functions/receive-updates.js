@@ -26,20 +26,36 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   'his highness', 'her highness', 'highness sheikh', 'ruler of',
   'sheikh mohammed', 'sheikh mohamed', 'sheikh mansour',
   'sheikh hamdan', 'sheikh maktoum', 'crown prince',
+  // Royal family names (without "sheikh" prefix)
+  'mohammed bin rashid', 'mohamed bin zayed', 'mohamed bin rashid',
+  'mohammed bin zayed', 'mansour bin zayed', 'hamdan bin mohammed',
+  'maktoum bin mohammed', 'theyab bin mohamed', 'khaled bin mohamed',
+  'hazza bin zayed', 'sultan bin ahmed', 'saud bin saqr',
+  'bin al nahyan', 'bin al maktoum', 'bin al qasimi',
+  'bin al sharqi', 'bin al nuaimi', 'bin al mualla',
   // Government operations
   'cabinet reshuffle', 'cabinet approves', 'minister appoint',
   'council of ministers', 'federal authority', 'royal decree',
   'federal decree', 'national strategy', 'government accelerator',
   'chairs meeting', 'inaugurates', 'launches initiative',
   'commends', 'praises', 'directs formation',
+  'approves.*strategy', 'approves.*plan', 'approves.*initiative',
+  'issues law', 'issues decree', 'enacts law',
   // Economy & finance
   'economy', 'stock market', 'stock exchange', 'oil price',
   'GDP', 'inflation', 'trade deficit', 'IPO', 'bond issuance',
   'investment fund', 'sovereign wealth', 'central bank',
   'real estate market', 'property prices', 'corporate earnings',
-  // Military & defense
+  // Military, defense & conflict
   'armed forces', 'military exercise', 'joint exercise',
   'naval force', 'air force', 'defense cooperation',
+  'drone attack', 'missile', 'airstrike', 'air strike',
+  'bombing', 'shelling', 'ceasefire', 'cease.?fire',
+  'escalation', 'retaliation', 'casualties', 'killed in',
+  'war zone', 'conflict zone', 'airspace violation',
+  'suspended.*routes', 'suspend.*flights', 'flight.*suspend',
+  'airlines.*cancel', 'cancel.*flights', 'flight.*ban',
+  'no.?fly zone', 'airspace clos', 'divert.*flights',
   // Sports (not tourist events)
   'football', 'soccer', 'cricket', 'tennis tournament',
   'golf tournament', 'marathon result', 'league match',
@@ -70,6 +86,19 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   'leads? .* delegation',
   // Economic statistics (not actionable for tourists)
   'revenues? surge', 'tourism revenue', 'tourism.*billion',
+  // Non-UAE country news (WAM publishes international wire stories)
+  'south korea', 's\\. korea', 'north korea', 'japan.*gdp',
+  'china.*trade', 'india.*budget', 'pakistan.*elect',
+  'fiscal surplus', 'fiscal deficit',
+  // Pardons, charity, food bank — not tourist relevant
+  'pardons.*prisoners', 'prisoners.*pardoned', 'food bank',
+  'iftar banquet', 'iftar with officials', 'ramadan iftar',
+  'distribute.*meals', 'suhoor gathering',
+  // Evacuation & stranded — alarming for tourists
+  'evacuation plan', 'stranded abroad', 'repatriation',
+  // Corporate tax, business regulation (not tourist)
+  'corporate tax', 'tax incentive', 'R&D.*tax',
+  'workshop on.*tax', 'financial management workshop',
   // General noise
   'martyrs', 'commemoration ceremony', 'charity donation',
   'humanitarian aid', 'relief effort', 'peacekeeping',

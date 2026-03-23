@@ -590,7 +590,16 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.3s ease;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.ticker-track.scrolling .ticker-item {
+    display: inline-block;
+    animation: ticker-scroll linear infinite;
+}
+
+@keyframes ticker-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% - 40px)); }
 }
 
 .ticker-item {

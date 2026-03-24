@@ -45,7 +45,8 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   'economy', 'stock market', 'stock exchange', 'oil price',
   'GDP', 'inflation', 'trade deficit', 'IPO', 'bond issuance',
   'investment fund', 'sovereign wealth', 'central bank',
-  'real estate market', 'property prices', 'corporate earnings',
+  'real estate market', 'real estate transaction', 'property prices',
+  'property market', 'corporate earnings',
   // Military, defense & conflict
   'armed forces', 'military exercise', 'joint exercise',
   'naval force', 'air force', 'defense cooperation',
@@ -72,7 +73,7 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   // Protocol & greetings
   'well.?wishers', 'receives.*greetings', 'exchange.*greetings',
   // Participation & conferences (non-tourist)
-  'takes part in', 'concludes.*edition', 'landmark edition',
+  'takes part in', 'concludes with', 'concludes.*edition', 'landmark edition',
   'sets new benchmark', 'key partners',
   // Equestrian & non-tourist sports
   'horse championship', 'equestrian', 'horses.*compete',

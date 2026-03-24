@@ -56,6 +56,8 @@ const IRRELEVANT_KEYWORDS = new RegExp([
   'suspended.*routes', 'suspend.*flights', 'flight.*suspend',
   'airlines.*cancel', 'cancel.*flights', 'flight.*ban',
   'no.?fly zone', 'airspace clos', 'divert.*flights',
+  'war disrupts', 'war.*flight', 'conflict.*flight',
+  'military.*operation', 'ground offensive',
   // Sports (not tourist events)
   'football', 'soccer', 'cricket', 'tennis tournament',
   'golf tournament', 'marathon result', 'league match',

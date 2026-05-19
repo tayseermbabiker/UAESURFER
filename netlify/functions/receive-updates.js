@@ -132,10 +132,13 @@ exports.handler = async (event) => {
   const table = base('Travel_Updates');
   const today = new Date().toISOString().split('T')[0];
 
-  // Fetch existing source_article_ids for dedup
+  // Fetch existing source_article_ids for dedup — only last 60 days.
+  // Older articles are auto-expired and can't reappear from the scraper anyway,
+  // so loading them just for dedup wastes Airtable API calls on every run.
   const existingIds = new Set();
   try {
     const records = await table.select({
+      filterByFormula: 'DATETIME_DIFF(NOW(), {created_at}, "days") < 60',
       fields: ['source_article_id'],
       pageSize: 100,
     }).all();

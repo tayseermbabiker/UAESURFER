@@ -307,6 +307,9 @@
       .wo-modal-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 14px; }
       .wo-modal-readmore { display: inline-flex; align-items: center; gap: 4px; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); text-decoration: none; }
       .wo-modal-readmore:hover { text-decoration: underline; }
+      .wo-modal-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 6px; }
+      .wo-modal-tickets { display: inline-flex; align-items: center; gap: 6px; background: var(--primary); color: #fff; font-size: 0.85rem; font-weight: 600; padding: 11px 18px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+      .wo-modal-tickets:hover { background: var(--primary-dark); transform: translateY(-1px); }
       @media (max-width: 768px) { .whats-on-card { width: 260px; } .whats-on-header h2 { font-size: 1.5rem; } }
       @media (max-width: 520px) { .whats-on-card { width: 240px; } .whats-on-section { padding: 32px 16px 12px; } .wo-modal-overlay { padding: 12px; } }
     </style>
@@ -336,7 +339,10 @@
                 <h3 id="wo-modal-title"></h3>
                 <p class="wo-modal-date" id="wo-modal-date"></p>
                 <p class="wo-modal-desc" id="wo-modal-desc"></p>
-                <a class="wo-modal-readmore" id="wo-modal-readmore" target="_blank" rel="noopener"></a>
+                <div class="wo-modal-actions">
+                    <a class="wo-modal-readmore" id="wo-modal-readmore" target="_blank" rel="noopener"></a>
+                    <a class="wo-modal-tickets" id="wo-modal-tickets" target="_blank" rel="noopener sponsored">Find tickets on Platinumlist →</a>
+                </div>
             </div>
         </div>
     </div>
@@ -358,6 +364,15 @@
         var rm = document.getElementById('wo-modal-readmore');
         if (item.link) { rm.href = item.link; rm.textContent = (label ? 'View on ' + label : 'View event') + ' →'; rm.style.display = 'inline-flex'; }
         else { rm.style.display = 'none'; }
+        // Platinumlist affiliate (ref=yjzkmgy). AD events -> Abu Dhabi storefront, else Dubai.
+        var tickets = document.getElementById('wo-modal-tickets');
+        var city = (item.source === 'ad-calendar') ? 'abu-dhabi' : 'dubai';
+        tickets.href = 'https://' + city + '.platinumlist.net/?ref=yjzkmgy&link=';
+        tickets.onclick = function() {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'affiliate_click', { platform: 'platinumlist', source: 'whats-on-modal', event_title: item.title });
+          }
+        };
         document.getElementById('wo-modal-overlay').classList.add('active');
         document.body.style.overflow = 'hidden';
       }

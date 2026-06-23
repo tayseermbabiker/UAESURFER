@@ -270,6 +270,137 @@
     })();
     </script>
 
+    <!-- What's On This Week — live UAE events -->
+    <style>
+      .whats-on-section { padding: 40px 24px 16px; background: var(--sand-light); }
+      .whats-on-inner { max-width: 1200px; margin: 0 auto; }
+      .whats-on-header { text-align: center; margin-bottom: 24px; }
+      .whats-on-header h2 { font-family: var(--font-headings); font-size: 1.8rem; font-weight: 700; color: var(--primary); margin: 0 0 6px; }
+      .whats-on-header p { font-size: 0.9rem; color: var(--text-muted); margin: 0; }
+      .wo-slider-wrapper { width: 100%; overflow: hidden; position: relative; }
+      .wo-slider-track { display: flex; gap: 16px; animation: woSlide 40s linear infinite; will-change: transform; }
+      .wo-slider-track:hover { animation-play-state: paused; }
+      @keyframes woSlide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .whats-on-card { background: var(--bg-secondary); border-radius: var(--radius-md); padding: 20px; border: 1px solid var(--border-light); display: flex; flex-direction: column; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; flex-shrink: 0; width: 300px; }
+      .whats-on-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--primary-light); }
+      .whats-on-tag { display: inline-block; background: var(--primary); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; align-self: flex-start; }
+      .whats-on-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin: 0 0 8px; line-height: 1.4; }
+      .whats-on-card .wo-desc { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.55; margin: 0 0 10px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+      .whats-on-card .wo-date { font-size: 0.75rem; color: var(--text-muted); margin: 0; }
+      .wo-skeleton { pointer-events: none; }
+      .wo-skeleton .whats-on-tag, .wo-skeleton h3, .wo-skeleton .wo-desc, .wo-skeleton .wo-date { background: var(--border-light); color: transparent; border-radius: 4px; animation: woPulse 1.2s ease-in-out infinite; }
+      .wo-skeleton .whats-on-tag { width: 60px; } .wo-skeleton h3 { width: 85%; height: 18px; }
+      .wo-skeleton .wo-desc { width: 100%; height: 36px; } .wo-skeleton .wo-date { width: 40%; height: 14px; }
+      @keyframes woPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+      .wo-modal-overlay { position: fixed; inset: 0; background: rgba(33,33,33,0.6); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 24px; }
+      .wo-modal-overlay.active { display: flex; }
+      .wo-modal { background: var(--bg-secondary); border-radius: var(--radius-lg); max-width: 520px; width: 100%; max-height: 85vh; max-height: 85dvh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: woModalIn 0.25s ease-out; }
+      @keyframes woModalIn { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      .wo-modal-header { padding: 24px 24px 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+      .wo-modal-close { background: none; border: none; font-size: 1.6rem; color: var(--text-muted); cursor: pointer; padding: 8px; margin: -8px -8px 0 0; line-height: 1; min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+      .wo-modal-close:hover { color: var(--text-primary); }
+      .wo-modal-tag { display: inline-block; background: var(--primary); color: #fff; font-size: 0.65rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; }
+      .wo-modal-source { display: inline-block; background: var(--bg-tertiary); color: var(--text-secondary); font-size: 0.65rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; margin-left: 6px; }
+      .wo-modal-body { padding: 16px 24px 24px; }
+      .wo-modal-body h3 { font-family: var(--font-headings); font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 12px 0 8px; line-height: 1.35; }
+      .wo-modal-date { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; }
+      .wo-modal-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 14px; }
+      .wo-modal-readmore { display: inline-flex; align-items: center; gap: 4px; font-size: 0.85rem; font-weight: 600; color: var(--primary-dark); text-decoration: none; }
+      .wo-modal-readmore:hover { text-decoration: underline; }
+      @media (max-width: 768px) { .whats-on-card { width: 260px; } .whats-on-header h2 { font-size: 1.5rem; } }
+      @media (max-width: 520px) { .whats-on-card { width: 240px; } .whats-on-section { padding: 32px 16px 12px; } .wo-modal-overlay { padding: 12px; } }
+    </style>
+    <section class="whats-on-section" id="whats-on-section">
+        <div class="whats-on-inner">
+            <div class="whats-on-header">
+                <h2>What's On This Week</h2>
+                <p>Live events &amp; happenings across the UAE</p>
+            </div>
+            <div class="wo-slider-wrapper">
+                <div class="wo-slider-track" id="wo-slider-track">
+                    <div class="whats-on-card wo-skeleton"><span class="whats-on-tag">...</span><h3>Loading</h3><p class="wo-desc">Loading</p><p class="wo-date">Loading</p></div>
+                    <div class="whats-on-card wo-skeleton"><span class="whats-on-tag">...</span><h3>Loading</h3><p class="wo-desc">Loading</p><p class="wo-date">Loading</p></div>
+                    <div class="whats-on-card wo-skeleton"><span class="whats-on-tag">...</span><h3>Loading</h3><p class="wo-desc">Loading</p><p class="wo-date">Loading</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wo-modal-overlay" id="wo-modal-overlay">
+        <div class="wo-modal">
+            <div class="wo-modal-header">
+                <div><span class="wo-modal-tag" id="wo-modal-tag"></span><span class="wo-modal-source" id="wo-modal-source"></span></div>
+                <button class="wo-modal-close" id="wo-modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="wo-modal-body">
+                <h3 id="wo-modal-title"></h3>
+                <p class="wo-modal-date" id="wo-modal-date"></p>
+                <p class="wo-modal-desc" id="wo-modal-desc"></p>
+                <a class="wo-modal-readmore" id="wo-modal-readmore" target="_blank" rel="noopener"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+      var sourceLabels = { 'whatson': "What's On UAE", 'etihad-arena': 'Etihad Arena', 'ad-calendar': 'Visit Abu Dhabi' };
+      var items = [];
+
+      function openWoModal(item) {
+        var d = new Date(item.pubDate);
+        var dateStr = isNaN(d) ? '' : d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+        var label = sourceLabels[item.source] || '';
+        document.getElementById('wo-modal-tag').textContent = item.category || 'UAE';
+        document.getElementById('wo-modal-source').textContent = label;
+        document.getElementById('wo-modal-title').textContent = item.title;
+        document.getElementById('wo-modal-date').textContent = dateStr;
+        document.getElementById('wo-modal-desc').textContent = item.fullDescription || item.description || '';
+        var rm = document.getElementById('wo-modal-readmore');
+        if (item.link) { rm.href = item.link; rm.textContent = (label ? 'View on ' + label : 'View event') + ' →'; rm.style.display = 'inline-flex'; }
+        else { rm.style.display = 'none'; }
+        document.getElementById('wo-modal-overlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeWoModal() {
+        document.getElementById('wo-modal-overlay').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      document.getElementById('wo-modal-overlay').addEventListener('click', function(e) { if (e.target === this) closeWoModal(); });
+      document.getElementById('wo-modal-close').addEventListener('click', closeWoModal);
+      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWoModal(); });
+
+      function buildCard(item, idx) {
+        var d = new Date(item.pubDate);
+        var dateStr = isNaN(d) ? '' : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        var esc = function(s) { var t = document.createElement('div'); t.textContent = s || ''; return t.innerHTML; };
+        return '<div class="whats-on-card" data-wo-idx="' + idx + '">'
+          + '<span class="whats-on-tag">' + esc(item.category || 'UAE') + '</span>'
+          + '<h3>' + esc(item.title) + '</h3>'
+          + '<p class="wo-desc">' + esc(item.description) + '</p>'
+          + '<p class="wo-date">' + dateStr + '</p></div>';
+      }
+
+      fetch('/api/whats-on')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var track = document.getElementById('wo-slider-track');
+          if (!data.items || data.items.length === 0) { document.getElementById('whats-on-section').style.display = 'none'; return; }
+          items = data.items;
+          var html = '';
+          items.forEach(function(it, i) { html += buildCard(it, i); });
+          items.forEach(function(it, i) { html += buildCard(it, i); }); // duplicate for seamless loop
+          track.innerHTML = html;
+          track.addEventListener('click', function(e) {
+            var card = e.target.closest('.whats-on-card');
+            if (!card) return;
+            var idx = parseInt(card.getAttribute('data-wo-idx'), 10);
+            if (items[idx]) openWoModal(items[idx]);
+          });
+        })
+        .catch(function() { document.getElementById('whats-on-section').style.display = 'none'; });
+    })();
+    </script>
+
     <!-- Essential Travel Info Cards -->
     <section id="essentials" class="section">
         <div class="container">
